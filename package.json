@@ -1,0 +1,30 @@
+{
+  "name": "ddev-docs",
+  "version": "1.0.0",
+  "description": "DDEV-Live Documentation",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "push": "node ./scripts/push ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drud/docs.git"
+  },
+  "author": "Drud Technologies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drud/docs/issues"
+  },
+  "homepage": "https://github.com/drud/docs#readme",
+  "dependencies": {
+    "eslint": "^5.15.1",
+    "freshdesk-api": "^2.5.0",
+    "front-matter": "^3.0.1",
+    "lodash": "^4.17.11",
+    "showdown": "^1.9.0"
+  }
+}
