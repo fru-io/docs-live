@@ -2,11 +2,12 @@
   "name": "ddev-docs",
   "version": "1.0.0",
   "description": "DDEV-Live Documentation",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "start": "node app.js",
     "push": "node ./scripts/push ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,10 +22,13 @@
   },
   "homepage": "https://github.com/drud/docs#readme",
   "dependencies": {
-    "eslint": "^5.15.1",
+    "express": "^4.16.4",
     "freshdesk-api": "^2.5.0",
     "front-matter": "^3.0.1",
     "lodash": "^4.17.11",
     "showdown": "^1.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1"
   }
 }
