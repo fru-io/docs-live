@@ -19,37 +19,21 @@ freshdesk:
 You agree not to misuse the Drud Technology LLC services ("Services") or help anyone else to do so. For example, you must not even try to do any of the following in connection with the Services:
 
 - probe, scan, or test the vulnerability of any system or network;
-
 - breach or otherwise circumvent any security or authentication measures;
-
 - access, tamper with, or use non-public areas or parts of the Services, or shared areas of the Services you haven't been invited to;
-
 - interfere with or disrupt any user, host, or network, for example by sending a virus, overloading, flooding, spamming, or mail-bombing any part of the Services;
-
 - access, search, or create accounts for the Services by any means other than our publicly supported interfaces (for example, "scraping" or creating accounts in bulk);
-
 - send unsolicited communications, promotions or advertisements, or spam;
-
 - send altered, deceptive or false source-identifying information, including "spoofing" or "phishing";
-
 - promote or advertise products or services other than your own without appropriate authorization;
-
 - create or host Internet Relay Chat (IRC) related materials such as bots, bouncers, or any script or software package designed to facilitate the creation, maintenance, or access to any IRC server or channel;
-
 - abuse referrals or promotions to get more storage space than deserved;
-
 - circumvent storage space limits;
-
 - sell the Services unless specifically authorized to do so;
-
 - publish or share materials that are unlawfully pornographic or indecent, or that contain extreme acts of violence;
-
 - advocate bigotry or hatred against any person or group of people based on their race, religion, ethnicity, sex, gender identity, sexual preference, disability, or impairment;
-
 - harass or abuse Drud personnel or representatives or agents performing services on behalf of Drud;
-
 - violate the law in any way, including storing, publishing or sharing material that's fraudulent, defamatory, or misleading; or
-
 - violate the privacy or infringe the rights of others.
 
 ## Data Retention

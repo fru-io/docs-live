@@ -22,7 +22,7 @@ We will proxy your live site and restore a copy to DDEV-Live, providing you a pr
 
 Once you've validated that the production site looks good, let us know that you are ready to migrate to DDEV-Live’s full hosting mode, and point your DNS at us:
 
-- Apex domain (yoursite.com), include all 3 A-records:
+* Apex domain (yoursite.com), include all 3 A-records:
   - A Record: @ | 35.168.185.204
   - A Record: @ | 35.169.15.168
   - A Record: @ | 52.0.29.214
@@ -30,7 +30,7 @@ Once you've validated that the production site looks good, let us know that you 
 * www subdomain ([www.]("http://www.drupaleasy.com/")yoursite.com):
   - CNAME Record: www | live.drud.com
 
-- subdomain (subdomain.yoursite.com)
+* subdomain (subdomain.yoursite.com)
   - CNAME Record: subdomain | live.drud.com
 
 We'll:

@@ -22,7 +22,7 @@ We recommend separate branches for each environment production, staging, and dev
 
 However, you aren't required to use those branch names: you _could_ push your master branch to the production branch on ddev-live and it will work.
 
-_Note: you don’t need to maintain a linear history for deployments. If you\`force push\` a branch with a single, giant commit of all of your code, that’s what will be deployed._
+_Note: you don’t need to maintain a linear history for deployments. If you `force push` a branch with a single, giant commit of all of your code, that’s what will be deployed._
 
 For detailed directions on making code changes on DDEV-Live, [see this page]("https://support.drud.com/support/solutions/articles/36000106365-making-incremental-code-changes-to-your-site").
 

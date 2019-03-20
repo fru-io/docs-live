@@ -26,16 +26,14 @@ After signing up for a plan, Drud will invite you to join our [support ticket sy
 
 First, install [s3cmd]("https://s3tools.org/s3cmd"):
 
-- Linux:
-
+* Linux:
   `sudo apt-get install s3cmd`
 
 * Mac:
-
   `brew install s3cmd`
 
-- Windows
-  - Download and install [http://sourceforge.net/projects/s3tools/files/s3cmd/]("http://sourceforge.net/projects/s3tools/files/s3cmd/")
+* Windows:
+  Download and install [http://sourceforge.net/projects/s3tools/files/s3cmd/]("http://sourceforge.net/projects/s3tools/files/s3cmd/")
 
 Then, upload your files:
 
@@ -45,9 +43,12 @@ And database (please use a gzip format):
 
 `s3cmd --access_key=<access_key> --secret_key=<secret> --region=us-east-1 --no-check-certificate put <project name>.sql.gz s3://<Customer Bucket Name>/<Project Name>/production/<project name>.sql.gz`
 
-_where _<access*key> is your S3 access key, <secret>* is your S3 secret, *<Customer Bucket Name>* is your S3 bucket name, and *<project name>* is your project name.\_
+_where <**access_key**> is your S3 access key, <**secret**> is your S3 secret, <**Customer Bucket Name**> is your S3 bucket name, and <**project name**> is your project name._
 
+
+---
 ## Provisioning Your Site
+---
 
 - Once uploaded to S3, please [submit a ticket]("https://support.drud.com/support/tickets/new") and ask us to provision your site on DDEV-Live. _Please indicate the location of the file(s) in S3 to be used in the restore._
 

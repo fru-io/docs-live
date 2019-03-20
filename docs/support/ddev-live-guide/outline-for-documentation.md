@@ -16,7 +16,7 @@ freshdesk:
 
 **Convert this list to Client Facing**
 
-- Managing projects and environments
+* Managing projects and environments
   - Setup
   - Manage secrets
     - Create
@@ -30,7 +30,7 @@ freshdesk:
     - Create
     - Modify
     - Delete
-- Migrating sites
+* Migrating sites
   - Prepare a site for running on ddev-live
   - Using migration-tools
   - Proxy traffic to legacy infrastructure
@@ -38,7 +38,7 @@ freshdesk:
   - Cut over to full-hosting mode
   - Using a migration tracker spreadsheet
   - HTTPS caveats
-- Managing existing sites
+* Managing existing sites
   - Push code to an environment
     - Finding push credentials for an already-existing project
   - Import data
@@ -49,12 +49,12 @@ freshdesk:
     - Manual backups
     - Restoring from a backup
   - Managing HTTPS
-- Client communication
+* Client communication
   - Standards and policies
   - Dealing with problems
     - Self resolution
     - Internal escalation
-- Reference
+* Reference
   - project-manager flags
   - Relevant IP addresses
   - Useful dashboards

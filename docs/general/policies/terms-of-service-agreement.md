@@ -16,7 +16,7 @@ freshdesk:
 
 You are accessing a website of Drud Technology, LLC and its affiliated entities (the "Site"). Drud Technology, LLC. and its affiliated entities are referred to herein as "Drud," "we," or "us."  By visiting the Site and accessing the information, content, documentation, source code, content, sample code, tools, API, or other materials made available by Drud in, on, or through the Site (the "Materials"), you agree to comply with and be bound by these Website Terms of Use and any documents referenced herein (the "Terms").   For the avoidance of doubt, these Terms supplement and do not modify or replace any other agreements entered into between you and Drud, including, but not limited to, a Master Subscription Agreement or other agreement with customers for access and use of Drud’s products or services (the "Main Agreement").
 
-**YOU MAY NOT ACCESS, OR ATTEMPT TO ACCESS, THE PORTIONS OF THE SITE THAT REQUIRE A PASSWORD FOR ACCESS OTHER THAN AS AN AUTHORIZED USER PURSUANT TO THE MAIN AGREEMENT.  IF YOU ARE AN AUTHORIZED USER, YOU MAY NOT ACCESS THE SITE AND EXCEED THE SCOPE OF YOUR PERMITTED USE UNDER THE MAIN AGREEMENT. **
+**YOU MAY NOT ACCESS, OR ATTEMPT TO ACCESS, THE PORTIONS OF THE SITE THAT REQUIRE A PASSWORD FOR ACCESS OTHER THAN AS AN AUTHORIZED USER PURSUANT TO THE MAIN AGREEMENT.  IF YOU ARE AN AUTHORIZED USER, YOU MAY NOT ACCESS THE SITE AND EXCEED THE SCOPE OF YOUR PERMITTED USE UNDER THE MAIN AGREEMENT.**
 
 Please review these Terms carefully. If you do not agree to these Terms, you have no right to obtain information from Drud, access or use the Materials, or otherwise use the Site.  **Failure to use the Site or Materials in accordance with these Terms may subject you to civil and criminal actions and penalties under applicable law.**  Except with respect to the Main Agreement, these Terms constitute the entire and only agreement between Drud and you, and supersede all prior or contemporaneous agreements, representations, warranties, and understandings with respect to the Materials and Site.  These Terms may be amended by Drud at any time without notice to you. Your continued use of the Site indicates your acknowledgement of, and consent to, updated Terms.
 
@@ -53,27 +53,20 @@ If you are a user of the Services pursuant to your Main Agreement, the Drud Acce
 **Copyright Infringement.** If you believe that your work has been copied in a way that constitutes copyright infringement on the Site or through the Materials, please provide Drud’s copyright agent the written information specified below. Please note that this procedure is exclusively for notifying Drud that your copyrighted material has been infringed.
 
 1.  An electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest;
-
 2.  A description of the copyrighted work that you claim has been infringed upon;
-
 3.  A description of where the material that you claim is infringing is located on the Site;
-
 4.  Your address, telephone number, and e-mail address;
-
 5.  A statement by you that you have a good-faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law; and
-
 6.  A statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.
 
 Drud’s Copyright Agent for notice of claims of copyright infringement on the Site can be contacted as follows:
-
+```
 Drud Technology, LLC
 Attn:Privacy Officer
-
 700 Broadway Suite 800
-
 Denver, Co  80203
-
 e-mail: privacy@drud.com
+```
 
 **Editing, Deleting and Modification.** Drud reserves the right to change, edit, or delete any documents, information, or Materials appearing on the Site.
 
@@ -83,7 +76,7 @@ e-mail: privacy@drud.com
 
 **WARRANTY DISCLAIMER.** THE SITE AND THE MATERIALS ARE PROVIDED "AS IS" AND "AS AVAILABLE." TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, DRUD AND ITS AFFILIATED PARTIES DISCLAIM ALL WARRANTIES EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE, OR MERCHANTABILITY.  DRUD DOES NOT WARRANT THAT THE SITE OR MATERIALS WILL BE UNINTERRUPTED, ERROR-FREE, CORRECT, ACCURATE, OR RELIABLE, THAT DEFECTS WILL BE CORRECTED, THAT THERE ARE NO VIRUSES OR OTHER HARMFUL COMPONENTS, OR THAT SECURITY METHODS EMPLOYED WILL BE SUFFICIENT.
 
-**LIMITATION OF LIABILITY. ** IN NO EVENT WILL DRUD OR AFFILIATED PARTIES BE LIABLE FOR ANY LOSS OF USE, LOSS OF PROFITS, INTERRUPTION OF BUSINESS, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, OR SPECIAL DAMAGES ARISING HEREFROM OR RELATED HERETO IN ANY CAUSES OF ACTION OF ANY KIND, EVEN IF DRUD WAS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF SUCH DAMAGES. DRUD’S AGGREGATE LIABILITY TO YOU FOR EVERY REASON UNDER THESE TERMS WILL BE LIMITED TO US\$50.00.  NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, YOU OBTAIN FROM US FROM OR THROUGH THE SITE OR MATERIALS WILL CREATE ANY WARRANTY, REPRESENTATION, OR GUARANTEE NOT EXPRESSLY STATED IN THESE TERMS.
+**LIMITATION OF LIABILITY.** IN NO EVENT WILL DRUD OR AFFILIATED PARTIES BE LIABLE FOR ANY LOSS OF USE, LOSS OF PROFITS, INTERRUPTION OF BUSINESS, INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, OR SPECIAL DAMAGES ARISING HEREFROM OR RELATED HERETO IN ANY CAUSES OF ACTION OF ANY KIND, EVEN IF DRUD WAS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF SUCH DAMAGES. DRUD’S AGGREGATE LIABILITY TO YOU FOR EVERY REASON UNDER THESE TERMS WILL BE LIMITED TO US\$50.00.  NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, YOU OBTAIN FROM US FROM OR THROUGH THE SITE OR MATERIALS WILL CREATE ANY WARRANTY, REPRESENTATION, OR GUARANTEE NOT EXPRESSLY STATED IN THESE TERMS.
 
 **Links to Other Websites; Third Party Materials.** The Site and Materials may now, or hereafter, contain links to third-party websites or content provided third parties, including User Submissions, as defined below (collectively, "Third Party Materials"). Drud does not control, investigate, monitor, or check such Third Party Materials.  Drud is not responsible for the Third Party Materials or opinions expressed therein.  The inclusion of Third Party Materials on the Site does not imply approval or endorsement of such Third Party Materials by Drud. If you decide to leave the Site and access any Third Party Materials, you do so at your own risk.  The Third Party Materials may be subject to the terms of third party license agreements that may be made available to you when you view or download the applicable Third Party Materials.
 
@@ -99,9 +92,9 @@ Any unreleased services or features discussed on the Site are not currently avai
 
 You are expressly prohibited from collecting information about other users of the Site, Materials, or Service for the purpose of sending, or to facilitate the sending of, unsolicited bulk communication, advertising, promotional materials, junk mail, spam, chain letters, pyramid schemes, or any other solicitation to other users of the Site.   Drud retains the right to remove or correct any posting that violates these Terms or Drud’s policies, at its sole discretion.  Certain User Submissions may be subject to additional terms and requirements.
 
-**Export Compliance. ** The Materials and derivatives thereof may be subject to export and import laws and regulations of the United States and other jurisdictions. You represent that you are not named on any U.S. government denied-party list. You will not permit any access or use any Materials in or from a U.S.-embargoed country (currently Cuba, Iran, North Korea, Sudan, and Syria) or in violation of any export or import law or regulation of any jurisdiction.
+**Export Compliance.** The Materials and derivatives thereof may be subject to export and import laws and regulations of the United States and other jurisdictions. You represent that you are not named on any U.S. government denied-party list. You will not permit any access or use any Materials in or from a U.S.-embargoed country (currently Cuba, Iran, North Korea, Sudan, and Syria) or in violation of any export or import law or regulation of any jurisdiction.
 
-**Miscellaneous. ** Any cause of action by you with respect to the Site or Materials must be instituted within one (1) year after the cause of action arose or be forever waived and barred. All actions will be subject to the limitations set forth under "Warranty Disclaimer" and "Limitation of Liability" above. The language in these Terms will be interpreted as to its fair meaning and not strictly for or against you or us. Should any part of these Terms be held invalid or unenforceable, that portion will be construed consistent with applicable law and the remaining portions will remain in full force and effect. To the extent that anything in or associated with the Site or Materials is in conflict or inconsistent with these Terms, these Terms will take precedence. Our failure to enforce any provision of these Terms will not be deemed a waiver of such provision.
+**Miscellaneous.** Any cause of action by you with respect to the Site or Materials must be instituted within one (1) year after the cause of action arose or be forever waived and barred. All actions will be subject to the limitations set forth under "Warranty Disclaimer" and "Limitation of Liability" above. The language in these Terms will be interpreted as to its fair meaning and not strictly for or against you or us. Should any part of these Terms be held invalid or unenforceable, that portion will be construed consistent with applicable law and the remaining portions will remain in full force and effect. To the extent that anything in or associated with the Site or Materials is in conflict or inconsistent with these Terms, these Terms will take precedence. Our failure to enforce any provision of these Terms will not be deemed a waiver of such provision.
 
 **Dispute Resolution.**  These Terms will be governed by the laws of the State of Colorado, excluding conflicts of laws principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply to these Terms.  In the event of a dispute, Drud encourages you first to contact Drud to resolve your problem directly with us. You may contact Drud regarding any complaints or disputes at privacy@drud.com.
 

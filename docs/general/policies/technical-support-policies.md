@@ -74,25 +74,14 @@ Customers may request escalation of a specific support issue directly within the
 
 ---
 
+<!-- https://www.tablesgenerator.com/markdown_tables# -->
 ## Service Level Agreements (SLAs)
-
-Initial Response Time
-
-Urgent
-
-60 minutes 24x7
-
-High
-
-2 hours 24x5
-
-Medium
-
-4 hours 24x5
-
-Low
-
-8 hours 24x5
+|        | Initial Response Time |
+| -----: | --------------------- |
+| Urgent | 60 minutes 24x7       |
+|   High | 2 hours 24x5          |
+| Medium | 4 hours 24x5          |
+|    Low | 8 hours 24x5          |
 
 ---
 
@@ -100,25 +89,17 @@ Low
 
 The overall level of support available for a particular product and platform combination may vary from version to version.
 
-###
-
 ### Problem Resolution Support
 
 Problem Resolution Support is available for all supported products, regardless of platform.
-
-###
 
 ### Consultative Support
 
 Consultative Support is available for all Drud Tech products regardless of platform.
 
-###
-
 ### Engineering Support
 
 Engineering Support is available on those platforms for which we or our partners produce supported product binaries, subject to the relevant Maintenance and Lifecycle policies for the specific product and platform. Engineering Support is unavailable for products or platforms that have reached their maintenance end of life.
-
-###
 
 ### Exclusions and Limitations
 
