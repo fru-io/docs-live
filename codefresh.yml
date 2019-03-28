@@ -9,7 +9,7 @@ steps:
     dockerfile: Dockerfile
   RunningCodeFreshDeploy:
     title: Running FreshDesk Deploy
-    image: drud/docs
+    image: ${{BuildingDockerImage}}
     commands:
       - npm install
       - npm run push
