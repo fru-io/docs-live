@@ -7,3 +7,9 @@ steps:
     working_directory: ./
     tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
     dockerfile: Dockerfile
+  RunningCodeFreshDeploy:
+    title: Running FreshDesk Deploy
+    image: node:11
+    commands:
+      - npm install
+      - npm run deploy
