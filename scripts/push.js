@@ -3,9 +3,10 @@ const _ = require("lodash")
 const path = require("path")
 const showdown = require("showdown")
 const fm = require("front-matter")
+const striptags = require("striptags")
 const DDEVFreshdesk = require("./freshdesk")
 
-const converter = new showdown.Converter()
+const converter = new showdown.Converter({tables: true, strikethrough: true, simplifiedAutoLink: true})
 const freshdesk = new DDEVFreshdesk("https://drudtech.freshdesk.com", process.env.FRESHDESKAPITOKEN)
 
 // validate path to search for support docs
@@ -17,32 +18,49 @@ if (process.argv.length <= 2) {
 // recursive function to collect all document files
 const findSupportDocs = (dir, filelist = []) => {
     fs.readdirSync(dir).forEach(file => {
-        filelist = fs.statSync(path.join(dir, file)).isDirectory()
-            ? findSupportDocs(path.join(dir, file), filelist)
-            : filelist.concat({
-                path: path.join(dir, file),
-                meta: fm( fs.readFileSync(path.join(dir, file), "utf8") ).attributes,
-                body: converter.makeHtml(fm( fs.readFileSync(path.join(dir, file), "utf8") ).body)
-            })
+        filePath = path.join(dir, file)
+
+        if (fs.statSync(filePath).isDirectory()) {
+            filelist = findSupportDocs(filePath, filelist)
+        } else {
+            markdown = fm( fs.readFileSync(filePath, "utf8") )
+
+            // filter out non freshdesk content
+            if (markdown.attributes.freshdesk) {
+                filelist = filelist.concat({
+                    path: filePath,
+                    ...markdown.attributes.freshdesk,
+                    description: converter.makeHtml(markdown.body),
+                    description_text: striptags(converter.makeHtml(markdown.body))
+                })
+            }
+
+        }
     })
+
     return filelist
 }
 
+
 // filter all the static content into groups - Categories, Folders, Articles to follow FreshDesk Schema
-let all_freshdesk_content = _.filter(findSupportDocs(process.argv[2]), "meta.freshdesk")
-let [ doc_categories, doc_category_articles ] = _.partition(all_freshdesk_content, [ "meta.freshdesk.taxonomy", "category" ])
-let [ doc_folders, filtered_articles ] = _.partition(doc_category_articles, [ "meta.freshdesk.taxonomy", "folder" ])
+const [ doc_categories, doc_category_articles ] = _.partition(findSupportDocs(process.argv[2]), [ "taxonomy", "category" ])
+const [ doc_folders, filtered_articles ] = _.partition(doc_category_articles, [ "taxonomy", "folder" ])
 
 // Categories
 _.forEach(doc_categories, (category) => {
-    const {name, id, description, visible_in_portals} = category.meta.freshdesk
+    const {
+        name = '',
+        id = null,
+        description = '',
+        visible_in_portals = []
+    } = category
+
     // if category exists
     if (_.isNumber(id)) {
         // update category
         freshdesk.updateSolutionsCategory(id, {
             name,
             description,
-            visible_in_portals
         }, function (err, data) {
             console.log(err || data)
         })
@@ -51,7 +69,6 @@ _.forEach(doc_categories, (category) => {
         freshdesk.createSolutionsCategory({
             name,
             description,
-            visible_in_portals
         }, function (err, data) {
             console.log(err || data)
         })
@@ -61,7 +78,15 @@ _.forEach(doc_categories, (category) => {
 
 // Folders
 _.forEach(doc_folders, (folder) => {
-    const {name, id, category_id, description, visibility, company_ids} = folder.meta.freshdesk
+    const {
+        name = '',
+        id = null,
+        category_id = null,
+        description = '',
+        visibility = 3, // agents
+        company_ids = []
+    } = folder
+
     // if folder exists
     if (_.isNumber(id)) {
         // update folder
@@ -69,7 +94,6 @@ _.forEach(doc_folders, (folder) => {
             name,
             description,
             visibility,
-            company_ids
         }, function (err, data) {
             console.log(err || data)
         })
@@ -79,7 +103,6 @@ _.forEach(doc_folders, (folder) => {
             name,
             description,
             visibility,
-            company_ids
         }, function (err, data) {
             console.log(err || data)
         })
@@ -89,15 +112,16 @@ _.forEach(doc_folders, (folder) => {
 // Articles
 _.forEach(filtered_articles, (article) => {
     const {
-        title,
-        id,
-        description,
-        type,
-        folder_id,
-        agent_id,
-        status,
-        tags
-    } = article.meta.freshdesk
+        title = '',
+        id = null,
+        description = '',
+        type = 2,
+        folder_id = null,
+        agent_id = 36000369419, // kbridges user ID
+        status = 1,
+        tags = []
+    } = article
+
     // if article exists
     if (_.isNumber(id)) {
         // update article
@@ -106,8 +130,7 @@ _.forEach(filtered_articles, (article) => {
             description,
             type,
             agent_id,
-            status,
-            tags
+            status
         }, function (err, data) {
             console.log(err || data)
         })
@@ -118,10 +141,10 @@ _.forEach(filtered_articles, (article) => {
             description,
             type,
             agent_id,
-            status,
-            tags
+            status
         }, function (err, data) {
             console.log(err || data)
         })
     }
+
 })

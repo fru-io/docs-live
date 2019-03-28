@@ -16,7 +16,7 @@ freshdesk:
 
 # API account
 
-If you do not have API credentials, please[open a ticket]("https://support.drud.com/support/tickets/new") and request one. We'll create an account, notifying you to set your password.
+If you do not have API credentials, please[open a ticket](https://support.drud.com/support/tickets/new) and request one. We'll create an account, notifying you to set your password.
 
 ## API documentation
 
@@ -24,7 +24,7 @@ Our API and its documentation are in active development. Attached below is a Swa
 
 ## Authentication
 
-The ddev-live API uses JWTs as an API token. You can request a JWT by submitting a POST request to [/user]("https://api.ddev-live.drud.io/docs/#/auth/login")
+The ddev-live API uses JWTs as an API token. You can request a JWT by submitting a POST request to [/user](https://api.ddev-live.drud.io/docs/#/auth/login)
 
 You'll receive a long string of letters and numbers back from that request, and that's what you'll need to include in authenticated requests to other API endpoints. The header that you'll need to send should look like this:
 

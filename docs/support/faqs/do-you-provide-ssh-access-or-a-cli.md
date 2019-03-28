@@ -18,7 +18,7 @@ No, we do not currently provide SSH access for security reasons.
 
 We currently provide:
 
-- [an API]("https://support.drud.com/support/solutions/articles/36000106931-working-with-the-api") to allow clients to access common workflow processes (such as environment sync, backup, and restore)
+- [an API](https://support.drud.com/support/solutions/articles/36000106931-working-with-the-api) to allow clients to access common workflow processes (such as environment sync, backup, and restore)
 - a hook system - **@TODO - link to Hook docs**
 
 We will be support

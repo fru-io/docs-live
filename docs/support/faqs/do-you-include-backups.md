@@ -16,6 +16,6 @@ freshdesk:
 
 Yes, all of our hosting plans include backups. Daily backups are provided for a week; weekly backups are provided for a month.
 
-Backups run nightly and can be accessed directly from your [s3 bucket]("https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html"). To browse these files, download an SFTP client like [Cyberduck]("https://cyberduck.io/") and enter the AWS credentials from the 1Password AWS note.
+Backups run nightly and can be accessed directly from your [s3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html). To browse these files, download an SFTP client like [Cyberduck](https://cyberduck.io/) and enter the AWS credentials from the 1Password AWS note.
 
 Alternatively, you can bring your own S3 bucket and we’ll configure DDEV Live to automatically upload backups to it. In this case, our backup retention policy is disabled and you’ll handle backup retention per your business requirements.

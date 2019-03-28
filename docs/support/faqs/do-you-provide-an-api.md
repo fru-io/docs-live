@@ -16,4 +16,4 @@ freshdesk:
 
 Yes, we have a public API that is in active development.
 
-Please [see this page]("https://support.drud.com/support/solutions/articles/36000106931-working-with-the-api") for instructions on working with our API.
+Please [see this page](https://support.drud.com/support/solutions/articles/36000106931-working-with-the-api) for instructions on working with our API.

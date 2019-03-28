@@ -32,7 +32,7 @@ Please review these Terms carefully. If you do not agree to these Terms, you hav
 
 5.  You may not use the Site or Materials in any manner that negatively impacts Drud or its authorized users.
 
-**Privacy.**  By accessing the Site or reviewing the Materials, you represent that you have read and agree to the terms of the Drud Privacy Policy for which a link is provided at the bottom of this page and available at [www.drud.com/privacy-policy/]("http://www.drud.com/privacy-policy/")  ("Privacy Policy"). By agreeing to these Terms you consent to Drud’s collection, use, storage, and disclosure of information associated with your use of the Site and Materials in accordance with the Privacy Policy.
+**Privacy.**  By accessing the Site or reviewing the Materials, you represent that you have read and agree to the terms of the Drud Privacy Policy for which a link is provided at the bottom of this page and available at [www.drud.com/privacy-policy/](http://www.drud.com/privacy-policy/)  (Privacy Policy). By agreeing to these Terms you consent to Drud’s collection, use, storage, and disclosure of information associated with your use of the Site and Materials in accordance with the Privacy Policy.
 
 **Ownership.** Subject to the limited rights expressly granted herein, Drud reserves all rights, title, and interest in and to the Site and Materials, including all related intellectual property rights.
 

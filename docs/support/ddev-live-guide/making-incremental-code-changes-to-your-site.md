@@ -24,16 +24,16 @@ The first is your “source of truth”  repository that you already use to man
 
 The second repository is the accompanying GitLab remote that DDEV-Live provides to you in 1password. When you’re ready to push your code to a DDEV-Live environment, you just push to that remote.
 
-_While not required, we strongly recommend you **make your changes locally first. [DDEV-Local]("https://ddev.readthedocs.io/en/stable/") makes it easy to stand up a local instance of your site for testing and making changes, and provides [integration with DDEV-Live]("https://ddev.readthedocs.io/en/stable/users/providers/drud-s3/")**._
+_While not required, we strongly recommend you **make your changes locally first. [DDEV-Local](https://ddev.readthedocs.io/en/stable/) makes it easy to stand up a local instance of your site for testing and making changes, and provides [integration with DDEV-Live](https://ddev.readthedocs.io/en/stable/users/providers/drud-s3/)**._
 
 The high-level DDEV-Live workflow is:
 
 1.  Commit and push your changes to the appropriate branch/repo for your site in your “source of truth” repository. *You always push to this location first to ensure it serves as the source of truth for your site.*
 2.  Once your repo has been updated, commit and push the changes again to the DDEV-Live GitLab repository for your site. _Be sure to push to the correct branch - in many cases a production and staging branch will be available. It is always advised to push and test first to a staging branch when available)._
 
-_For more background on how repositories work on DDEV-Live, [see this FAQ]("https://support.drud.com/support/solutions/articles/36000070126-do-you-provide-version-control-for-managing-my-site-")._
+_For more background on how repositories work on DDEV-Live, [see this FAQ](https://support.drud.com/support/solutions/articles/36000070126-do-you-provide-version-control-for-managing-my-site-)._
 
-_Depending on your workflow and/or the changes you are making to your site, you may prefer to [push and deploy entire backup assets]("https://support.drud.com/support/solutions/articles/36000106500-making-and-pushing-changes-via-backups")._
+_Depending on your workflow and/or the changes you are making to your site, you may prefer to [push and deploy entire backup assets](https://support.drud.com/support/solutions/articles/36000106500-making-and-pushing-changes-via-backups)._
 
 ## To Commit and Push Changes to Your GitLab Repository:
 
@@ -63,4 +63,4 @@ A notable examples are legacy systems that run a composer install, npm install, 
 
 If this will not work for your requirements, please let us know. We can work with you to set up Jenkins (or a similar tool) to run a build step for you, and then push the result to your DDEV-LIVE Git endpoint.
 
-_Note: it is best practice_ [to exclude any large files]("https://git-scm.com/docs/gitignore_") *(images, pdfs, etc.) from your Git repository.*
+_Note: it is best practice_ [to exclude any large files](https://git-scm.com/docs/gitignore_) *(images, pdfs, etc.) from your Git repository.*

@@ -27,7 +27,7 @@ Once you've validated that the production site looks good, let us know that you 
   - A Record: @ | 35.169.15.168
   - A Record: @ | 52.0.29.214
 
-* www subdomain ([www.]("http://www.drupaleasy.com/")yoursite.com):
+* www subdomain ([www.](http://www.drupaleasy.com/)yoursite.com):
   - CNAME Record: www | live.drud.com
 
 * subdomain (subdomain.yoursite.com)

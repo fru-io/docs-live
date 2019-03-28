@@ -14,4 +14,4 @@ freshdesk:
   tags: [] # tags	array of strings	Tags that have been associated with the solution article
 ---
 
-Please subscribe to [https://status.drud.com/]("https://status.drud.com/") for platform status notifications, planned releases, and maintenance updates.
+Please subscribe to [https://status.drud.com/](https://status.drud.com/) for platform status notifications, planned releases, and maintenance updates.

@@ -14,13 +14,13 @@ freshdesk:
   tags: [] # tags	array of strings	Tags that have been associated with the solution article
 ---
 
-DDEV-Live provides free TLS certificates for every site launched on the platform through [Let's Encrypt]("https://letsencrypt.org"). Unless you specifically request that a given site _not_ be served over HTTPS, we will enable HTTPS and provision a certificate automatically. Please note: at this time we do _not_ serve a redirect from HTTP to HTTPS, so your application code will need to handle that.
+DDEV-Live provides free TLS certificates for every site launched on the platform through [Let's Encrypt](https://letsencrypt.org). Unless you specifically request that a given site _not_ be served over HTTPS, we will enable HTTPS and provision a certificate automatically. Please note: at this time we do _not_ serve a redirect from HTTP to HTTPS, so your application code will need to handle that.
 
 In order to provision a certificate for a particular hostname, DNS for that hostname must be pointed at the ddev-live platform.
 
 ## Limitations
 
-The main limitations to be aware of are detailed on the [Let's Encrypt Rate Limits]("https://letsencrypt.org/docs/rate-limits/") page. These rate limits affect how quickly large numbers of sites can be moved onto the platform.
+The main limitations to be aware of are detailed on the [Let's Encrypt Rate Limits](https://letsencrypt.org/docs/rate-limits/) page. These rate limits affect how quickly large numbers of sites can be moved onto the platform.
 
 The amount of time that it takes from the point where DNS has been switched to the point where a certificate has been issued can vary from 30 seconds up to 30 minutes, depending on how many others sites are requesting certificates at that exact moment in time. This is a fully automated process that will begin as soon as DNS has propagated. In the interim, the site will be served with a dummy certificate that will cause an error to be shown in most browsers if a user attempts to access the site via HTTPS.
 

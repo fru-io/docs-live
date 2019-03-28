@@ -16,4 +16,4 @@ freshdesk:
 
 DDEV-Live currently supports PHP `7.0`, `7.1`, and `7.3` for websites.
 
-_PHP `5.6` is **[end-of-life]("http://php.net/supported-versions.php")** and no longer supported._
+_PHP `5.6` is **[end-of-life](http://php.net/supported-versions.php)** and no longer supported._

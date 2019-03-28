@@ -24,6 +24,6 @@ However, you aren't required to use those branch names: you _could_ push your ma
 
 _Note: you don’t need to maintain a linear history for deployments. If you `force push` a branch with a single, giant commit of all of your code, that’s what will be deployed._
 
-For detailed directions on making code changes on DDEV-Live, [see this page]("https://support.drud.com/support/solutions/articles/36000106365-making-incremental-code-changes-to-your-site").
+For detailed directions on making code changes on DDEV-Live, [see this page](https://support.drud.com/support/solutions/articles/36000106365-making-incremental-code-changes-to-your-site).
 
-For more on remotes, see [https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes]("https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes").
+For more on remotes, see [https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).

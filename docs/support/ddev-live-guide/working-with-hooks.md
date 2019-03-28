@@ -73,7 +73,7 @@ Supported Hooks: `pre-deploy` | `post-deploy`
 
 ### Drush Commands
 
-The `drush` action allows you to execute [drush]("https://www.drush.org/") commands, which are useful for managing Drupal 6, 7, and 8 sites. Drush commands are automatically configured to run in non-interactive context and are configured to run in the docroot of your project. These commands are run with your site codebase bootstrapped.
+The `drush` action allows you to execute [drush](https://www.drush.org/) commands, which are useful for managing Drupal 6, 7, and 8 sites. Drush commands are automatically configured to run in non-interactive context and are configured to run in the docroot of your project. These commands are run with your site codebase bootstrapped.
 
 Key: `drush` Value: (string) drush command arguments and flags Supported Hooks: `pre-deploy` | `post-deploy`
 
@@ -81,7 +81,7 @@ Key: `drush` Value: (string) drush command arguments and flags Supported Hooks: 
 
 ### WP-CLI Commands
 
-The `wp` action allows you to execute [WP-CLI]("https://wp-cli.org/") commands, which are useful for managing WordPress sites. WP-CLI commands are automatically configured to run in the docroot of your project.
+The `wp` action allows you to execute [WP-CLI](https://wp-cli.org/) commands, which are useful for managing WordPress sites. WP-CLI commands are automatically configured to run in the docroot of your project.
 
 Key: `wp` Value: (string) wp command arguments and flags Supported Hooks: `pre-deploy` | `post-deploy`
 

@@ -14,4 +14,4 @@ freshdesk:
   tags: [] # tags	array of strings	Tags that have been associated with the solution article
 ---
 
-draft - see [https://docs.google.com/document/d/1PMLrUZKjUviZHgPOSPz1lknTTJbF2qw6VW8IvN5QGNs/edit]("https://docs.google.com/document/d/1PMLrUZKjUviZHgPOSPz1lknTTJbF2qw6VW8IvN5QGNs/edit")
+draft - see [https://docs.google.com/document/d/1PMLrUZKjUviZHgPOSPz1lknTTJbF2qw6VW8IvN5QGNs/edit](https://docs.google.com/document/d/1PMLrUZKjUviZHgPOSPz1lknTTJbF2qw6VW8IvN5QGNs/edit)

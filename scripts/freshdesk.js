@@ -16,7 +16,7 @@ class DDEVFreshdesk extends Freshdesk {
     }
 
     createSolutionsCategory(data, cb) {
-        makeRequest("PUT", this._auth, `${this.baseUrl}/api/v2/solutions/categories`, null, data, cb)
+        makeRequest("POST", this._auth, `${this.baseUrl}/api/v2/solutions/categories`, null, data, cb)
     }
 
     updateSolutionsCategory(id, data, cb) {
@@ -28,7 +28,7 @@ class DDEVFreshdesk extends Freshdesk {
     }
 
     createSolutionsFolder(id, data, cb) {
-        makeRequest("PUT", this._auth, `${this.baseUrl}/api/v2/solutions/categories/${id}/folders`, null, data, cb)
+        makeRequest("POST", this._auth, `${this.baseUrl}/api/v2/solutions/categories/${id}/folders`, null, data, cb)
     }
 
     updateSolutionsFolder(id, data, cb) {
@@ -44,7 +44,7 @@ class DDEVFreshdesk extends Freshdesk {
     }
 
     createArticle(id, data, cb) {
-        makeRequest("PUT", this._auth, `${this.baseUrl}/api/v2/solutions/folders/${id}/articles`, null, data, cb)
+        makeRequest("POST", this._auth, `${this.baseUrl}/api/v2/solutions/folders/${id}/articles`, null, data, cb)
     }
 
     updateArticle(id, data, cb) {

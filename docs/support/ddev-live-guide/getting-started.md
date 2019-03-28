@@ -18,13 +18,13 @@ freshdesk:
 
 # Access and Setup
 
-After signing up for a plan, Drud will invite you to join our [support ticket system]("http://support.drud.com") and send you an [invite to our API]("https://support.drud.com/support/solutions/articles/36000106931-working-with-the-api").
+After signing up for a plan, Drud will invite you to join our [support ticket system](http://support.drud.com) and send you an [invite to our API](https://support.drud.com/support/solutions/articles/36000106931-working-with-the-api).
 
 ---
 
 ## Setting Up Your S3 Bucket
 
-First, install [s3cmd]("https://s3tools.org/s3cmd"):
+First, install [s3cmd](https://s3tools.org/s3cmd):
 
 * Linux:
   `sudo apt-get install s3cmd`
@@ -33,7 +33,7 @@ First, install [s3cmd]("https://s3tools.org/s3cmd"):
   `brew install s3cmd`
 
 * Windows:
-  Download and install [http://sourceforge.net/projects/s3tools/files/s3cmd/]("http://sourceforge.net/projects/s3tools/files/s3cmd/")
+  Download and install [http://sourceforge.net/projects/s3tools/files/s3cmd/](http://sourceforge.net/projects/s3tools/files/s3cmd/)
 
 Then, upload your files:
 
@@ -50,6 +50,6 @@ _where <**access_key**> is your S3 access key, <**secret**> is your S3 secret,
 ## Provisioning Your Site
 ---
 
-- Once uploaded to S3, please [submit a ticket]("https://support.drud.com/support/tickets/new") and ask us to provision your site on DDEV-Live. _Please indicate the location of the file(s) in S3 to be used in the restore._
+- Once uploaded to S3, please [submit a ticket](https://support.drud.com/support/tickets/new) and ask us to provision your site on DDEV-Live. _Please indicate the location of the file(s) in S3 to be used in the restore._
 
-- We'll let you know when it's ready. Then visit your site’s preview URL to [begin working with your site]("https://support.drud.com/support/solutions/articles/36000106365-working-with-ddev-live-sites").
+- We'll let you know when it's ready. Then visit your site’s preview URL to [begin working with your site](https://support.drud.com/support/solutions/articles/36000106365-working-with-ddev-live-sites).
