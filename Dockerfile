@@ -10,6 +10,9 @@ RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
 # Installing all dependencies
 RUN npm install
 
+# Running deploy step
+RUN npm run push
+
 # Copying application code
 COPY . /app
 
@@ -23,9 +26,6 @@ COPY --from=builder /tmp/node_modules /app/node_modules
 
 # Copying application code
 COPY . /app
-
-# Running deploy step
-CMD npm run push
 
 # start the node web server
 # CMD npm start
