@@ -1,7 +1,10 @@
 version: "3"
 
 services:
-  example-service:
+  base:
+    container_name: ddev_docs
+    environment:
+      - FRESHDESKAPITOKEN
     build: .
     volumes:
       - .:/usr/src/app
@@ -9,4 +12,4 @@ services:
     ports:
       - 3000:3000
       - 9229:9229
-    command: npm run push
+    command: npm start

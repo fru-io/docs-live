@@ -34,7 +34,6 @@ Front matter allows you to keep metadata attached to an instance of a content ty
   freshdesk:
     name: General                       # string - Name of the solution category
     id: 36000020154                     # number - Unique ID of the solution category
-    description: General Support Docs.  # string - Description of the solution category
     taxonomy: category                  # string - Can be either 'category', 'folder' or empty for articles
     visible_in_portals: []              # array - List of portal IDs where this category is visible
   ```
@@ -47,7 +46,6 @@ Front matter allows you to keep metadata attached to an instance of a content ty
     name: Policies            # name - string	Name of the solution folder
     id: 36000030822           # number - Unique ID of the solution folder id
     category_id: 36000020154  # number - Unique ID of the solution category id
-    description:              # string - Description of the solution folder
     visibility: 1             # number - Accessibility of this folder.
     taxonomy: folder          # string - Can be either 'category', 'folder' or empty for articles
     company_ids: []           # array - IDs of the companies to whom this solution folder is visible
@@ -60,8 +58,6 @@ Front matter allows you to keep metadata attached to an instance of a content ty
   freshdesk:
     title: Acceptable Use Policy  # string - Title of the solution article
     id: 36000062122               # number - Unique ID of the solution article
-    description:                  # string - Description of the solution article
-    description_text:             # string - Description of the solution article in plain text
     type: 1                       # number - The type of the solution article
     category_id: 36000020154      # number - ID of the category to which the solution article belongs
     folder_id: 36000030822        # number - ID of the folder to which the solution article belongs
@@ -89,5 +85,9 @@ Requires node >= 10 and npm >= 5
 ### Docker
 Requires Docker installed and running.
 
-`docker-compose up` then `docker-compose exec 'npm run push'` to deploy your updates.
+To start project - `docker-compose up`
+
+To Deploy Updates - `npm run push:docker` or `docker-compose exec base npm run push`
+
+To Pull Changes from FreshDesk - `npm run sync:docker` or `docker-compose exec base npm run sync`
 

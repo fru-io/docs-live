@@ -1,19 +1,18 @@
 ---
-title: Do you support CDNs?
-description:
+title: 'Do you support CDNs?'
+description: null
 freshdesk:
-  title: Do you support CDNs? # title	string	Title of the solution article
-  id: 36000108916 # id	number	Unique ID of the solution article
-  description: # description	string	Description of the solution article
-  description_text: # description_text	string	Description of the solution article in plain text
-  type: 1 # type	number	The type of the solution article
-  category_id: 36000115505 # category_id	number	ID of the category to which the solution article belongs
-  folder_id: 36000178516 # folder_id	number	ID of the folder to which the solution article belongs
-  agent_id: 36007655997 # agent_id	number	ID of the agent who created the solution article
-  status: 2 # status	number	Status of the solution article
-  tags: [] # tags	array of strings	Tags that have been associated with the solution article
+    title: 'Do you support CDNs?'
+    id: 36000108916
+    type: 1
+    category_id: 36000115505
+    folder_id: 36000178516
+    agent_id: 36007655997
+    status: 2
+    tags: []
 ---
 
 Yes, DDEV Live provides the ability to integrate with CDN services, like Cloudfront and Cloudflare.
 
 If you currently use Cloudflare to manage your DNS settings, you can keep that in place without issue, on DDEV Live.
+

@@ -6,7 +6,13 @@ const fm = require("front-matter")
 const striptags = require("striptags")
 const DDEVFreshdesk = require("./freshdesk")
 
-const converter = new showdown.Converter({tables: true, strikethrough: true, simplifiedAutoLink: true})
+const converter = new showdown.Converter({
+    tables: true,
+    strikethrough: true,
+    simplifiedAutoLink: true,
+    omitExtraWLInCodeBlocks: true,
+    disableForced4SpacesIndentedSublists: true
+})
 const freshdesk = new DDEVFreshdesk("https://drudtech.freshdesk.com", process.env.FRESHDESKAPITOKEN)
 
 // validate path to search for support docs
@@ -18,12 +24,12 @@ if (process.argv.length <= 2) {
 // recursive function to collect all document files
 const findSupportDocs = (dir, filelist = []) => {
     fs.readdirSync(dir).forEach(file => {
-        filePath = path.join(dir, file)
+        const filePath = path.join(dir, file)
 
         if (fs.statSync(filePath).isDirectory()) {
             filelist = findSupportDocs(filePath, filelist)
         } else {
-            markdown = fm( fs.readFileSync(filePath, "utf8") )
+            const markdown = fm( fs.readFileSync(filePath, "utf8") )
 
             // filter out non freshdesk content
             if (markdown.attributes.freshdesk) {
@@ -49,10 +55,10 @@ const [ doc_folders, filtered_articles ] = _.partition(doc_category_articles, [ 
 // Categories
 _.forEach(doc_categories, (category) => {
     const {
-        name = '',
+        name = "",
         id = null,
-        description = '',
-        visible_in_portals = []
+        description = "",
+        // visible_in_portals = []
     } = category
 
     // if category exists
@@ -79,12 +85,12 @@ _.forEach(doc_categories, (category) => {
 // Folders
 _.forEach(doc_folders, (folder) => {
     const {
-        name = '',
+        name = "",
         id = null,
         category_id = null,
-        description = '',
+        description = "",
         visibility = 3, // agents
-        company_ids = []
+        // company_ids = []
     } = folder
 
     // if folder exists
@@ -112,14 +118,14 @@ _.forEach(doc_folders, (folder) => {
 // Articles
 _.forEach(filtered_articles, (article) => {
     const {
-        title = '',
+        title = "",
         id = null,
-        description = '',
+        description = "",
         type = 2,
         folder_id = null,
-        agent_id = 36000369419, // kbridges user ID
+        agent_id = 36008255312, // nsmith user ID
         status = 1,
-        tags = []
+        // tags = []
     } = article
 
     // if article exists
@@ -132,7 +138,9 @@ _.forEach(filtered_articles, (article) => {
             agent_id,
             status
         }, function (err, data) {
-            console.log(err || data)
+            if (_.isObject(err))
+                console.log({id, errors: err.data.errors})
+            else console.log(err || data)
         })
     } else {
         // create article
@@ -143,7 +151,9 @@ _.forEach(filtered_articles, (article) => {
             agent_id,
             status
         }, function (err, data) {
-            console.log(err || data)
+            if (_.isObject(err))
+                console.log({id, errors: err.data.errors})
+            else console.log(err || data)
         })
     }
 

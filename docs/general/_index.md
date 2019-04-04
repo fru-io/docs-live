@@ -1,14 +1,14 @@
 ---
-title: General # name	string	Name of the solution category
-description: General Support Docs # description	string	Description of the solution category
+title: General
+description: 'General Support Docs'
 freshdesk:
-  name: General # name	string	Name of the solution category
-  id: 36000020154 # id	number	Unique ID of the solution category
-  description: General Support Docs # description	string	Description of the solution category
-  taxonomy: category
-  visible_in_portals: [] # visible_in_portals	array of numbers	List of portal IDs where this category is visible
+    name: General
+    id: 36000020154
+    taxonomy: category
+    visible_in_portals: []
 ---
 
 # General Notes
 
 General Support Docs
+

@@ -1,24 +1,22 @@
 ---
-title: Technical Support Policies
-description:
+title: 'Technical Support Policies'
+description: null
 freshdesk:
-  title: Technical Support Policies # title	string	Title of the solution article
-  id: 36000003478 # id	number	Unique ID of the solution article
-  description: # description	string	Description of the solution article
-  description_text: # description_text	string	Description of the solution article in plain text
-  type: 1 # type	number	The type of the solution article
-  category_id: 36000020154 # category_id	number	ID of the category to which the solution article belongs
-  folder_id: 36000030822 # folder_id	number	ID of the folder to which the solution article belongs
-  agent_id: 36000369419 # agent_id	number	ID of the agent who created the solution article
-  status: 0 # status	number	Status of the solution article
-  tags: [] # tags	array of strings	Tags that have been associated with the solution article
+    title: 'Technical Support Policies'
+    id: 36000003478
+    type: 1
+    category_id: 36000020154
+    folder_id: 36000030822
+    status: 1
+    tags: []
+    agent_id: 36008255312
 ---
 
 Drud Technology delivers technical support services including Problem Resolution Support, Engineering Support and Consultative Support for DDEV, Drud Preview, Drud Hosting and related products via the Customer Slack Channel.
 
-Each designated technical contact will receive a Customer Slack Channel ID based on the associated email address that can be used to report new support issues, monitor ongoing issues or review historical issues.  Information regarding making changes to technical contacts may be submitted via the Customer Slack Channel or via an email request.
+Each designated technical contact will receive a Customer Slack Channel ID based on the associated email address that can be used to report new support issues, monitor ongoing issues or review historical issues. Information regarding making changes to technical contacts may be submitted via the Customer Slack Channel or via an email request.
 
-All support services are delivered in English.  Drud Tech will use reasonable efforts to provide support in other languages using available personnel but may not have such resources available at the time of the support request.
+All support services are delivered in English. Drud Tech will use reasonable efforts to provide support in other languages using available personnel but may not have such resources available at the time of the support request.
 
 ## Problem Resolution Support
 
@@ -26,21 +24,19 @@ The focus of Problem Resolution Support is helping to restore service and assist
 
 ## Engineering Support
 
-Engineering support can include bug fixes, patches, hotfixes, and topics that require communication with the product engineering team.  Hot fixes are provided to address critical failures and may not receive the full QA and regression testing performed on regular maintenance releases due to the urgent nature of the situation.
+Engineering support can include bug fixes, patches, hotfixes, and topics that require communication with the product engineering team. Hot fixes are provided to address critical failures and may not receive the full QA and regression testing performed on regular maintenance releases due to the urgent nature of the situation.
 
 Custom feature development (Non Recurring Engineering) is a separate service and is not included in Engineering Support
 
 ## Consultative Support
 
-Consultative Support covers issues that are specific to a customer's deployment, such as performance tuning, best practice recommendations and code reviews, rather than general product usage, service failures or software defects.  Drud Tech’s Managed Hosting Service is a separate service and is not included in Consultative Support.
+Consultative Support covers issues that are specific to a customer's deployment, such as performance tuning, best practice recommendations and code reviews, rather than general product usage, service failures or software defects. Drud Tech’s Managed Hosting Service is a separate service and is not included in Consultative Support.
 
 Consultative Support is intended for narrow, specific topics and is not a replacement for a dedicated Professional Services engagement which can address systemic, architectural and other broader topics.
 
 ### Performance Tuning
 
 Drud Tech will provide assistance resolving performance problems caused by configuration, storage engines, and more, suggesting changes and identifying alternative implementations suited to a particular environment.
-
-###
 
 ### CICD Review
 
@@ -74,14 +70,14 @@ Customers may request escalation of a specific support issue directly within the
 
 ---
 
-<!-- https://www.tablesgenerator.com/markdown_tables# -->
 ## Service Level Agreements (SLAs)
-|        | Initial Response Time |
-| -----: | --------------------- |
-| Urgent | 60 minutes 24x7       |
-|   High | 2 hours 24x5          |
-| Medium | 4 hours 24x5          |
-|    Low | 8 hours 24x5          |
+
+|                       | Initial Response Time |
+| :-------------------: | --------------------- |
+| Urgent                | 60 minutes 24x7       |
+| High                  | 2 hours 24x5          |
+| Medium                | 4 hours 24x5          |
+| Low                   | 8 hours 24x5          |
 
 ---
 
@@ -106,3 +102,4 @@ Engineering Support is available on those platforms for which we or our partners
 Support for legacy versions of products that no longer receive Engineering Support may require an additional fee. Support for issues specific to a platform that lacks Engineering Support may be limited to problems that can be reproduced on a platform that has Engineering Support.
 
 Drud Tech makes every commercially reasonable effort to work with other product and platform vendors to resolve issues affecting our supported products.
+

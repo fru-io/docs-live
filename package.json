@@ -9,6 +9,9 @@
   "scripts": {
     "start": "node app.js",
     "push": "node ./scripts/push ./docs",
+    "push:docker": "docker-compose exec base npm run push",
+    "sync": "node ./scripts/sync",
+    "sync:docker": "docker-compose exec base npm run push sync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,8 +29,9 @@
     "freshdesk-api": "^2.5.0",
     "front-matter": "^3.0.1",
     "lodash": "^4.17.11",
-    "showdown": "^1.9.0",
-    "striptags": "^3.1.1"
+    "showdown": "git+https://github.com/showdownjs/showdown.git",
+    "striptags": "^3.1.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^5.15.1"

@@ -1,17 +1,15 @@
 ---
 title: Policies
-description: Company policies.
+description: 'Company policies.'
 freshdesk:
-  title: Acceptable Use Policy # title	string	Title of the solution article
-  id: 36000062122 # id	number	Unique ID of the solution article
-  description: # description	string	Description of the solution article
-  description_text: # description_text	string	Description of the solution article in plain text
-  type: 1 # type	number	The type of the solution article
-  category_id: 36000020154 # category_id	number	ID of the category to which the solution article belongs
-  folder_id: 36000030822 # folder_id	number	ID of the folder to which the solution article belongs
-  agent_id: 36008255312 # agent_id	number	ID of the agent who created the solution article
-  status: 2 # status	number	Status of the solution article
-  tags: [] # tags	array of strings	Tags that have been associated with the solution article
+    title: 'Acceptable Use Policy'
+    id: 36000062122
+    type: 1
+    category_id: 36000020154
+    folder_id: 36000030822
+    agent_id: 36008255312
+    status: 2
+    tags: []
 ---
 
 ## Prohibited Conduct & Activities
@@ -38,8 +36,9 @@ You agree not to misuse the Drud Technology LLC services ("Services") or help an
 
 ## Data Retention
 
-Any backups are performed by Drud as a courtesy to its customers; however, customers should maintain a copy of their files and other materials in the event backups are irretrievable for any reason.  Drud will not be deemed responsible for data or other loss resulting from the unavailability of backups.  Backups will not be retained for accounts that have been cancelled, Drud has a legitimate business interest or legal requirement to retain such backup.
+Any backups are performed by Drud as a courtesy to its customers; however, customers should maintain a copy of their files and other materials in the event backups are irretrievable for any reason. Drud will not be deemed responsible for data or other loss resulting from the unavailability of backups. Backups will not be retained for accounts that have been cancelled, Drud has a legitimate business interest or legal requirement to retain such backup.
 
 ## Reporting
 
-Drud reserves the right to refuse, cancel, or suspend Services that violate this policy at its discretion.  Any violations of this policy may be made via email to privacy@drud.com
+Drud reserves the right to refuse, cancel, or suspend Services that violate this policy at its discretion. Any violations of this policy may be made via email to [privacy@drud.com](<mailto:privacy@drud.com>)
+

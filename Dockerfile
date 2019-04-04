@@ -4,11 +4,11 @@ WORKDIR /app
 
 COPY package.json /app
 
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
+
 # Creating tar of productions dependencies
 RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
-
-# Installing all dependencies
-RUN npm install
 
 # Copying application code
 COPY . /app
@@ -25,4 +25,4 @@ COPY --from=builder /tmp/node_modules /app/node_modules
 COPY . /app
 
 # start the node web server
-# CMD npm start
+CMD npm start
