@@ -9,6 +9,7 @@ const DDEVFreshdesk = require("./freshdesk")
 const converter = new showdown.Converter({
     tables: true,
     strikethrough: true,
+    simpleLineBreaks: true,
     simplifiedAutoLink: true,
     omitExtraWLInCodeBlocks: true,
     disableForced4SpacesIndentedSublists: true
