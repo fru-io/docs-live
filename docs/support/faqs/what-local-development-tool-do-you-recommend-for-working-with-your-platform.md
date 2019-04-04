@@ -14,6 +14,4 @@ freshdesk:
   tags: [] # tags	array of strings	Tags that have been associated with the solution article
 ---
 
-We are quite partial to our own ddev local. Please see the docs here to get started: [https://ddev.readthedocs.io/en/stable/](https://ddev.readthedocs.io/en/stable/)
-
-"
+We are partial to our own open source local development tool, DDEV Local. Please see the docs here to get started: [https://ddev.readthedocs.io/en/stable/](https://ddev.readthedocs.io/en/stable/)
