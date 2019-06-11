@@ -1,6 +1,6 @@
 # DDEV Docs
 
-Documentation repository being used to setup a POC for a company wide implementation of read the docs private plans.
+A documentation repository for user docs on support.drud.com (FreshDesk) and dash.ddev.com (DDEV-Live UI).
 
 ## Document Hierarchy
 ### Organization of Docs Source
@@ -22,7 +22,7 @@ While you can nest content at any level, however the top **2** levels (i.e. `doc
   ```
 
 #### Index Pages: `_index.md`
-`_index.md` has a special role. It allows you to manage the content in FreshDesk for the Category and Folders with front matter data.
+`_index.md` has a special role. It allows you to manage the content in Freshdesk for the Category and Folders with front matter data.
 
 ### Front-Matter
 Front matter allows you to keep metadata attached to an instance of a content type—i.e., embedded inside a content file—and is one of the many features that makes this work.
@@ -62,25 +62,25 @@ Front matter allows you to keep metadata attached to an instance of a content ty
     category_id: 36000020154      # number - ID of the category to which the solution article belongs
     folder_id: 36000030822        # number - ID of the folder to which the solution article belongs
     agent_id: 36008255312         # number - ID of the agent who created the solution article
-    status: 2                     # number - Status of the solution article
+    status: 2                     # number - Status of the solution article: 1 is draft, 2 is published
     tags: []                      # array - Tags that have been associated with the solution article
   ```
 
 
 #### Freshdesk
-In order to support Freshdesk's document hierarchy you will notice above that each piece of content has a `freshdesk` object. Without it, the content will NOT be imported into FreshDesk. Also notice the `taxonomy` value inside the object, for categories/folders. This is what the script looks for to filter out and determine content types. It doesn't look at the folder structure to determine where to place content.
+In order to support Freshdesk's document hierarchy you will notice above that each piece of content has a `freshdesk` object. Without it, the content will NOT be imported into Freshdesk. Also notice the `taxonomy` value inside the object, for categories/folders. This is what the script looks for to filter out and determine content types. It doesn't look at the folder structure to determine where to place content.
 
   **Please Note**
-  - `category_id`, `folder_id`, `agent_id` all come from freshbook manually at this point.
-  - `id` can be left empty to create new article, folder, or category. However please update the repo with the ID, or it will keep creating new content. **All** `id`'s are coming from freshbook manually at this point. Might be best to create the new content manually in freshdesks with no content to get the ID and when you deploy your new markdown it will update the content.
+  - `category_id`, `folder_id`, `agent_id` all come from Freshdesk manually at this point.
+  - `id` can be left empty to create new article, folder, or category. However please update the repo with the ID, or it will keep creating new content. **All** `id`'s are coming from Freshdesk manually at this point. Create the new content manually in Freshdesk with no content to get the ID and when you deploy your new markdown it will update the content.
 
 ## Dev Setup
-Y0u can use this locally or with docker.
+You can use this locally or with Docker.
 
 ### Local NPM/Node
 Requires node >= 10 and npm >= 5
 
-`npm install` then `npm run push` to deply your updates.
+`npm install` then `npm run push` to deploy your updates.
 
 ### Docker
 Requires Docker installed and running.
@@ -89,5 +89,5 @@ To start project - `docker-compose up`
 
 To Deploy Updates - `npm run push:docker` or `docker-compose exec base npm run push`
 
-To Pull Changes from FreshDesk - `npm run sync:docker` or `docker-compose exec base npm run sync`
+To Pull Changes from Freshdesk - `npm run sync:docker` or `docker-compose exec base npm run sync`
 
