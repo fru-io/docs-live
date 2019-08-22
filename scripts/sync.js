@@ -57,7 +57,7 @@ const writeMarkdown = (meta, body) => {
 }
 
 // recursive function to collect all local documents
-const findSupportDocs = (dir = "./docs", filelist = []) => {
+const findSupportDocs = (dir = "./docs/freshdesk", filelist = []) => {
     fs.readdirSync(dir).forEach(file => {
         const filePath = path.join(dir, file)
 
@@ -124,7 +124,7 @@ freshdesk.getSolutionsCategories({}, function (err, fdCategories) {
                     id: null,
                     taxonomy: "category"
                 }, cat),
-                path: `docs/${slugify(cat.name)}/_index.md`
+                path: `docs/freshdesk/${slugify(cat.name)}/_index.md`
             }
 
             // write to a new file
@@ -173,7 +173,7 @@ freshdesk.getSolutionsCategories({}, function (err, fdCategories) {
                             taxonomy: "folder",
                             company_ids: []
                         }, folder),
-                        path: `docs/${slugify(cat.name)}/${slugify(folder.name)}/_index.md`
+                        path: `docs/freshdesk/${slugify(cat.name)}/${slugify(folder.name)}/_index.md`
                     }
 
                     // write to a new file
@@ -232,7 +232,7 @@ freshdesk.getSolutionsCategories({}, function (err, fdCategories) {
                                     status: article.status || 2,
                                     tags: []
                                 }, folder),
-                                path: `docs/${slugify(cat.name)}/${slugify(folder.name)}/${slugify(article.title)}.md`
+                                path: `docs/freshdesk/${slugify(cat.name)}/${slugify(folder.name)}/${slugify(article.title)}.md`
                             }
 
                             // write to a new file

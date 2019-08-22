@@ -12,4 +12,4 @@ steps:
     image: ${{BuildingDockerImage}}
     commands:
       - npm install
-      - npm run push
+      - npm run fd:push

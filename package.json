@@ -2,16 +2,14 @@
   "name": "ddev-docs",
   "version": "1.0.0",
   "description": "DDEV-Live Documentation",
-  "main": "app.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "node app.js",
-    "push": "node ./scripts/push ./docs",
-    "push:docker": "docker-compose exec base npm run push",
-    "sync": "node ./scripts/sync",
-    "sync:docker": "docker-compose exec base npm run push sync",
+    "fd:push": "node ./scripts/push ./docs/freshdesk",
+    "fd:push:docker": "docker-compose exec base npm run push",
+    "fd:sync": "node ./scripts/sync",
+    "fd:sync:docker": "docker-compose exec base npm run push sync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
