@@ -30,7 +30,7 @@ Grant DDEV-Live access to your selected public repositories.
 4. Choose the personal account or organization where you want to install the app, then select the repositories you want DDEV-Live to access. *You or the organization must own the repos*.  
 You will be redirected back to the DDEV-Live UI and the checkbox for the GitHub app will be automatically checked.
 
-🛈 You can change these settings or update your Access Token later in the [DDEV-Live dashboard](https://dash.ddev.com/settings/).
+You can change these settings or add and remove repositories later in the [DDEV-Live dashboard](https://dash.ddev.com/settings/).
 
 ## Step 2 - Install the DDEV-Live CLI
 From the DDEV-Live dashboard, click the **Authenticate via CLI** link to download the DDEV-Live CLI for your operating system. This will download a file named ddev-live.zip.
@@ -48,9 +48,9 @@ From the DDEV-Live dashboard, click the **Authenticate via CLI** link to downloa
 
 ### Verify the installation
 
-Type `ddev-live`. Successful installation will return information on usage and available commands, beginning with the text:  `A command-line client for the DDEV Live hosting platform.`
+Type `ddev-live --version`. Successful installation will return the version of DDEV-Live, for example `ddev-live version v1dev20190823`.
 
-🛈 You can type `ddev-live --help` at any time for more information.
+You can type `ddev-live --help` at any time for more information.
 
 ## Step 3 - Authenticate
 
@@ -59,8 +59,8 @@ Authentication verifies your access to the DDEV-Live platform from your GitHub a
 A browser window opens the DDEV-Live dashboard displaying a confirmation message. The CLI displays `Authentication complete!`
 
 ## Step 4 - Add a site from your GitHub repo
-
-1. Type `ddev-live create drupal-site <orgname>/<site> --github-repo <githubuser>/<reponame>`
+1. Type `ddev-live create drupal-site --help` to view configuration flags.
+2. Type `ddev-live create drupal-site <orgname>/<site> --github-repo <githubuser>/<reponame>`
 >
 |Command|Description |
 |:--|:--|
@@ -76,8 +76,6 @@ The `status > webStatus > urls` section of the output will display the preview u
    The output of `ddev-live get drupal-site <org>/<site>` is helpful to include when contacting support or sending feedback.
 
 4. Navigate to your URL in a browser to confirm your site is displaying as expected.
-
-🛈 Type `ddev-live create drupal-site --help` for additional flags that can be used to set configuration like drupal version, webroot-path, and composer arguments.
 
 ## Step 5 - Working with your site on DDEV-Live
 
