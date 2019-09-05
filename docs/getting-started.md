@@ -1,7 +1,8 @@
-﻿
 # Get Started with DDEV-Live
 
-This tutorial will step you through setting up DDEV-Live as an early access user - from initial account creation to publishing a website on a pre-production URL.
+This tutorial will step you through setting up DDEV-Live as an early access user - from initial account creation to publishing a website on a pre-production URL.  
+
+This tutorial uses Drupal as an example. DDEV-Live will also support PHP and TYPO3.
 
 Steps in the process:
 *   Install the DDEV-Live GitHub App
@@ -10,16 +11,12 @@ Steps in the process:
 *   Add a site from your GitHub repo
 *   Work with your site on DDEV-Live
 
-**Estimated running time:** 20 minutes
-
-## Prerequisites
-*   A GitHub account
-*   A GitHub repo containing a website to use for this tutorial
-
-**Minimum system requirements**
-- macOS Sierra
-- Windows 10
-- Linux
+## You will need
+*  Current, up-to-date operating system (Mac, Linux or Windows)
+*  Internet connection
+*  GitHub account
+*  GitHub repo containing a website to use for this tutorial
+ - The repo should contain a Drupal website, with database and files.
 
 ## Step 1 - Install the DDEV-Live GitHub app
 Grant DDEV-Live access to your selected public repositories.
@@ -54,32 +51,43 @@ Type `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying
 The CLI displays `Authentication complete!`
 
 ## Step 4 - Add a site from your GitHub repo
-View site configuration flags with `ddev-live create drupal-site --help`.
-
-1. Type `ddev-live create drupal-site <orgname>/<site> --github-repo <githubuser>/<reponame>`
-* `orgname` is provided to you by DDEV in your golden ticket email.
-* `site` is the name you want to call this site on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an alphabetic character, and end with an alphanumeric character.|
+Prepare the information you'll need:
+* Your DDEV-Live golden ticket email contains your `orgname`.
+* Decide on the name you want to call your `site` on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an alphabetic character, and end with an alphanumeric character.|
 * `githubuser` is your GitHub username or organization.
-* `reponame` is the GitHub repo you want to connect to DDEV-Live. Default branch is master.|
-The CLI will display feedback while your site is being initialized. It may take a few minutes for your site image to be built.  
-When your site has been successfully created, the CLI displays `Created Drupal site: orgname/sitename`
+* Choose the GitHub `reponame` you want to connect to DDEV-Live. Default branch is master.  
+>For example, the orgname is `org-name`, the site is called `mysite`, the GitHub user is `ghuser` and the repo is `myrepo`.
+
+1. Type `ddev-live create drupal-site <orgname>/<site> --github-repo <githubuser>/<reponame> --webroot-path web` to create the site.
+You can add flags for specific configuration options. Use `ddev-live create drupal-site --help` to see all possible flags and their descriptions.
+
+| Flag | Description      |
+| ----------- | ----------- |
+| `--branch <branchName>`       |Specify the branch of a GitHub repo. The default branch is `master`. |
+| `--webroot-path <path>`    |Specify a non-standard webroot path.   |
+|`--drupal-version <version>`|Specify the Drupal version. The default is Drupal8.|
+| `--run-composer-install`      |Run composer installation on site creation. Composer is not installed on a Drupal site by default.  |
+| `--timeout <int>`        |Set the timeout after which the CLI will hang while waiting for the site creation to complete. The default is 60 seconds.|
+
+   >For example, `ddev-live create drupal-site org-name/mysite --github-repo ghuser/myrepo --drupal-version 8 --webroot-path web --run-composer-install`
+
+   The CLI will display feedback while your site is being initialized. It may take a few minutes for your site image to be built.  
+   When your site has been successfully created, the CLI displays `Created Drupal site: orgname/sitename`
 2. Type `ddev-live get drupal-site <org>/<site>`  
-The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It may take a some time before your site comes online.  
+The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It may take a few minutes for your site to come online.  
 
-   The `status > webStatus > urls` section of the output will display the preview url for your site.  
-
-   Include the output of this command when contacting support or sending feedback.
-
-3. Navigate to your URL in a browser to confirm the site is displaying as expected.
-
+   The `status > webStatus > urls` section of the output will display the preview url for your site.  For example, `https://mysite.orgname.sites.ddev.live/`
+3. Navigate to the URL in a browser to confirm your site is displaying as expected.
 ## Step 5 - Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
-* You can view a list of all the sites within a specified organization with `ddev-live get drupal-site --org <org>`
+* View a list of all the sites within a specified organization with `ddev-live get drupal-site --org <org>`
 * View the state of a specific site with `ddev-live get drupal-site <org>/<site>`
-* Use the `update` sub-command to modify a site. It provides most of the same configuration options as `create`.
+* Use `update` to modify a site. You can use most of the same flags accepted by the `create` command.
+* Use `delete` to delete a site. For example, `ddev-live delete drupal-site <org>/<site>`.
+* Use `push` and `pull` to upload and download files and database assets. See `ddev-live push -h` and `ddev-live pull -h` for more information.
 
 ### Next steps
-Having problems? We’d love to help you be successful with DDEV-Live. Read the FAQs and if you're still having trouble, email our [Support team](mailto:support@drud.com).
+Having problems? We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you're still having trouble, email our [Support team](mailto:support@drud.com).
 
 Have we missed something? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
 
