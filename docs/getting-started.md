@@ -1,94 +1,139 @@
 # Get Started with DDEV-Live
 
-This tutorial will step you through setting up DDEV-Live as an early access user - from initial account creation to publishing a website on a pre-production URL.  
+This tutorial will step you through setting up DDEV-Live as an early access user - from initial account authentication to publishing a website on a pre-production URL.  
 
-This tutorial uses Drupal as an example. DDEV-Live will also support PHP and TYPO3.
+This tutorial uses Drupal as an example. DDEV-Live will generally support other PHP applications and CMSs such as TYPO3.
 
-Steps in the process:
-*   Install the DDEV-Live GitHub App
-*   Install the DDEV-Live CLI
-*   Authenticate
-*   Add a site from your GitHub repo
-*   Work with your site on DDEV-Live
+### Steps in the process:
+* [Install the DDEV-Live GitHub App on your GitHub account](#install-the-ddev-live-github-app)
+* [Install the DDEV-Live CLI on your machine](#install-the-ddev-live-cli)
+* [Verify and Authenticate](#verify-installation-and-authenticate)
+* [Add a site from your connected GitHub repo](#add-a-site-from-your-connected-github-account)
+* [Import a database and files](#import-a-database-and-files)
+* [Work with your site on DDEV-Live](#working-with-your-site-on-ddev-live)
 
-## You will need
-*  Current, up-to-date operating system (Mac, Linux or Windows)
-*  Internet connection
-*  GitHub account
-*  GitHub repo containing a website to use for this tutorial
- - The repo should contain a Drupal website, with database and files.
+### You will need
+* An email from the DDEV team inviting you to access the platform and giving you a personal `<org>` to use in commands below
+* Current, up-to-date operating system (macOS, Linux or Windows).
+* Internet connection.
+* GitHub account.
+* GitHub repository containing a Drupal 7 or 8 project to import for this tutorial. 
+* Export in archive format of your [database](https://ddev.readthedocs.io/en/latest/users/cli-usage/#exporting-a-database "DDEV-Local export db"), and...
+* Unarchived file directories to upload for your project, if applicable. 
 
-## Step 1 - Install the DDEV-Live GitHub app
-Grant DDEV-Live access to your selected public repositories.
+## Install the DDEV-Live GitHub app
+Grant DDEV-Live access to your selected repositories.
 1. In your browser, navigate to [https://dash.ddev.com](https://dash.ddev.com).
-2. If prompted, click the **Login With Github** button. The DDEV-Live UI displays.
-3. In the **Important Links** section, click the **Install Github App** link. A GitHub configuration page displays.
-4. Choose the personal account or organization where you want to install the app, then select the repositories you want DDEV-Live to access. *You or the organization must own the repos*.  
+2. If prompted, click the **Login With Github** button and log in to GitHub if needed. The DDEV-Live UI displays. (You are likely already viewing this guide in the UI at [https://dash.ddev.com/docs/getting-started/](https://dash.ddev.com/docs/getting-started/)).
+3. In the **Important Links** section on the dash homepage, click the **Install Github App** link. A GitHub configuration page displays.
+4. Choose the personal or organization account where you want to install the app, then select the repositories you want DDEV-Live to access and click Install. *You or the organization must own the repositories*.  
 
-You can change these settings or add and remove repositories later in [Settings](https://dash.ddev.com/settings/).
+You can change these settings and add or remove repositories later in [Settings](https://dash.ddev.com/settings/).
 
-## Step 2 - Install the DDEV-Live CLI
-From the DDEV-Live dashboard, click the **Authenticate via CLI** link to download the DDEV-Live CLI for your operating system. This will download a file named ddev-live.zip.
+## Install the DDEV-Live CLI
+From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate via CLI** link for your operating system to download the DDEV-Live CLI. This will download a file named ddev-live.zip.
 
 #### Mac and Linux
-1. Extract ddev-live.zip to a system $PATH location.
-2. Open a Terminal window.
-3. Type `ddev-live`.
+1. Extract ddev-live.zip. For example: `unzip ddev-live.zip`.
+2. Move the resulting ddev-live binary to a directory that is in your $PATH variable. For example:`mv ~/Downloads/ddev-live /usr/local/bin`. You may need to add to your $PATH in your .bash_profile or equivalent.
 
 #### Windows
-1. In Windows Explorer, extract ddev-live.zip to your preferred location.
-2. Run the Command Prompt as an administrator.
-3. Type `cd <filepath>` and specify the location where you extracted ddev-live.exe.
-4. Type `start ddev-live.exe`.
+1. Extract ddev-live.zip to a directory that is in your %PATH% variable. For example, extract to: `C:\Program Files`. You may need to edit and add to the Path environment variable in Advanced System Properties. 
 
-### Verify the installation
-Type `ddev-live --version`. Successful installation will return the version of DDEV-Live, for example `ddev-live version v1dev20190823`.
+### Verify Installation and Authenticate
+Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
+1. In your terminal window, type `ddev-live`. Successful installation will return usage information. Run `ddev-live [command] -h` at any time for details on commands.
+2. Run `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.  
+  The CLI displays `Authentication complete!`.
 
-Get help at any time with `ddev-live --help` to access more information.
-## Step 3 - Authenticate
-Authentication verifies your access to the DDEV-Live platform from your GitHub account.  
-Type `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.  
-The CLI displays `Authentication complete!`
+## Add a site from your connected GitHub account
+#### DDEV-Live default settings. 
+We give additional flags below to use if your project differs from these defaults.
+* Default Drupal version is Drupal 8.
+* Default webroot is the project root (ie the directory from which your site is served).
+* Default branch is master.
+* `composer install` will not run.
 
-## Step 4 - Add a site from your GitHub repo
-Prepare the information you'll need:
-* Your DDEV-Live golden ticket email contains your `orgname`.
-* Decide on the name you want to call your `site` on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an alphabetic character, and end with an alphanumeric character.|
-* `githubuser` is your GitHub username or organization.
-* Choose the GitHub `reponame` you want to connect to DDEV-Live. Default branch is master.  
->For example, the orgname is `org-name`, the site is called `mysite`, the GitHub user is `ghuser` and the repo is `myrepo`.
+#### User-provided values in commands:
+* `<org>` is the DDEV provided value for your unique organization on DDEV-Live. Please see your "Welcome" email for details.
+* `<site>` is what you wish to call your project on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an _alphabetic_ character, and end with an _alphanumeric_ character.
+* `<github-org>` is your connected GitHub user or organization.
+* `<repo-name>` is the connected repo you wish to import.  
 
-1. Type `ddev-live create drupal-site <orgname>/<site> --github-repo <githubuser>/<reponame> --webroot-path web` to create the site.
-You can add flags for specific configuration options. Use `ddev-live create drupal-site --help` to see all possible flags and their descriptions.
+1. To create your project on DDEV-Live and import code from GitHub with the default settings, run: 
+```
+ddev-live create drupal-site <org>/<site> --github-repo <github-org>/<repo-name> [flags]
+```
 
-| Flag | Description      |
-| ----------- | ----------- |
-| `--branch <branchName>`       |Specify the branch of a GitHub repo. The default branch is `master`. |
-| `--webroot-path <path>`    |Specify a non-standard webroot path.   |
-|`--drupal-version <version>`|Specify the Drupal version. The default is Drupal8.|
-| `--run-composer-install`      |Run composer installation on site creation. Composer is not installed on a Drupal site by default.  |
-| `--timeout <int>`        |Set the timeout after which the CLI will hang while waiting for the site creation to complete. The default is 60 seconds.|
+Here is a common example for a Drupal 8 site that requires `composer install`, with the webroot in /web:
+```
+ddev-live create drupal-site my-org/my-site --github-repo my-github/my-repo --webroot-path web --run-composer-install
+```
 
-   >For example, `ddev-live create drupal-site org-name/mysite --github-repo ghuser/myrepo --drupal-version 8 --webroot-path web --run-composer-install`
+You can add flags for specific configuration options. Use `ddev-live create drupal-site --help` to see all possible flags and their descriptions. A few common flags:
 
-   The CLI will display feedback while your site is being initialized. It may take a few minutes for your site image to be built.  
-   When your site has been successfully created, the CLI displays `Created Drupal site: orgname/sitename`
+| Flag | Description |
+| :---- | :----------- |
+| `--drupal-version <version>` |Specify the Drupal version, `<7>` or `<8>`. The default is Drupal 8. |
+| `--webroot-path <path>` |The webroot is the directory from which your site is served. The default is the project root. <br> This value is a relative path from your project root. For Drupal 8, the most common is `--webroot-path web`. |
+| `--run-composer-install` |Runs `composer install` on site creation. <br> The default is that Composer does _not_ run. <br> Further arguments are available with `--composer-args <args>`.|
+| `--branch <branch-name>` |Specify the branch of a GitHub repo. The default branch is `master`. |
+
+The CLI will display feedback while your site is being initialized. It may take a few minutes for your site image to be built.  When your site has been successfully created, the CLI displays: 
+```
+Created Drupal site: <org>/<site>
+```
+
 2. Type `ddev-live get drupal-site <org>/<site>`  
-The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It may take a few minutes for your site to come online.  
+The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It may take a few minutes for all health checks to return "true."  
 
-   The `status > webStatus > urls` section of the output will display the preview url for your site.  For example, `https://mysite.orgname.sites.ddev.live/`
-3. Navigate to the URL in a browser to confirm your site is displaying as expected.
-## Step 5 - Working with your site on DDEV-Live
+The `status > webStatus > urls` section of the output will display the preview url for your site. Visit this link to confirm that your code has been imported. For example, `https://my-site.my-org.sites.ddev.live/`.
+
+## Import a database and files
+Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
+1. Next we will upload your database archive to the site environment.
+```
+ddev-live push db <org>/<site> <path>
+```
+For example, here is a successful command and response, showing your database restore instance name: 
+```
+ddev-live push db my-org/my-site /tmp/db.sql.gz
+Uploaded: /tmp/db.sql.gz
+Initiated backup restore: my-org/my-site-8wbmv
+```
+Use the restore instance to check the status of the restore operation, for example:
+```
+ddev-live get db-backup-status my-org/my-site-8wbmv
+```
+
+2. And now we will upload your files to the site environment. Move into your files directory and push the files using:
+```
+ddev-live push files <org>/<site> .
+```
+For example, here is a successful command and response for a site with the webroot in web, showing your file restore instance name:
+```
+cd web/sites/default/files && ddev-live push files my-org/my-site .
+Uploaded: [files list]
+Initiated files restore: my-org/my-site-t5jn5
+```
+Use the restore instance to check the status of the file restore operation, for example:
+```
+ddev-live get files-backup-status my-org/my-site-t5jn5
+```
+
+3. Visit or refresh your site's URL in the browser to confirm it is displaying as expected. 
+
+## Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
-* View a list of all the sites within a specified organization with `ddev-live get drupal-site --org <org>`
-* View the state of a specific site with `ddev-live get drupal-site <org>/<site>`
-* Use `update` to modify a site. You can use most of the same flags accepted by the `create` command.
-* Use `delete` to delete a site. For example, `ddev-live delete drupal-site <org>/<site>`.
-* Use `push` and `pull` to upload and download files and database assets. See `ddev-live push -h` and `ddev-live pull -h` for more information.
+* View a list of all the sites within a specified organization with `ddev-live get drupal-site --org <org>`.
+* View the state of a specific site with `ddev-live get drupal-site <org>/<site>`.
+* Use `ddev-live update` to modify the GitHub repo or branch to pull from.
+* Use `ddev-live delete` to delete a site. For example, `ddev-live delete drupal-site <org>/<site>`.
+* Use `ddev-live pull` to download project database and files. 
 
 ### Next steps
-Having problems? We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you're still having trouble, email our [Support team](mailto:support@drud.com).
+We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you have any additional questions, email our [Support team](mailto:support@ddev.com).
 
-Have we missed something? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
+What do you think? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
 
-Find out more about [DDEV-Local](https://www.drud.com/ddev-local/).
+Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.
