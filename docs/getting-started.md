@@ -1,4 +1,4 @@
-# Get Started with DDEV-Live
+# Get started with DDEV-Live
 
 This tutorial will step you through setting up DDEV-Live as an early access user - from initial account authentication to publishing a website on a pre-production URL.  
 
@@ -13,7 +13,7 @@ This tutorial uses Drupal as an example. DDEV-Live will generally support other 
 * [Work with your site on DDEV-Live](#working-with-your-site-on-ddev-live)
 
 ### You will need
-* An email from the DDEV team inviting you to access the platform and giving you a personal `<org>` to use in commands below
+* An email from the DDEV team inviting you to access the platform and giving you a personal `<org>` to use in commands below.
 * Current, up-to-date operating system (macOS, Linux or Windows).
 * Internet connection.
 * GitHub account.
@@ -40,7 +40,7 @@ From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate 
 #### Windows
 1. Extract ddev-live.zip to a directory that is in your %PATH% variable. For example, extract to: `C:\Program Files`. You may need to edit and add to the Path environment variable in Advanced System Properties. 
 
-### Verify Installation and Authenticate
+### Verify installation and authenticate
 Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
 1. In your terminal window, type `ddev-live`. Successful installation will return usage information. Run `ddev-live [command] -h` at any time for details on commands.
 2. Run `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.  
@@ -50,24 +50,24 @@ Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
 #### DDEV-Live default settings. 
 We give additional flags below to use if your project differs from these defaults.
 * Default Drupal version is Drupal 8.
-* Default webroot is the project root (ie the directory from which your site is served).
+* Default docroot is the project root (ie the directory from which your site is served).
 * Default branch is master.
 * `composer install` will not run.
 
 #### User-provided values in commands:
 * `<org>` is the DDEV provided value for your unique organization on DDEV-Live. Please see your "Welcome" email for details.
-* `<site>` is what you wish to call your project on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an _alphabetic_ character, and end with an _alphanumeric_ character.
+* `<site>` is what you want to call your project on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an _alphabetic_ character, and end with an _alphanumeric_ character.
 * `<github-org>` is your connected GitHub user or organization.
-* `<repo-name>` is the connected repo you wish to import.  
+* `<repo-name>` is the connected repo you want to import.  
 
 1. To create your project on DDEV-Live and import code from GitHub with the default settings, run: 
 ```
 ddev-live create drupal-site <org>/<site> --github-repo <github-org>/<repo-name> [flags]
 ```
 
-Here is a common example for a Drupal 8 site that requires `composer install`, with the webroot in /web:
+Here is a common example for a Drupal 8 site that requires `composer install`, with the docroot in /web:
 ```
-ddev-live create drupal-site my-org/my-site --github-repo my-github/my-repo --webroot-path web --run-composer-install
+ddev-live create drupal-site my-org/my-site --github-repo my-github/my-repo --docroot web --run-composer-install
 ```
 
 You can add flags for specific configuration options. Use `ddev-live create drupal-site --help` to see all possible flags and their descriptions. A few common flags:
@@ -75,7 +75,7 @@ You can add flags for specific configuration options. Use `ddev-live create drup
 | Flag | Description |
 | :---- | :----------- |
 | `--drupal-version <version>` |Specify the Drupal version, `<7>` or `<8>`. The default is Drupal 8. |
-| `--webroot-path <path>` |The webroot is the directory from which your site is served. The default is the project root. <br> This value is a relative path from your project root. For Drupal 8, the most common is `--webroot-path web`. |
+| `--docroot <path>` |The docroot is the directory from which your site is served. The default is the project root. <br> This value is a relative path from your project root. For Drupal 8, the most common is `--docroot web`. |
 | `--run-composer-install` |Runs `composer install` on site creation. <br> The default is that Composer does _not_ run. <br> Further arguments are available with `--composer-args <args>`.|
 | `--branch <branch-name>` |Specify the branch of a GitHub repo. The default branch is `master`. |
 
@@ -91,7 +91,7 @@ The `status > webStatus > urls` section of the output will display the preview u
 
 ## Import a database and files
 Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
-1. Next we will upload your database archive to the site environment.
+1. First, upload your database archive to the site environment.
 ```
 ddev-live push db <org>/<site> <path>
 ```
@@ -106,11 +106,11 @@ Use the restore instance to check the status of the restore operation, for examp
 ddev-live get db-backup-status my-org/my-site-8wbmv
 ```
 
-2. And now we will upload your files to the site environment. Move into your files directory and push the files using:
+2. Next, upload your files to the site environment. Move into your files directory and push the files using:
 ```
 ddev-live push files <org>/<site> .
 ```
-For example, here is a successful command and response for a site with the webroot in web, showing your file restore instance name:
+For example, here is a successful command and response for a site with the docroot in web, showing your file restore instance name:
 ```
 cd web/sites/default/files && ddev-live push files my-org/my-site .
 Uploaded: [files list]
