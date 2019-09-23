@@ -44,7 +44,7 @@ From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate 
 Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
 1. In your terminal window, type `ddev-live`. Successful installation will return usage information. Run `ddev-live [command] -h` at any time for details on commands.
 2. Run `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.  
-  The CLI displays `Authentication complete!`. If you are primarily working with one organization you may want to run `ddev-live auth --default-org <org>` to eliminate needing to use the `--org <org>` flag for subsequent commands.
+  The CLI displays `Authentication complete!`. If you are primarily working with one organization you may want to run ddev-live auth --default-org <org> to refer to sites only using <site> instead of <org>/<site> and eliminate needing to use the --org <org> flag for subsequent commands.
 
 ## Add a site from your connected GitHub account
 #### DDEV-Live default settings. 
@@ -90,7 +90,9 @@ The output will display several sections including status and health. These sect
 The `status > webStatus > urls` section of the output will display the preview url for your site. Visit this link to confirm that your code has been imported. For example, `https://my-site.my-org.sites.ddev.live/`.
 
 ## Import a database and files
-Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/). Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed as your local command finishes. For example, the instance name for a `ddev-live push files` will look be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
+Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
+
+Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed as your local command finishes. For example, the instance name for `ddev-live push files` will be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
 1. First, upload your database archive to the site environment. 
 ```
 ddev-live push db <org>/<site> <path>
@@ -139,4 +141,4 @@ What do you think? Send us your feedback about DDEV-Live using the [Feedback for
 
 Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.
 
-Last updated 23 Sept 2019 19:32:55 CEST
+Last updated 23 Sept 2019 19:10:17 UTC
