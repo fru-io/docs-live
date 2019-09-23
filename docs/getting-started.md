@@ -125,11 +125,12 @@ ddev-live describe restore my-org/my-site-t5jn5
 
 ## Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
-* View a list of all the sites within a specified organization with `ddev-live describe site --org <org>`.
-* View the state of a specific site with `ddev-live describe site drupal-site <org>/<site>`.
-* Use `ddev-live update` to modify the GitHub repo or branch to pull from.
-* Use `ddev-live delete` to delete a site. For example, `ddev-live delete drupal-site <org>/<site>`.
-* Use `ddev-live pull` to download project database and files. 
+* View a list of all the sites within a specified organization with `ddev-live list sites --org <org>`.
+* View the state of a specific site with `ddev-live describe site <org>/<site>`.
+* Use `ddev-live config` to modify the GitHub repo or branch to pull from.
+* Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
+* Use `ddev-live backup` to initiate a database or files backup. 
+* Use `ddev-live pull` to download project database or files. 
 
 ### Next steps
 We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you have any additional questions, email our [Support team](mailto:support@ddev.com).
@@ -138,4 +139,4 @@ What do you think? Send us your feedback about DDEV-Live using the [Feedback for
 
 Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.
 
-Last updated 23 Sept 2019 19:03:44 CEST
+Last updated 23 Sept 2019 19:32:55 CEST
