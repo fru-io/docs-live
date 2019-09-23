@@ -44,7 +44,7 @@ From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate 
 Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
 1. In your terminal window, type `ddev-live`. Successful installation will return usage information. Run `ddev-live [command] -h` at any time for details on commands.
 2. Run `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.  
-  The CLI displays `Authentication complete!`.
+  The CLI displays `Authentication complete!`. If you are primarily working with one organization you may want to run `ddev-live auth --default-org <org>` to eliminate needing to use the `--org <org>` flag for subsequent commands.
 
 ## Add a site from your connected GitHub account
 #### DDEV-Live default settings. 
@@ -62,15 +62,15 @@ We give additional flags below to use if your project differs from these default
 
 1. To create your project on DDEV-Live and import code from GitHub with the default settings, run: 
 ```
-ddev-live create drupal-site <org>/<site> --github-repo <github-org>/<repo-name> [flags]
+ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> [flags]
 ```
 
 Here is a common example for a Drupal 8 site that requires `composer install`, with the docroot in /web:
 ```
-ddev-live create drupal-site my-org/my-site --github-repo my-github/my-repo --docroot web --run-composer-install
+ddev-live create site drupal my-org/my-site --github-repo my-github/my-repo --docroot web --run-composer-install
 ```
 
-You can add flags for specific configuration options. Use `ddev-live create drupal-site --help` to see all possible flags and their descriptions. A few common flags:
+You can add flags for specific configuration options. Use `ddev-live create site drupal --help` to see all possible flags and their descriptions. A few common flags:
 
 | Flag | Description |
 | :---- | :----------- |
@@ -84,14 +84,14 @@ The CLI will display feedback while your site is being initialized. It may take 
 Created Drupal site: <org>/<site>
 ```
 
-2. Type `ddev-live get drupal-site <org>/<site>`  
+2. Type `ddev-live describe site <org>/<site>`  
 The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It may take a few minutes for all health checks to return "true."  
 
 The `status > webStatus > urls` section of the output will display the preview url for your site. Visit this link to confirm that your code has been imported. For example, `https://my-site.my-org.sites.ddev.live/`.
 
 ## Import a database and files
-Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
-1. First, upload your database archive to the site environment.
+Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/). Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed as your local command finishes. For example, the instance name for a `ddev-live push files` will look be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
+1. First, upload your database archive to the site environment. 
 ```
 ddev-live push db <org>/<site> <path>
 ```
@@ -103,7 +103,7 @@ Initiated backup restore: my-org/my-site-8wbmv
 ```
 Use the restore instance to check the status of the restore operation, for example:
 ```
-ddev-live get db-backup-status my-org/my-site-8wbmv
+ddev-live describe restore my-org/my-site-8wbmv
 ```
 
 2. Next, upload your files to the site environment. Move into your files directory and push the files using:
@@ -118,15 +118,15 @@ Initiated files restore: my-org/my-site-t5jn5
 ```
 Use the restore instance to check the status of the file restore operation, for example:
 ```
-ddev-live get files-backup-status my-org/my-site-t5jn5
+ddev-live describe restore my-org/my-site-t5jn5
 ```
 
 3. Visit or refresh your site's URL in the browser to confirm it is displaying as expected. 
 
 ## Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
-* View a list of all the sites within a specified organization with `ddev-live get drupal-site --org <org>`.
-* View the state of a specific site with `ddev-live get drupal-site <org>/<site>`.
+* View a list of all the sites within a specified organization with `ddev-live describe site --org <org>`.
+* View the state of a specific site with `ddev-live describe site drupal-site <org>/<site>`.
 * Use `ddev-live update` to modify the GitHub repo or branch to pull from.
 * Use `ddev-live delete` to delete a site. For example, `ddev-live delete drupal-site <org>/<site>`.
 * Use `ddev-live pull` to download project database and files. 
@@ -137,3 +137,5 @@ We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://da
 What do you think? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
 
 Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.
+
+Last updated 23 Sept 2019 19:03:44 CEST
