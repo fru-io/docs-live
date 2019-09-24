@@ -10,8 +10,9 @@ During this process, getting feedback will be critical.  We’ll be counting on 
 - Is it a convenient process?  
 - Is it speedy?  
 - Is the CLI easy to use?  
-- Was the workflow more simple to get a site up and running on the platform?  
+- Was the workflow simple to get a site up and running on the platform?  
 - What was the most challenging aspect of the platform?
+- What would you like to see next?  
 
 
 ## But before we begin...
