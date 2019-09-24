@@ -6,6 +6,7 @@
 * `ddev-live push files` only works when the local directory is referenced as `.` 
 * You will see additional information during `ddev-live create site` regarding github `[github] GithubRepoSynced: False (GithubRateLimit: Github RateLimit Reached! Requeueing to execute after reset period)`. This does not affect the `ddev-live create site` process.
 * You will see additional information during `ddev-live create site` regarding fpm `[fpm] ImageBaseUpToDate: False (DistroUpdateAvailable: New FPM version available: 7.2)`. This does not affect the `ddev-live create site` process.
-* `ddev-live describe restore` is only inspecting files restores, not db restores. 
+* `ddev-live describe restore` is only inspecting files restores, not db restores.
+* `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times.
 
-Last updated Mon Sep 23 19:52:32 2019 UTC
+Last updated Mon Sep 24 16:08 2019 UTC
