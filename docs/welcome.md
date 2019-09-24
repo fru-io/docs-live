@@ -26,6 +26,6 @@ Before we get started, there’s just a couple of items that you’ll need to ke
 ## We’re so excited to have you as an early access partner!  
 We can’t thank you enough for being on this journey with us, especially as one of the first people to get access to our new hosting platform, DDEV-Live.  We’re excited that you’re a part of this.  
 
-All the best, 
-The DDEV Team
+All the best,  
+The DDEV Team  
 DDEV - Advancing Developer Communities
