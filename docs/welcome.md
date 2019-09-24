@@ -2,7 +2,7 @@
 
 ## What to expect and how you can help. 
 During this process, getting feedback will be critical.  We’ll be counting on you to share feedback in several ways: 
-- Feedback form
+- [Feedback form](https://dash.ddev.com/feedback/)
 - Scheduled Zoom call towards the end of your trial period (we’ll schedule once you’ve gotten started).  
 
 ## Here’s the areas where feedback will be most valuable: 
