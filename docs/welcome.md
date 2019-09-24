@@ -27,7 +27,5 @@ Before we get started, there’s just a couple of items that you’ll need to ke
 We can’t thank you enough for being on this journey with us, especially as one of the first people to get access to our new hosting platform, DDEV-Live.  We’re excited that you’re a part of this.  
 
 All the best, 
-
 The DDEV Team
-
 DDEV - Advancing Developer Communities
