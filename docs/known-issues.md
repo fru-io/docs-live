@@ -8,5 +8,6 @@
 * You will see additional information during `ddev-live create site` regarding fpm `[fpm] ImageBaseUpToDate: False (DistroUpdateAvailable: New FPM version available: 7.2)`. This does not affect the `ddev-live create site` process.
 * `ddev-live describe restore` is only inspecting files restores, not db restores.
 * `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times.
+* Drupal 8 sites warn that Trusted Host Settings is not enabled.
 
 Last updated Mon Sep 24 16:08 2019 UTC
