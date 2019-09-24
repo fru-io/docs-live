@@ -3,7 +3,7 @@
 ## What to expect and how you can help. 
 During this process, getting feedback will be critical.  We’ll be counting on you to share feedback in several ways: 
 - We want your [feedback on your experience](https://dash.ddev.com/feedback/)
-- If you get stuck, [we're here to support you](https://dash.ddev.com/docs/support/)
+- If you get stuck, [we're here to Support you](https://dash.ddev.com/docs/support/)
 - We'll reach out during the course of your trial.  Towards the end, we'll schedule a Zoom call. 
 
 ## Here’s the areas where feedback will be most valuable: 
