@@ -1,6 +1,7 @@
 # Known issues
 
 * Currently, only Drupal sites are supported.
+* Not currently supporting live hostnames.
 * `ddev-live auth` has a 60 minute timeout. If you start noticing CLI output similar to "failed to get site" when you know the site exists you should run `ddev-live auth` again.
 * You may see a 503 or a 502 error at a newly generated site's URL for a period of time.
 * `ddev-live push files` only works when the local directory is referenced as `.` 
@@ -10,4 +11,4 @@
 * `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times.
 * Drupal 8 sites warn that Trusted Host Settings is not enabled.
 
-Last updated Mon Sep 24 16:08 2019 UTC
+Last updated Wed Sep 25 23:05:38 2019 UTC
