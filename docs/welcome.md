@@ -1,19 +1,24 @@
 # Welcome Golden Ticket Holder
 
-## What to expect and how you can help. 
+## What to expect and how you can help
 During this process, getting feedback will be critical.  We’ll be counting on you to share feedback in several ways: 
 - We want your [feedback on your experience](https://dash.ddev.com/feedback/)
 - If you get stuck, [we're here to Support you](https://dash.ddev.com/docs/support/)
-- We'll reach out during the course of your trial.  Towards the end, we'll schedule a Zoom call. 
+- We'll reach out during the course of your trial and towards the end, we'll schedule a call. 
 
 ## Here’s the areas where feedback will be most valuable: 
-- Is it a convenient process?  
-- Is it speedy?  
-- Is the CLI easy to use?  
-- Was the workflow simple to get a site up and running on the platform?  
-- What was the most challenging aspect of the platform?
-- What would you like to see next?  
+### Workflow
+- Does our tooling fit into your current workflows?
+- Can you launch a new site?
+- Can you import an old site?
+- Can you create a backup?
+- Can you alter a site environment?
 
+### Feedback
+- What do you like?
+- What do you dislike?
+- What did you struggle with?
+- Was the documentation helpful?
 
 ## But before we begin...
 Before we get started, there’s just a couple of items that you’ll need to keep in mind: 
