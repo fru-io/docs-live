@@ -31,7 +31,7 @@ When a default organization is set, you can ommit the `--org <org>` flag and gen
 ### When will DDEV-Live be ready for production sites?
 Depending on your requirements, we’re ready for you now. Get in touch with us at support@ddev.com to discuss the opportunity.
 ### What kind of uptime can I expect?
-During the Golden Ticket period, you can expect sites to be generally available. View the uptime and status of the DDEV-Live hosting platform on our [status page](https://ddevgoldentickets.statuspage.io/#). We’re not quite ready yet to advertise an SLA, though we do expect it to be competitive.
+During the Golden Ticket period, you can expect sites to be generally available. View the uptime and status of the DDEV-Live hosting platform on our [status page](https://status.ddev.com/). We’re not quite ready yet to advertise an SLA, though we do expect it to be competitive.
 ### Will you support other CMS solutions or other Git providers?
 The Golden Ticket period supports Drupal sites with code hosted on GitHub. DDEV-Live will generally support other PHP applications and CMSs such as TYPO3 or Sulu. Support for other languages, WordPress, Bitbucket and GitLab is planned for the future.
 ## Privacy and security
@@ -44,6 +44,8 @@ All data will be deleted after the Golden Ticket period. Assume all data can be 
 ## Support
 We want to help you be successful with DDEV-Live. If you have a question that is not answered here, please email our [Support](mailto:support@ddev.com) team.
 
-You can view the [uptime and status](https://ddevgoldentickets.statuspage.io/#) of the DDEV-Live hosting platform, and subscribe to updates.
+You can view the [uptime and status](https://status.ddev.com/) of the DDEV-Live hosting platform, and subscribe to updates.
 
 During the Golden Ticket period, we want to hear from you. Please send us your feedback using the [Feedback form](https://dash.ddev.com/feedback/) or by running `ddev-live feedback` from the command line. We aim to improve  DDEV-Live to meet your needs, so we encourage you to really exercise the platform and try things out.
+
+Last Updated: Wed Sep 25 12:36:51 2019 UTC
