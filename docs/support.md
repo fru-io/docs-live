@@ -6,7 +6,9 @@ Check with our [Known Issues List](https://dash.ddev.com/docs/known-issues/) to 
 ### Support
 Email our [Support](mailto:support@ddev.com) team if you need assistance.
 ### Status
-Check the [uptime and status](https://ddevgoldentickets.statuspage.io/#) of the DDEV-Live hosting platform, and subscribe to updates.
+Check the [uptime and status](https://status.ddev.com/) of the DDEV-Live hosting platform, and subscribe to updates.
 ### Feedback
 Send us your feedback using the [Feedback form](https://dash.ddev.com/feedback/).  
 We really want to hear from you so that we can improve DDEV-Live to meet your needs.
+
+Last Updated: Wed Sep 25 12:38:29 2019 UTC
