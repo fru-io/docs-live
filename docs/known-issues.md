@@ -11,5 +11,6 @@
 * `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times.
 * Drupal 8 sites warn that Trusted Host Settings is not enabled.
 * When you make a change in the GitHub repo for a previously deployed site you do not have the ability to check on the status of the deployment from the cli. It will complete, but might take some time.
+* DRUPAL_HASH_SALT is visible in cli output.
 
-Last updated Thu Sep 26 23:33:59 2019 UTC
+Last updated Thu Sep 26 23:36:22 2019 UTC
