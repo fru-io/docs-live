@@ -1,17 +1,17 @@
 # Known issues
-
-* Currently, only Drupal sites are supported.
-* Not currently supporting live hostnames.
 * `ddev-live auth` has a 60 minute timeout. If you start noticing CLI output similar to "failed to get site" when you know the site exists you should run `ddev-live auth` again.
 * You may see a 503 or a 502 error at a newly generated site's URL for a period of time.
-* `ddev-live push files` only works when the local directory is referenced as `.` 
-* You will see additional information during `ddev-live create site` regarding github `[github] GithubRepoSynced: False (GithubRateLimit: Github RateLimit Reached! Requeueing to execute after reset period)`. This does not affect the `ddev-live create site` process.
-* You will see additional information during `ddev-live create site` regarding fpm `[fpm] ImageBaseUpToDate: False (DistroUpdateAvailable: New FPM version available: 7.2)`. This does not affect the `ddev-live create site` process.
+* `ddev-live push files` is slow to transfer assets
 * `ddev-live describe restore` is only inspecting files restores, not db restores.
-* `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times.
+* `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times and CLI timeouts.
 * Drupal 8 sites warn that Trusted Host Settings is not enabled.
-* When you make a change in the GitHub repo for a previously deployed site you do not have the ability to check on the status of the deployment from the cli. It will complete, but might take some time.
-* DRUPAL_HASH_SALT is visible in cli output.
+* When you make a change in the GitHub repo for a previously deployed site you do not have the ability to check on the status of the deployment from the CLI.
+* DRUPAL_HASH_SALT is visible in CLI output.
 * Databases from deleted sites are not being cleaned up properly.
 
-Last updated Fri Sep 27 00:58:45 2019 UTC
+
+# Golden ticket limitations
+* Only Drupal sites are supported.
+* Custom domains and hostnames aren't supported.
+
+Last updated Fri Sep 27 15:04:45 2019 UTC
