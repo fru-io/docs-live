@@ -7,6 +7,7 @@
 * When you make a change in the GitHub repo for a previously deployed site you do not have the ability to check on the status of the deployment from the CLI.
 * DRUPAL_HASH_SALT is visible in CLI output.
 * Databases from deleted sites are not being cleaned up properly.
+* If you uninstall the DDEV-Live GitHub integration and then reinstall it you will no longer be able to deploy.
 
 
 # Golden ticket limitations
