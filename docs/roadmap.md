@@ -7,10 +7,6 @@ MVP Feedback
 
 As you get to know our systems and workflows, we recognize that there might be some places that are a little rough around the edges. We are committed to addressing these issues as soon as they are reported to us. So please, let us know!
 
-A well deserved break
-
-Work life balance has been and is very important to us. But we have been working hard to deliver MVP and we have been burning the candle from both ends a little. So we plan on slowing down a bit to give everyone some time to catch up but we’ll still have the lights on for you.
-
 
 ### Next
 
