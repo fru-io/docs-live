@@ -85,9 +85,9 @@ Created Drupal site: <org>/<site>
 ```
 
 2. Type `ddev-live describe site <org>/<site>`  
-The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It may take a few minutes for all health checks to return "true."  
+The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It takes several minutes for all health checks to return "true."  
 
-The `status > webStatus > urls` section of the output will display the preview url for your site. Visit this link to confirm that your code has been imported. For example, `https://my-site-my-org.sites.ddev.live/`.
+The `Preview URL:` line of the output will display the preview url for your site when it has been created. Visit this link to confirm that your code has been imported. For example, `https://my-site-my-org.sites.ddev.live/`.
 
 ## Import a database and files
 Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
