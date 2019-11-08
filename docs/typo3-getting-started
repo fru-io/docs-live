@@ -17,7 +17,7 @@ This tutorial shows the commands to deploy a TYPO3 CMS project. DDEV-Live also s
 * Current, up-to-date operating system (macOS, Linux or Windows).
 * Internet connection.
 * GitHub account.
-* GitHub repository containing a TYPO3 v9 project to import for this tutorial. 
+* GitHub repository containing a TYPO3 version 8, 9, or 10 project to import for this tutorial. 
 * Export in archive format of your [database](https://ddev.readthedocs.io/en/latest/users/cli-usage/#exporting-a-database "DDEV-Local export db"), and...
 * Unarchived file directories to upload for your project, if applicable. 
 
@@ -65,62 +65,62 @@ We give additional flags below to use if your project differs from these default
 ddev-live create site typo3 <org>/<site> --github-repo <github-org>/<repo-name> [flags]
 ```
 
-Here is a common example for a TYPO3 site that requires `composer install`, with the docroot in /public:
+Here is a common example for a TYPO3 v10 site that requires `composer install`, with the docroot in /public:
 ```
-ddev-live create site typo3 my-org/my-site --github-repo my-github/my-repo --docroot public --run-composer-install
+ddev-live create site typo3 my-org/my-site --github-repo my-github/my-repo --docroot public --run-composer-install --typo3-version 10
 ```
 
 You can add flags for specific configuration options. Use `ddev-live create site typo3 --help` to see all possible flags and their descriptions. A few common flags:
 
 | Flag | Description |
 | :---- | :----------- |
-| `--typo3-version <version>` |Specify the TYPO3 version. The default is TYPO3 v9. |
-| `--docroot <path>` |The docroot is the directory from which your site is served. The default is the project root. <br> This value is a relative path from your project root. For TYPO3, the most common is `--docroot public`. |
+| `--typo3-version <version>` |Specify the TYPO3 version, <8>, <9> or <10>. The default is TYPO3 v9. |
+| `--docroot <path>` |The docroot is the directory from which your site is served. The default is the repository's root. <br> This value is a relative path from your project root. For TYPO3, the most common is `--docroot public`. |
 | `--run-composer-install` |Runs `composer install` on site creation. <br> The default is that Composer does _not_ run. <br> Further arguments are available with `--composer-args <args>`.|
 | `--branch <branch-name>` |Specify the branch of a GitHub repo. The default branch is `master`. |
 
-The CLI will display feedback while your site is being initialized. It may take a few minutes for your site image to be built.  When your site has been successfully created, the CLI displays: 
+The CLI will display `Creating TYPO3 site: <org>/<site>`. It may take a few minutes for your site image to be built.  When your site has been successfully created, running `ddev-live describe site <org>/<site>` will display: 
 ```
 Created TYPO3 site: <org>/<site>
 ```
 
 2. Type `ddev-live describe site <org>/<site>`  
-The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It takes several minutes for all health checks to return "true."  
+The output will display several sections including general site info, and the health of various components. The status messages change as the system provisions the site. It takes several minutes for all health checks to return "true."  
 
-The `Preview URL:` line of the output will display the preview url for your site when it has been created. Visit this link to confirm that your code has been imported. For example, `https://my-site-my-org.sites.ddev.live/`.
+The `Preview URL:` line of the output will display the preview url for your site when it has been created. Visit this link to confirm that your code has been imported. For example, `https://preview-my-site-my-org.sites.ddev.live`.
 
 ## Import a database and files
 Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
 
-Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed as your local command finishes. For example, the instance name for `ddev-live push files` will be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
+Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed when your local command finishes. For example, the instance name for `ddev-live push files` will be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
 1. First, upload your database archive to the site environment. 
 ```
-ddev-live push db <org>/<site> <path>
+ddev-live push database <org>/<site> <path>
 ```
 For example, here is a successful command and response, showing your database restore instance name: 
 ```
-ddev-live push db my-org/my-site /tmp/db.sql.gz
+ddev-live push database my-org/my-site /tmp/db.sql.gz
 Uploaded: /tmp/db.sql.gz
 Initiated backup restore: my-org/my-site-8wbmv
 ```
 Use the restore instance to check the status of the restore operation, for example:
 ```
-ddev-live describe restore my-org/my-site-8wbmv
+ddev-live describe restore database my-org/my-site-8wbmv
 ```
 
-2. Next, upload your files to the site environment. Move into your files directory and push the files using:
+2. Next, upload your files to the site environment. The destination path is the docroot you set for your project. Please see additional details by running `ddev-live push files -h`. 
 ```
-ddev-live push files <org>/<site> .
+ddev-live push files <org>/<site> <path>
 ```
-For example, here is a successful command and response for a site with the docroot in web, showing your file restore instance name:
+For example, here is a successful command and response for a TYPO3 site with the docroot in public/, showing your file restore instance name:
 ```
-cd web/sites/default/files && ddev-live push files my-org/my-site .
+ddev-live push files my-org/my-site /path/to/dir
 Uploaded: [files list]
 Initiated files restore: my-org/my-site-t5jn5
 ```
 Use the restore instance to check the status of the file restore operation, for example:
 ```
-ddev-live describe restore my-org/my-site-t5jn5
+ddev-live describe restore file my-org/my-site-t5jn5
 ```
 
 3. Visit or refresh your site's URL in the browser to confirm it is displaying as expected. 
@@ -141,5 +141,5 @@ What do you think? Send us your feedback about DDEV-Live using the [Feedback for
 
 Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.
 
-Last updated Thu Nov 7 21:01:43 2019 UTC
+Last updated Fri Nov 8 18:23:31 2019 UTC
 
