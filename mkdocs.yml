@@ -1,6 +1,8 @@
 site_name: DDEV-Live
 theme:
   name: 'material'
+  palette:
+    primary: 'yellow'
 
 nav:
     - Home: index.md
