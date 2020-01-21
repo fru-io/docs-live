@@ -1,3 +1,27 @@
 site_name: DDEV-Live
 theme:
   name: 'material'
+
+nav:
+    - Home: index.md
+    - User Guide:
+        - Getting started with Drupal: getting-started.md
+        - Getting started with TYPO3: typo-3-getting-started.md
+        - Help & Support: support.md
+        - FAQs: faq.md
+    - About:
+        - Welcome to DDEV-Live: welcome.md
+        - Release Notes: MISSING.md
+        - Roadmap: roadmap.md
+        - Known issues: known-issues.md
+        - Contributing: MISSING.md
+        - License: MISSING.md
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - admonition
+    - def_list
+
+plugins:
+    - search
