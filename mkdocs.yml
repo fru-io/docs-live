@@ -1,4 +1,9 @@
 site_name: DDEV-Live
+
+google_analytics:
+  - 'UA-105593079-5'
+  - 'auto'
+
 theme:
   name: 'material'
   palette:
