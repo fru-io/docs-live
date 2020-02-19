@@ -127,6 +127,7 @@ ddev-live describe restore my-org/my-site-t5jn5
 
 ## Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
+
 * View a list of all the sites within a specified organization with `ddev-live list sites --org <org>`.
 * View the state of a specific site with `ddev-live describe site <org>/<site>`.
 * Use `ddev-live config` to modify the GitHub repo or branch to pull from.
