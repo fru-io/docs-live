@@ -75,7 +75,7 @@ You can add flags for specific configuration options. Use `ddev-live create site
 | Flag | Description |
 | :---- | :----------- |
 | `--drupal-version <version>` |Specify the Drupal version, `<7>` or `<8>`. The default is Drupal 8. |
-| `--docroot <path>` |The docroot is the directory from which your site is served. The default is the project root. <br> This value is a relative path from your project root. For Drupal 8, the most common is `--docroot web`. |
+| `--docroot <path>` |The docroot is the directory from which your site is served. The default is the project root, `--docroot ""`. <br> This value is a relative path from your project root. For Drupal 8, the most common is `--docroot web`. |
 | `--run-composer-install` |Runs `composer install` on site creation. <br> The default is that Composer does _not_ run. <br> Further arguments are available with `--composer-args <args>`.|
 | `--branch <branch-name>` |Specify the branch of a GitHub repo. The default branch is `master`. |
 
