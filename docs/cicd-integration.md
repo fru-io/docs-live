@@ -11,12 +11,12 @@ This tutorial uses Drupal as an example. DDEV-Live supports many PHP application
 ### Table of contents:
 * [Prerequisites](#prerequisites)
 * [Steps](#steps)
-  * [Install the DDEV-Live CLI and jq into Jenkins](#install-the-ddev-live-cli-and-jq-into-jenkins)
-  * [Add DDEV-Live monitoring scripts](#add-ddev-live-monitoring-scripts-to-your-build)
-  * [Configure Jenkins credential manager](#configure-your-jenkins-credential-manager-with-your-ddev-live-token)
-  * [Configure a new Jenkins job credential binding](#configure-a-new-jenkins-job-credential-binding-to-use-the-token)
-  * [Create a built step to execute a shell script](#create-a-build-step-to-execute-a-shell-script)
-  * [Run the build to deploy on DDEV-Live](#run-the-build-to-see-your-branch-launched-into-ddev-live)
+  * [Install the DDEV-Live CLI and jq into Jenkins](#1-install-the-ddev-live-cli-and-jq-into-jenkins)
+  * [Add DDEV-Live monitoring scripts](#2-add-ddev-live-monitoring-scripts-to-your-build)
+  * [Configure Jenkins credential manager](#3-configure-your-jenkins-credential-manager-with-your-ddev-live-token)
+  * [Configure a new Jenkins job credential binding](#4-configure-a-new-jenkins-job-credential-binding-to-use-the-token)
+  * [Create a built step to execute a shell script](#5-create-a-build-step-to-execute-a-shell-script)
+  * [Run the build to deploy on DDEV-Live](#6-run-the-build-to-see-your-branch-launched-into-ddev-live)
 
 ### Prerequisites
 * A fully configured account on [DDEV-Live](https://dash.ddev.com/)
