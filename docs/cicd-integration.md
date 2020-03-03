@@ -1,6 +1,6 @@
 # Tutorial: How to integrate Jenkins with DDEV-Live
 
-This tutorial will illustrate how to perform a one-time setup to configure Jenkins in order to run regular automatic deployments into DDEV-Live. With this setup, you can connect a CI/CD process into DDEV-Live for the purpose of running tests or doing UAT.
+This tutorial will illustrate how to perform a one-time setup to configure [Jenkins](https://jenkins.io/) in order to run regular automatic deployments into DDEV-Live. With this setup, you can connect an existing CI/CD process into DDEV-Live.
 
 **Why you might need this:**
 * You want to demo work to clients so they can approve things in a user acceptance testing (UAT) environment.
@@ -11,18 +11,18 @@ This tutorial uses Drupal as an example. DDEV-Live supports many PHP application
 ### Table of contents:
 * [Prerequisites](#prerequisites)
 * [Steps](#steps)
-  * [Install the DDEV-Live CLI and jq into Jenkins] (Will fill these in once headings agreed upon)
-  * [Add DDEV-Live monitoring scripts to your build]
-  * [Configure Jenkins credential manager] 
-  * [Configure a new Jenkins job credential binding]
-  * [Add a custom exec shell command]
-  * [Run the build to deploy on DDEV-Live]
+  * [Install the DDEV-Live CLI and jq into Jenkins](#install-the-ddev-live-cli-and-jq-into-jenkins)
+  * [Add DDEV-Live monitoring scripts](#add-ddev-live-monitoring-scripts-to-your-build)
+  * [Configure Jenkins credential manager](#configure-your-jenkins-credential-manager-with-your-ddev-live-token)
+  * [Configure a new Jenkins job credential binding](#configure-a-new-jenkins-job-credential-binding-to-use-the-token)
+  * [Create a built step to execute a shell script](#create-a-build-step-to-execute-a-shell-script)
+  * [Run the build to deploy on DDEV-Live](#run-the-build-to-see-your-branch-launched-into-ddev-live)
 
 ### Prerequisites
 * A fully configured account on [DDEV-Live](https://dash.ddev.com/)
 * A Jenkins server and user with access and permissions to install new executables
 
-### Files you will need to create or configure. Please see [link] for example files.
+### Files you will need to create or configure. Please see the [tutorial repository](https://github.com/drud/devrel/tree/master/jenkins-ddev-live) for example files.
 * config.xml
 * Jenkins Dockerfile
 * wait_curl_healthy.sh
@@ -30,23 +30,23 @@ This tutorial uses Drupal as an example. DDEV-Live supports many PHP application
 
 ## Steps
 ### 1. Install the DDEV-Live CLI and jq into Jenkins
-* [Install the DDEV-Live CLI binary](https://dash.ddev.com/docs/getting-started/#install-the-ddev-live-cli) and [jq](https://stedolan.github.io/jq/) into Jenkins. Follow your usual procedure to install an executable.
+* [Install the DDEV-Live CLI binary](https://dash.ddev.com/docs/getting-started/#install-the-ddev-live-cli) and [jq](https://stedolan.github.io/jq/) into Jenkins. Follow your usual procedure to install an executable. Our [example Jenkins Dockerfil is here](https://github.com/drud/devrel/blob/master/jenkins-ddev-live/Dockerfile).
 
 ### 2. Add DDEV-Live monitoring scripts to your build
-* If you like, reference our monitoring scripts (step 5 below) by adding to your Jenkins Dockerfile: 
-`RUN git clone https://github.com/rfay/ddev-live-test.git /usr/share/jenkins/ref/ddev-live-test` (replace this with /drud/ddev-live-tutorials etc)
+* If you like, reference our [monitoring scripts](https://github.com/drud/devrel/tree/master/jenkins-ddev-live) (called in step 5 below) by adding the following to your Jenkins Dockerfile: 
+`RUN git clone https://github.com/drud/devrel.git /usr/share/jenkins/ref/devrel`
 
 ### 3. Configure your Jenkins credential manager with your DDEV-Live Token
 * In the DDEV-Live dash, under settings, click the copy icon at the right of the DDEV API Token field to copy your API token. 
 * In the Jenkins dashboard under Jenkins > credentials > system > global credentials, click "add credentials." Select "Kind: secret text," "Scope: global," ID and description: “ddev-live-token,” for example. Paste the token into the secret field and click ok.
 
 ### 4. Configure a new Jenkins job credential binding to use the token
-* Create a Jenkins job. Specify the GitHub project repository you want to work with for this tutorial under Source Code Management. 
+* Create a Jenkins job. Specify the GitHub project repository you want to work with for this tutorial under Source Code Management. If you have specific branches patterns you want to deploy, they should be configured here as well. For example, users of Git flow may want to only use feature/* branches.
 * In the Build Environment panel, check "use secret text or files."
 * In the Bindings panel, input variable “TOKEN”, select "specific credentials," and from the dropdown select the ddev-live-token credential you created in the previous step. 
 
 ### 5. Create a build step to execute a shell script
-Add a build step of "execute shell" type. Use the following or similarly modified for your needs. Please refer [here](https://docs.ddev.com/getting-started/#add-a-site-from-your-connected-github-account) for details on the values of the `ddev-live create site` command.
+Add a build step of "execute shell" type. Below is an example script. This will likely need to be modified for your needs and use cases. Please refer [here](https://docs.ddev.com/getting-started/#add-a-site-from-your-connected-github-account) for details on the values of the `ddev-live create site` command.
 
 ```
 eval $(/usr/share/jenkins/ref/.linuxbrew/bin/brew shellenv)
@@ -54,11 +54,11 @@ eval $(/usr/share/jenkins/ref/.linuxbrew/bin/brew shellenv)
 SITENAME=staging-${GIT_BRANCH#*/}-$BUILD_NUMBER
 ddev-live auth --token=$TOKEN --default-org=your-org
 
-ddev-live create site drupal $SITENAME --github-repo=you/yourrepo --branch=$BRANCH_NAME
-/usr/share/jenkins/ref/ddev-live-test/wait_site_healthy.sh $SITENAME
+ddev-live create site drupal $SITENAME --github-repo=you/your-repo --branch=${GIT_BRANCH#*/}
+/usr/share/jenkins/ref/devrel/jenkins-ddev-live/wait_site_healthy.sh $SITENAME
 
 url=$(ddev-live describe site ${SITENAME} -o json | jq -r .previewUrl)
-/usr/share/jenkins/ref/ddev-live-test/wait_curl_healthy.sh $url
+/usr/share/jenkins/ref/devrel/jenkins-ddev-live/wait_curl_healthy.sh $url
 ```
 
 **What is this doing?**
@@ -71,18 +71,14 @@ url=$(ddev-live describe site ${SITENAME} -o json | jq -r .previewUrl)
 
 Save the build.
 
-### 6. Run the build and wait to see your new branch launched into DDEV-Live
-* Trigger or manually run the build from Jenkins. 
-* When the site is ready ... (How to view the site, what's available once it's built, such as rebuild?)
+### 6. Run the build to see your branch launched into DDEV-Live
+* Depending on how you've configured the Jenkins job, you can either wait for a branch to automatically build or you can click "build" manually now.
+* Once the job is finished you should see the URL in the Console output of the build job.
 
 ## Deleting the site when you are done
 Run `ddev-live delete site --help` for details on removing the build from DDEV-Live when you are finished. 
 
 ### What next?
-(What else might users ask at this point? what about permanent connections to Jenkins? How to manage any changes throughout the components involved here? How this procss could apply with other services/tools?)
-
 We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you have any additional questions, email our [Support team](mailto:support@ddev.com).
 
 What do you think? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
-
-Last updated 27 February 2020 22:00 UTC
