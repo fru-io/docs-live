@@ -30,14 +30,14 @@ This tutorial uses Drupal as an example. DDEV-Live supports many PHP application
 
 ## Steps
 ### 1. Install the DDEV-Live CLI and jq into Jenkins
-* [Install the DDEV-Live CLI binary](https://dash.ddev.com/docs/getting-started/#install-the-ddev-live-cli) and [jq](https://stedolan.github.io/jq/) into Jenkins. Follow your usual procedure to install an executable. Our [example Jenkins Dockerfil is here](https://github.com/drud/devrel/blob/master/jenkins-ddev-live/Dockerfile).
+* [Install the DDEV-Live CLI binary](https://dash.ddev.com/docs/getting-started/#install-the-ddev-live-cli) and [jq](https://stedolan.github.io/jq/) into Jenkins. Follow your usual procedure to install an executable. Our [example Jenkins Dockerfile is here](https://github.com/drud/devrel/blob/master/jenkins-ddev-live/Dockerfile).
 
 ### 2. Add DDEV-Live monitoring scripts to your build
 * If you like, reference our [monitoring scripts](https://github.com/drud/devrel/tree/master/jenkins-ddev-live) (called in step 5 below) by adding the following to your Jenkins Dockerfile: 
 `RUN git clone https://github.com/drud/devrel.git /usr/share/jenkins/ref/devrel`
 
 ### 3. Configure your Jenkins credential manager with your DDEV-Live Token
-* In the DDEV-Live dash, under settings, click the copy icon at the right of the DDEV API Token field to copy your API token. 
+* In the DDEV-Live dash, under [settings](https://dash.ddev.com/settings/), click the copy icon at the right of the DDEV API Token field to copy your API token. 
 * In the Jenkins dashboard under Jenkins > credentials > system > global credentials, click "add credentials." Select "Kind: secret text," "Scope: global," ID and description: “ddev-live-token,” for example. Paste the token into the secret field and click ok.
 
 ### 4. Configure a new Jenkins job credential binding to use the token
