@@ -7,7 +7,7 @@ google_analytics:
 theme:
   name: 'material'
   palette:
-    primary: 'yellow'
+    primary: 'light-blue'
 
 nav:
     - Home: index.md
@@ -16,13 +16,15 @@ nav:
         - Getting started with TYPO3: typo3-getting-started.md
         - Help & Support: support.md
         - FAQs: faq.md
+    - Tutorials:
+        - CI/CD with Jenkins: cicd-integration.md
     - About:
         - Welcome to DDEV-Live: welcome.md
         - Release Notes: MISSING.md
         - Roadmap: roadmap.md
         - Known issues: known-issues.md
-        - Contributing: MISSING.md
-        - License: MISSING.md
+        - Contributing: https://github.com/drud/community/blob/master/governance.md
+        - License: https://github.com/drud/docs/blob/master/LICENSE.MD
 
 markdown_extensions:
     - toc:

@@ -1,6 +1,6 @@
 # DDEV Docs
 
-A documentation repository for user docs on support.drud.com (FreshDesk) and dash.ddev.com (DDEV-Live UI).
+A documentation repository for user docs on support.ddev.com and dash.ddev.com
 
 ## Document Hierarchy
 ### Organization of Docs Source
