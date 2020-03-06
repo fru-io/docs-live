@@ -31,6 +31,9 @@ markdown_extensions:
         permalink: true
     - admonition
     - def_list
+    - mdx_truly_sane_lists:
+        nested_indent: 2
+        truly_sane: true
 
 plugins:
     - search
