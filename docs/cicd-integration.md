@@ -63,6 +63,7 @@ url=$(ddev-live describe site ${SITENAME} -o json | jq -r .previewUrl)
 ```
 
 **What is this doing?**
+
 * The first line is directing Jenkins to the DDEV-Live binary. Here we are using Linuxbrew, but please install the DDEV-Live CLI binary as you see fit.
 * Next, we set up a SITENAME for DDEV-Live to use. We used "staging" for this tutorial. GIT_BRANCH will be your branch of choice, and BUILD_NUMBER for reference.
 * Then we authenticate to DDEV-Live with the DDEV-Live API Token and setting the default org. This will be your DDEV-Live org name.
