@@ -45,6 +45,8 @@ From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate 
 2. Move the resulting ddev-live binary to a directory that is in your $PATH variable. For example:`mv ~/Downloads/ddev-live /usr/local/bin`. You may need to add to your $PATH in your .bash_profile or equivalent.
 
 #### Windows
+From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate via CLI** link for Windows to download the DDEV-Live CLI. This will download a file named ddev-live.zip.
+
 1. Extract ddev-live.zip to a directory that is in your %PATH% variable. For example, extract to: `C:\Program Files`. You may need to edit and add to the Path environment variable in Advanced System Properties.
 
 ### Verify installation and authenticate
