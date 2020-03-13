@@ -1,7 +1,7 @@
 # Help and Support
 We want to help you be successful with DDEV-Live.
 ### Questions
-Read our [Frequently Asked Questions](https://dash.ddev.com/docs/faq/) to see if your query has already been answered.  
+Read our [Frequently Asked Questions](https://dash.ddev.com/docs/faqs/) to see if your query has already been answered.  
 Check with our [Known Issues List](https://dash.ddev.com/docs/known-issues/) to see if we may already be aware of the issue.  
 ### Support
 Email our [Support](mailto:support@ddev.com) team if you need assistance.
