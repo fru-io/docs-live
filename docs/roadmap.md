@@ -12,11 +12,11 @@ As you get to know our systems and workflows, we recognize that there might be s
 
 Billing and entitlements
 
-You should only be paying for exactly the things you’re using, we need manage our inventory, and be able to do things like regularly bill a credit card. (Who knew!) But.. if you want to pay to use our platform now, we can facilitate that too, [just get in touch](https://dash.ddev.com/docs/support/)!
+You should only be paying for exactly the things you’re using, we need manage our inventory, and be able to do things like regularly bill a credit card. (Who knew!) But.. if you want to pay to use our platform now, we can facilitate that too, [just get in touch](https://docs.ddev.com/support/)!
 
-Expanding the list of CMSes and frameworks
+Expanding the list of CMSs and frameworks
 
-TYPO3, Static sites (Gatsby, Hugo, Jekyll, etc), WordPress, NodeJS, Ruby on Rails --  just to name a few. We also want to [hear from you](https://dash.ddev.com/feedback/) about your portfolio of sites and their requirements.
+TYPO3, static sites (Gatsby, Hugo, Jekyll, etc), WordPress, NodeJS, Ruby on Rails --  just to name a few. We also want to [hear from you](https://dash.ddev.com/feedback/) about your portfolio of sites and their requirements.
 
 
 ### Later
