@@ -11,4 +11,4 @@
 * Custom domains and hostnames aren't supported.
 * `ddev-live push files` does not yet work with an archive of the entire files directory.
 
-### Running into something that's not listed here? [Support is here for you](https://dash.ddev.com/docs/support/)
+### Running into something that's not listed here? [Support is here for you](https://docs.ddev.com/support/)
