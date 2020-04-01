@@ -7,7 +7,7 @@ You should use a test site. Your site will be live on our domain, which is a pub
 ### What kind of file/tarball do I need to prepare?
 You will need an export in archive format of your database, and unarchived file directories to upload for your project, if applicable.
 ### How can I create a site?
-The [Getting Started guide](https://dash.ddev.com/docs/getting-started/) runs through a tutorial on how to create a Drupal site.
+The [Getting Started guide](https://docs.ddev.com/getting-started/) shows how to get started with DDEV-Live.
 ### How do I work with Composer on the platform?
 Composer does not run on a Drupal site by default. To run `composer install` on site creation, include the flag `--run-composer-install`. Additionally if arguments are required for Composer, pass them in using the `--composer-args <args>` flag. 
 ### What does it mean when a site is ready?
@@ -47,5 +47,3 @@ We want to help you be successful with DDEV-Live. If you have a question that is
 You can view the [uptime and status](https://status.ddev.com/) of the DDEV-Live hosting platform, and subscribe to updates.
 
 During the Golden Ticket period, we want to hear from you. Please send us your feedback using the [Feedback form](https://dash.ddev.com/feedback/) or by running `ddev-live feedback` from the command line. We aim to improve  DDEV-Live to meet your needs, so we encourage you to really exercise the platform and try things out.
-
-Last Updated: Wed Sep 25 12:36:51 2019 UTC
