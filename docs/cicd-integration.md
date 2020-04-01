@@ -31,7 +31,7 @@ This tutorial uses Drupal as an example. DDEV-Live supports many PHP application
 
 ## Steps
 ### 1. Install the DDEV-Live CLI and jq into Jenkins
-* [Install the DDEV-Live CLI binary](https://dash.ddev.com/docs/getting-started/#install-the-ddev-live-cli) and [jq](https://stedolan.github.io/jq/) into Jenkins. Follow your usual procedure to install an executable. Our [example Jenkins Dockerfile is here](https://github.com/drud/devrel/blob/master/jenkins-ddev-live/Dockerfile).
+* [Install the DDEV-Live CLI binary](https://docs.ddev.com/getting-started/#install-the-ddev-live-cli) and [jq](https://stedolan.github.io/jq/) into Jenkins. Follow your usual procedure to install an executable. Our [example Jenkins Dockerfile is here](https://github.com/drud/devrel/blob/master/jenkins-ddev-live/Dockerfile).
 
 ### 2. Add DDEV-Live monitoring scripts to your build
 * If you like, reference our [monitoring scripts](https://github.com/drud/devrel/tree/master/jenkins-ddev-live) (called in step 5 below) by adding the following to your Jenkins Dockerfile:
@@ -81,6 +81,6 @@ Save the build.
 Run `ddev-live delete site --help` for details on removing the build from DDEV-Live when you are finished.
 
 ### What next?
-We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you have any additional questions, email our [Support team](mailto:support@ddev.com).
+We’d love to help you be successful with DDEV-Live. Please visit our [Help & Support page](https://docs.ddev.com/support/).
 
 What do you think? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
