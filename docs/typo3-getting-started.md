@@ -24,7 +24,7 @@ This tutorial shows the commands to deploy a TYPO3 CMS project. DDEV-Live also s
 ## Install the DDEV-Live GitHub app
 Grant DDEV-Live access to your selected repositories.
 1. In your browser, navigate to [https://dash.ddev.com](https://dash.ddev.com).
-2. If prompted, click the **Login With Github** button and log in to GitHub if needed. The DDEV-Live UI displays. (You are likely already viewing this guide in the UI at [https://dash.ddev.com/docs/getting-started/](https://dash.ddev.com/docs/getting-started/)).
+2. If prompted, click the **Login With Github** button and log in to GitHub if needed. The DDEV-Live UI displays. 
 3. In the **Important Links** section on the dash homepage, click the **Install Github App** link. A GitHub configuration page displays.
 4. Choose the personal or organization account where you want to install the app, then select the repositories you want DDEV-Live to access and click Install. *You or the organization must own the repositories*.
 
@@ -56,6 +56,7 @@ Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
 ## Add a site from your connected GitHub account
 #### DDEV-Live default settings.
 We give additional flags below to use if your project differs from these defaults.
+
 * Default TYPO3 version is 9
 * Default docroot is empty, the repository's root directory (this is the directory from which your site is served).
 * Default branch is master.
@@ -97,7 +98,7 @@ The output will display several sections including general site info, and the he
 The `Preview URL:` line of the output will display the preview url for your site when it has been created. Visit this link to confirm that your code has been imported. For example, `https://preview-my-site-my-org.sites.ddev.live`.
 
 ## Import a database and files
-Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://dash.ddev.com/docs/faqs/).
+Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://docs.ddev.com/faq/).
 
 Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed when your local command finishes. For example, the instance name for `ddev-live push files` will be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
 1. First, upload your database archive to the site environment.
@@ -134,6 +135,7 @@ ddev-live describe restore file my-org/my-site-t5jn5
 
 ## Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
+
 * View a list of all the sites within a specified organization with `ddev-live list sites --org <org>`.
 * View the state of a specific site with `ddev-live describe site <org>/<site>`.
 * Use `ddev-live config` to modify the GitHub repo or branch to pull from.
@@ -142,11 +144,8 @@ The DDEV-Live GitHub app watches the specified branch of your repo. When you pus
 * Use `ddev-live pull` to download project database or files.
 
 ### Next steps
-We’d love to help you be successful with DDEV-Live. Read the [FAQs](https://dash.ddev.com/docs/faqs/) and if you have any additional questions, email our [Support team](mailto:support@ddev.com).
+We’d love to help you be successful with DDEV-Live. Please visit our [Help & Support page](https://docs.ddev.com/support/).
 
 What do you think? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
 
 Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.
-
-Last updated Fri Nov 8 18:23:31 2019 UTC
-
