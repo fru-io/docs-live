@@ -19,8 +19,6 @@ nav:
     - Tutorials:
         - CI/CD with Jenkins: cicd-integration.md
     - About:
-        - Welcome to DDEV-Live: welcome.md
-        - Release Notes: MISSING.md
         - Roadmap: roadmap.md
         - Known issues: known-issues.md
         - Contributing: https://github.com/drud/community/blob/master/governance.md
