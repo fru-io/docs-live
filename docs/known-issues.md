@@ -5,10 +5,6 @@
 * When you make a change in the GitHub repo for a previously deployed site you do not have the ability to check on the status of the deployment from the CLI.
 * DRUPAL_HASH_SALT is visible in CLI output.
 * Databases from deleted sites are not being cleaned up properly.
-
-# Golden ticket limitations
-* Only Drupal, and TYPO3 sites are supported.
-* Custom domains and hostnames aren't supported.
 * `ddev-live push files` does not yet work with an archive of the entire files directory.
 
 ### Running into something that's not listed here? [Support is here for you](https://docs.ddev.com/support/)
