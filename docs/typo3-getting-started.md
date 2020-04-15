@@ -13,7 +13,6 @@ This tutorial shows the commands to deploy a TYPO3 CMS project. DDEV-Live also s
 * [Work with your site on DDEV-Live](#working-with-your-site-on-ddev-live)
 
 ### You will need
-* An email from the DDEV team inviting you to access the platform and giving you a personal `<org>` to use in commands below.
 * Current, up-to-date operating system (macOS, Linux or Windows).
 * Internet connection.
 * GitHub account.
