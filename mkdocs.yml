@@ -25,7 +25,6 @@ nav:
     - About:
         - Roadmap: roadmap.md
         - Known issues: known-issues.md
-        - DDEV Local: ddev-local.md
         - Contributing: https://github.com/drud/community/blob/master/governance.md
         - License: https://github.com/drud/docs/blob/master/LICENSE.md
 
