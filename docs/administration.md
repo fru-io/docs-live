@@ -42,9 +42,10 @@ Are you sure you want to delete developer ddev-demo/foo@example.com? (Y/n) y
 Deleted developer foo@example.com from organization ddev-demo
 ```
 
-Add a developer with `ddev-live admin add administrator`.
+Delete a developer with `ddev-live admin delete administrator`.
 
 ```
 ➜  ddev-live admin delete admin bar@example.com
 Are you sure you want to delete admin ddev-demo/bar@example.com? (Y/n) y
-Deleted admin bar@example.com from organization ddev-demo```
+Deleted admin bar@example.com from organization ddev-demo
+```
