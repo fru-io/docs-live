@@ -3,7 +3,7 @@ Users of the DDEV-Local development environment are free to use the DDEV-Local t
 
 ## Individual user accounts
 
-Each person that uses the DDEV-Live platform will have an individual account. To sign up for an account, visit [dash.ddev.com](http://dash.ddev.com/). This account includes:
+Each person that uses the DDEV-Live platform will have an individual account. To sign up for an account, visit [dash.ddev.com](http://dash.ddev.com/). To view your account information navigate to [your settings](http://dash.ddev.com/settings) page:
 
 - Account Name: The full-text name of your DDEV account. The Account Name might be your full name or could be the name of an organization.
 - Account Slug: The machine-friendly account name. The account slug is a shorter machine-friendly name that does not contain spaces or  special characters. The account slug exists in all preview URLs, so make sure to pick something you are comfortable seeing regularly or distributing to clients.
