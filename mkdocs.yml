@@ -11,6 +11,7 @@ theme:
 
 nav:
     - Home: index.md
+    - Introduction and Philosophy: introduction.md
     - Authorization and Organizations:
         - Types of Accounts: account-types.md
         - Authentication: authentication.md
