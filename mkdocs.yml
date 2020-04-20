@@ -11,6 +11,8 @@ theme:
 
 nav:
     - Home: index.md
+    - Authorization and Organizations:
+        - Types of Accounts: account-types.md
     - User Guide:
         - Getting started with Drupal: getting-started.md
         - Getting started with TYPO3: typo3-getting-started.md
