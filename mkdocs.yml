@@ -28,7 +28,7 @@ nav:
         - jobs: placeholder.md
         - status: placeholder.md
         - hostnames: hostnames.md
-        - tls: placeholder.md
+        - tls: tls.md
         - variables: placeholder.md
         - guides:
             - Drupal: drupal-guide.md
