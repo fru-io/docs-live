@@ -37,9 +37,6 @@ nav:
     - Working with Assets:
         - databases: placeholder.md
         - files: placeholder.md
-    - Working with Assets:
-        - databases: placeholder.md
-        - files: placeholder.md
     - CI/CD:
         - Overview: placeholder.md
         - jenkins: cicd-integration.md
