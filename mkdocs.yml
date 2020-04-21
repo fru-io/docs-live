@@ -17,6 +17,9 @@ nav:
         - Authentication: authentication.md
         - Administration: administration.md
         - Organizations: organizations.md
+    - Providers:
+        - Overview: providers.md
+        - Github: github.md
     - User Guide:
         - Getting started with Drupal: getting-started.md
         - Getting started with TYPO3: typo3-getting-started.md
