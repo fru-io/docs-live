@@ -1,58 +1,6 @@
-# Get started with DDEV-Live
-
-This tutorial will step you through setting up DDEV-Live as an early access user - from initial account authentication to publishing a website on a pre-production URL.
-
-This tutorial shows the commands to deploy a TYPO3 CMS project. DDEV-Live also supports Drupal, generic PHP applications and other CMSs.
-
-### Steps in the process:
-* [Install the DDEV-Live GitHub App on your GitHub account](#install-the-ddev-live-github-app)
-* [Install the DDEV-Live CLI on your machine](#install-the-ddev-live-cli)
-* [Verify and Authenticate](#verify-installation-and-authenticate)
-* [Add a site from your connected GitHub repo](#add-a-site-from-your-connected-github-account)
-* [Import a database and files](#import-a-database-and-files)
-* [Work with your site on DDEV-Live](#working-with-your-site-on-ddev-live)
-
-### You will need
-* Current, up-to-date operating system (macOS, Linux or Windows).
-* Internet connection.
-* GitHub account.
-* GitHub repository containing a TYPO3 version 8, 9, or 10 project to import for this tutorial.
-* Export in archive format of your [database](https://ddev.readthedocs.io/en/latest/users/cli-usage/#exporting-a-database "DDEV-Local export db"), and...
-* Unarchived file directories to upload for your project, if applicable.
-
-## Install the DDEV-Live GitHub app
-Grant DDEV-Live access to your selected repositories.
-1. In your browser, navigate to [https://dash.ddev.com](https://dash.ddev.com).
-2. If prompted, click the **Login With Github** button and log in to GitHub if needed. The DDEV-Live UI displays. 
-3. In the **Important Links** section on the dash homepage, click the **Install Github App** link. A GitHub configuration page displays.
-4. Choose the personal or organization account where you want to install the app, then select the repositories you want DDEV-Live to access and click Install. *You or the organization must own the repositories*.
-
-You can change these settings and add or remove repositories later in [Settings](https://dash.ddev.com/settings/).
-
-## Install the DDEV-Live CLI
-You can install the DDEV-Live CLI with [Homebrew](https://brew.sh)
-
-```
-$ brew tap drud/ddev-live
-$ brew install drud/ddev-live/ddev-live
-```
-
-#### Alternative Mac and Linux install
-From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate via CLI** link for your operating system to download the DDEV-Live CLI. This will download a file named ddev-live.zip.
-
-1. Extract ddev-live.zip. For example: `unzip ddev-live.zip`.
-2. Move the resulting ddev-live binary to a directory that is in your $PATH variable. For example:`mv ~/Downloads/ddev-live /usr/local/bin`. You may need to add to your $PATH in your .bash_profile or equivalent.
-
-#### Windows
-1. Extract ddev-live.zip to a directory that is in your %PATH% variable. For example, extract to: `C:\Program Files`. You may need to edit and add to the Path environment variable in Advanced System Properties.
-
-### Verify installation and authenticate
-Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
-1. In your terminal window, type `ddev-live`. Successful installation will return usage information. Run `ddev-live [command] -h` at any time for details on commands.
-2. Run `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.
-  The CLI displays `Authentication complete!`. If you are primarily working with one organization you may want to run ddev-live auth --default-org <org> to refer to sites only using <site> instead of <org>/<site> and eliminate needing to use the --org <org> flag for subsequent commands.
-
 ## Add a site from your connected GitHub account
+This tutorial uses TYPO3 and follows on the general [Getting Started Guide](getting-started.md). DDEV-Live supports other PHP applications and CMSs such as Drupal, WordPress, etc.
+
 #### DDEV-Live default settings.
 We give additional flags below to use if your project differs from these defaults.
 
@@ -141,10 +89,3 @@ The DDEV-Live GitHub app watches the specified branch of your repo. When you pus
 * Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
 * Use `ddev-live backup` to initiate a database or files backup.
 * Use `ddev-live pull` to download project database or files.
-
-### Next steps
-We’d love to help you be successful with DDEV-Live. Please visit our [Help & Support page](https://docs.ddev.com/support/).
-
-What do you think? Send us your feedback about DDEV-Live using the [Feedback form](https://dash.ddev.com/feedback/).
-
-Find out more about [DDEV-Local](https://ddev.readthedocs.io/en/stable/) to round out your dev-to-deploy experience.

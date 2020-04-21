@@ -19,9 +19,9 @@ nav:
         - Organizations: organizations.md
     - Working with Providers:
         - Overview: providers.md
-        - Github: github.md
+        - GitHub: github.md
     - Working with Sites:
-        - Overview: placeholder.md
+        - Overview: getting-started.md
         - site: placeholder.md
         - filestore: placeholder.md
         - database: placeholder.md
@@ -31,8 +31,8 @@ nav:
         - tls: placeholder.md
         - variables: placeholder.md
         - guides:
-            - Drupal: getting-started.md
-            - TYPO3: typo3-getting-started.md
+            - Drupal: drupal-guide.md
+            - TYPO3: typo3-guide.md
             - WordPress: placeholder.md
     - Working with Assets:
         - databases: placeholder.md
