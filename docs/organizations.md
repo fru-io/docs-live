@@ -12,12 +12,12 @@ Authentication complete!
 ```
 ## Specify Organization with Commands
 ```
-➜  docs git:(orgs) ddev-live list sites --org ddev-demo
+➜  ddev-live list sites --org ddev-demo
 SITES
  NAME                AGE  TYPE       VERSION  SITEHEALTHY  DBHEALTHY  FILESTOREHEALTHY  PREVIEWURL
  foo                 1d  Drupal     7        true         true       true              https://preview-foo-ddev-demo.sites.ddev.live
  bar                 1d  Drupal     8        true         true       true              https://preview-bar-ddev-demo.sites.ddev.live
- ```
+```
 
 ## Switching Organizations
 Use `ddev-live auth` to globally switch from one organization to another with the `--default-org` flag.
