@@ -35,6 +35,7 @@ From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate 
 
 ### Verify installation and authenticate
 Authentication connects the DDEV-Live platform to the DDEV-Live CLI.
+
 1. In your terminal window, type `ddev-live`. Successful installation will return usage information. Run `ddev-live [command] -h` at any time for details on commands.
 2. Run `ddev-live auth`. A browser window opens the DDEV-Live dashboard displaying a confirmation message.
   The CLI displays `Authentication complete!`. If you are primarily working with one organization you may want to run ddev-live auth --default-org <org> to refer to sites only using <site> instead of <org>/<site> and eliminate needing to use the --org <org> flag for subsequent commands.

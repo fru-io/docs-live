@@ -10,12 +10,12 @@ We give additional flags below to use if your project differs from these default
 * `composer install` will not run.
 
 #### User-provided values in commands:
-* `<org>` is the DDEV provided value for your unique organization on DDEV-Live. Please see your "Welcome" email for details.
-* `<site>` is what you want to call your project on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an _alphabetic_ character, and end with an _alphanumeric_ character.
-* `<github-org>` is your connected GitHub user or organization.
+* `<org>` is your [account slug](account-types.md).
+* `<site>` is the [key for this project](site.md).
+* `<github-org>` is your [connected GitHub user or organization](github.md).
 * `<repo-name>` is the connected repo you want to import.
 
-1. To create your project on DDEV-Live and import code from GitHub with the default settings, run:
+To create your project on DDEV-Live and import code from GitHub with the default settings, run:
 ```
 ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> [flags]
 ```
@@ -39,53 +39,7 @@ The CLI will display feedback while your site is being initialized. It may take 
 Created Drupal site: <org>/<site>
 ```
 
-2. Type `ddev-live describe site <org>/<site>`
+- Type `ddev-live describe site <org>/<site>`
 The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It takes several minutes for all health checks to return "true."
 
 The `Preview URL:` line of the output will display the preview url for your site when it has been created. Visit this link to confirm that your code has been imported. For example, `https://my-site-my-org.sites.ddev.live/`.
-
-## Import a database and files
-Upload any existing content for your project using the database export archive and files directory as mentioned in the section ["You will need"](#you-will-need), above. For more on asset backup and restore please see the [FAQs](https://docs.ddev.com/faq/).
-
-Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed as your local command finishes. For example, the instance name for `ddev-live push files` will be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
-1. First, upload your database archive to the site environment.
-```
-ddev-live push db <org>/<site> <path>
-```
-For example, here is a successful command and response, showing your database restore instance name:
-```
-ddev-live push db my-org/my-site /tmp/db.sql.gz
-Uploaded: /tmp/db.sql.gz
-Initiated backup restore: my-org/my-site-8wbmv
-```
-Use the restore instance to check the status of the restore operation, for example:
-```
-ddev-live describe restore my-org/my-site-8wbmv
-```
-
-2. Next, upload your files to the site environment. Move into your files directory and push the files using:
-```
-ddev-live push files <org>/<site> .
-```
-For example, here is a successful command and response for a site with the docroot in web, showing your file restore instance name:
-```
-cd web/sites/default/files && ddev-live push files my-org/my-site .
-Uploaded: [files list]
-Initiated files restore: my-org/my-site-t5jn5
-```
-Use the restore instance to check the status of the file restore operation, for example:
-```
-ddev-live describe restore my-org/my-site-t5jn5
-```
-
-3. Visit or refresh your site's URL in the browser to confirm it is displaying as expected.
-
-## Working with your site on DDEV-Live
-The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
-
-* View a list of all the sites within a specified organization with `ddev-live list sites --org <org>`.
-* View the state of a specific site with `ddev-live describe site <org>/<site>`.
-* Use `ddev-live config` to modify the GitHub repo or branch to pull from.
-* Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
-* Use `ddev-live backup` to initiate a database or files backup.
-* Use `ddev-live pull` to download project database or files.
