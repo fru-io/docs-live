@@ -27,7 +27,7 @@ nav:
         - database: placeholder.md
         - jobs: placeholder.md
         - status: placeholder.md
-        - hostnames: placeholder.md
+        - hostnames: hostnames.md
         - tls: placeholder.md
         - variables: placeholder.md
         - guides:
