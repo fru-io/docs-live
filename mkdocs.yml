@@ -17,16 +17,38 @@ nav:
         - Authentication: authentication.md
         - Administration: administration.md
         - Organizations: organizations.md
-    - Providers:
+    - Working with Providers:
         - Overview: providers.md
         - Github: github.md
-    - User Guide:
-        - Getting started with Drupal: getting-started.md
-        - Getting started with TYPO3: typo3-getting-started.md
-        - Help & Support: support.md
+    - Working with Sites:
+        - Overview: placeholder.md
+        - site: placeholder.md
+        - filestore: placeholder.md
+        - database: placeholder.md
+        - jobs: placeholder.md
+        - status: placeholder.md
+        - hostnames: placeholder.md
+        - tls: placeholder.md
+        - variables: placeholder.md
+        - guides:
+            - Drupal: getting-started.md
+            - TYPO3: typo3-getting-started.md
+            - WordPress: placeholder.md
+    - Working with Assets:
+        - databases: placeholder.md
+        - files: placeholder.md
+    - Working with Assets:
+        - databases: placeholder.md
+        - files: placeholder.md
+    - CI/CD:
+        - Overview: placeholder.md
+        - jenkins: cicd-integration.md
+        - CircleCI: placeholder.md
+    - Finding Help:
         - FAQs: faq.md
-    - Tutorials:
-        - CI/CD with Jenkins: cicd-integration.md
+        - support: support.md
+        - slack: placeholder.md
+        - discourse: placeholder.md
     - About:
         - Roadmap: roadmap.md
         - Known issues: known-issues.md
