@@ -18,7 +18,8 @@ nav:
         - authentication: authentication.md
         - administration: administration.md
         - organizations: organizations.md
-    - Working with Providers: providers.md
+    - Working with Providers:
+        - understanding providers: providers.md
         - GitHub: github.md
     - Working with Sites:
         - sites: sites.md
