@@ -44,7 +44,7 @@ Initiated files restore ddev-demo/mysite-wtm5z
 ```
 `ddev-live describe` will give you the [job's](https://docs.ddev.com/jobs) status.
 ```
-➜  ddev-live describe restore files cyberswat/lullabot2-wtm5z
+➜  ddev-live describe restore files ddev-demo/mysite-wtm5z
 Name:      mysite-wtm5z
 Org:       ddev-demo
 Created:   20s ago (2020-04-23 18:39:38 -0400 EDT)
