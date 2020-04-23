@@ -27,6 +27,7 @@ This command returns a reference to a database backup. The reference can be used
 ➜  ddev-live describe backup database ddev-demo/mysite-h9fqh
 ```
 
+## Configuring Database Backups
 To configure a backup schedule, use `ddev-live config backups`. One argument is required: a reference to a site. Backups are initiated daily at a randomly assigned time, and seven automated backups are retained by default.
 ```
 ➜  ddev-live config backups enable ddev-demo/mysite
@@ -44,13 +45,12 @@ Set database backup retention count to 5 for site: ddev-demo/mysite
 ## Pushing Databases
 `ddev-live push` can move [files](https://docs.ddev.com/files/) and [databases](https://docs.ddev.com/databases/) from your local environment to a [site](https://docs.ddev.com/sites/). Uploading files or a database will trigger a [job](https://docs.ddev.com/jobs/) that performs the task on DDEV-Live.
 
-Use `ddev-live push database` to import a database to your site. Two arguments are required: a reference to a site and the path to a database backup asset. Database backups must be gzip-ed SQL files. When the database backup has been uploaded, a backup restore operation is initiated using the
-uploaded asset.
+Use `ddev-live push database` to import a database to your site. Two arguments are required: a reference to a site and the path to a database backup asset. Database backups must be gzip-ed SQL files. When the database backup has been uploaded, a backup restore operation is initiated using the uploaded asset.
 
-The following command pushes a database named foo from local to live and initiates a [backup restore](https://docs.ddev.com/backups/). 
+The following command pushes a database named `foo.sql.gz` from local to live and initiates a [backup restore](https://docs.ddev.com/backups/). 
 ```
-➜  ddev-live push database mysite ./my-site-a1b2c.gz
-Uploaded: ./my-site-a1b2c.gz
+➜  ddev-live push database mysite ./foo.sql.gz
+Uploaded: ./foo.sql.gz
 Initiated backup restore: ddev-demo/mysite-gxsrd
 ```
 
