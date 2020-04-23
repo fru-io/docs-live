@@ -25,7 +25,7 @@ nav:
         - backups: placeholder.md
         - databases: placeholder.md
         - execs: placeholder.md
-        - files: placeholder.md
+        - files: files.md
         - guides:
             - Drupal: drupal-guide.md
             - TYPO3: typo3-guide.md
