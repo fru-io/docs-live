@@ -13,7 +13,7 @@ The output will display several sections including status and health. These sect
 * Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
 
 ## Working with your site on DDEV-Live
-The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site.
+The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site. This will take a few minutes to complete. 
 
 * View a list of all the sites within a specified organization with `ddev-live list sites --org <org>`.
 * View the state of a specific site with `ddev-live describe site <org>/<site>`.
