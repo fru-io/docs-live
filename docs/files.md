@@ -13,6 +13,7 @@ FILE ASSETS
 ```
 
 ## File Backups
+
 File [backups](https://docs.ddev.com/backups) are created on demand and are not run on a schedule. Once a [backup](https://docs.ddev.com/backups) has been generated it can be [restored](https://docs.ddev.com/restores/) to a [site](https://docs.ddev.com/sites/).
 
 `ddev-live backup` initiates a [job](https://docs.ddev.com/jobs) to create a [backup](https://docs.ddev.com/backups) of files. The output will contain a job name you can use to get more information.
@@ -29,6 +30,26 @@ Org:       ddev-demo
 Created:   29s ago (2020-04-23 17:33:41 -0400 EDT)
 FileStore: mysite
 Type:      export
+Status:    Completed
+```
+
+## File Restores
+
+`ddev-live restore files` initiates a [job](https://docs.ddev.com/jobs) to create a [backup](https://docs.ddev.com/backups) of files. The output will contain a job name you can use to get more information.
+
+```
+➜  ddev-live restore files mysite
+Initiated files restore ddev-demo/mysite-wtm5z
+
+```
+`ddev-live describe` will give you the [job's](https://docs.ddev.com/jobs) status.
+```
+➜  ddev-live describe restore files cyberswat/lullabot2-wtm5z
+Name:      mysite-wtm5z
+Org:       ddev-demo
+Created:   20s ago (2020-04-23 18:39:38 -0400 EDT)
+FileStore: mysite
+Type:      import
 Status:    Completed
 ```
 
