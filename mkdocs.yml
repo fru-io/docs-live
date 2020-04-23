@@ -12,19 +12,18 @@ theme:
 nav:
     - Home: index.md
     - Introduction and Philosophy: introduction.md
+    - Getting Started: getting-started.md
     - Auth and Orgs:
-        - Accounts: account-types.md
-        - Authentication: authentication.md
-        - Administration: administration.md
-        - Organizations: organizations.md
-    - Working with Providers:
-        - Overview: providers.md
+        - accounts: account-types.md
+        - authentication: authentication.md
+        - administration: administration.md
+        - organizations: organizations.md
+    - Working with Providers: : providers.md
         - GitHub: github.md
     - Working with Sites:
-        - Overview: getting-started.md
-        - site: site.md
-        - filestore: placeholder.md
-        - database: placeholder.md
+        - sites: sites.md
+        - files: placeholder.md
+        - databases: placeholder.md
         - jobs: placeholder.md
         - status: placeholder.md
         - hostnames: hostnames.md
