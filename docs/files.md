@@ -1,30 +1,33 @@
-* Use `ddev-live backup` to initiate a database or files backup.
-* Use `ddev-live pull` to download project database or files.
+# Files
 
-## Import a database and files
-Upload any existing content for your project using a database export archive and files directory. For more on asset backup and restore please see the [FAQs](https://docs.ddev.com/faq/).
+## Listing Files
 
-Uploading files or a database will trigger an instance that performs the task on DDEV-Live. Keep an eye out for the instance name that is displayed as your local command finishes. For example, the instance name for `ddev-live push files` will be contained in the line `Initiated files restore: <org>/<site>-<id>`. You can use the instance name in subsequent describe commands to see status.
+`ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
 
-- Next, upload your files to the site environment. Move into your files directory and push the files using:
+The following command returns the file assets for the `mysite` site. In this example, there is one file named foo.jpg in your files directory.
 ```
-ddev-live push files <org>/<site> .
-```
-For example, here is a successful command and response for a Drupal site with the docroot in web, showing your file restore instance name:
-```
-cd web/sites/default/files && ddev-live push files my-org/my-site .
-Uploaded: [files list]
-Initiated files restore: my-org/my-site-t5jn5
-```
-For example, here is a successful command and response for a TYPO3 site with the docroot in public/, showing your file restore instance name:
-```
-ddev-live push files my-org/my-site /path/to/dir
-Uploaded: [files list]
-Initiated files restore: my-org/my-site-t5jn5
-```
-Use the restore instance to check the status of the file restore operation, for example:
-```
-ddev-live describe restore my-org/my-site-t5jn5
+➜  ddev-live list files mysite
+FILE ASSETS
+ PATH
+ foo.jpg
 ```
 
-- Visit or refresh your site's URL in the browser to confirm it is displaying as expected.
+## Pushing Files
+`ddev-live push` can move [files](https://docs.ddev.com/files/) and [databases](https://docs.ddev.com/databases/) from your local environment to a [site](https://docs.ddev.com/sites/).
+
+The following comman pushes a file named foo.jpg from local to live. 
+```
+➜  ddev-live list files mysite
+➜  ddev-live push files mysite foo.jpg
+Uploaded: foo.jpg
+      To: backups/on-demand/foo.jpg
+```
+
+## Pulling Files
+`ddev-live pull` can move [files](https://docs.ddev.com/files/) and [databases](https://docs.ddev.com/databases/) from a [site](https://docs.ddev.com/sites/) to your local environment.
+
+```
+➜  ddev-live pull files mysite foo.jpg
+Asset(s) downloaded.
+```
+It is possible to pull a full [files backup](https://docs.ddev.com/backups/).
