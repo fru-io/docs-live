@@ -23,7 +23,7 @@ nav:
         - gitHub: github.md
     - Working with Sites:
         - backups: placeholder.md
-        - databases: placeholder.md
+        - databases: databases.md
         - execs: placeholder.md
         - files: files.md
         - guides:
