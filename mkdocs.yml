@@ -37,7 +37,7 @@ nav:
         - tls: tls.md
         - variables: placeholder.md
     - CI/CD:
-        - Jenkins: cicd-integration.md
+        - Jenkins: jenkins.md
         - CircleCI: placeholder.md
     - Finding Help:
         - community: placeholder.md
