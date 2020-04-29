@@ -22,7 +22,7 @@ nav:
         - provider: providers.md
         - gitHub: github.md
     - Working with Sites:
-        - backups: placeholder.md
+        - backups: backups.md
         - databases: databases.md
         - execs: placeholder.md
         - files: files.md
