@@ -66,7 +66,20 @@ Uploaded: foo.jpg
 ## Pulling Files
 `ddev-live pull` can move [files](https://docs.ddev.com/files/) and [databases](https://docs.ddev.com/databases/) from a [site](https://docs.ddev.com/sites/) to your local environment.
 
+The following command downloads a file named `foo.jpg` from the `mysite` site to the current local working directory.
 ```
 ➜  ddev-live pull files mysite foo.jpg
+Asset(s) downloaded.
+```
+The following command downloads all files from the `mysite` site to the local `/home/ddev-demo/tmp` directory.
+
+```
+➜  ddev-live pull files mysite --dest ~/tmp
+trimmed: foo.jpg
+localDestPath /home/ddev-demo/tmp/foo.jpg
+Downloaded foo.jpg (1/2)
+trimmed: bar.jpg
+localDestPath /home/ddev-demo/tmp/bar.jpg
+Downloaded bar.jpg (2/2)
 Asset(s) downloaded.
 ```

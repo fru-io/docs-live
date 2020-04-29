@@ -1,20 +1,33 @@
 # Databases
+Database backups are not enabled by default. You will need to [configure a database backup](https://docs.ddev.com/databases/#configuring-database-backups).
 
 ## Listing Databases
 
 `ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
 
-The following command returns the databases assets on the org `ddev-demo`. In this example, there is one database named foo on your org.
+The following command returns the databases assets. In this example, there is one database named `mysite` for the `mysite` site.
 ```
-➜  ddev-live list databases ddev-demo
+➜  ddev-live list databases
 DATABASES
  NAME          SITE          SERVER         SERVERREADY  AGE
- foo           mysite        default-9482b  True         10d
+ mysite        mysite        default-9482b  True         10d
+```
+
+## Listing Database Backups
+
+`ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
+
+The following command returns the database backups. In this example, there is one database named `mysite` for the `mysite` site. The output is restricted to database backups with the `--db` flag. Omitting the `--db` flag will list both database and file backups.
+```
+➜  ddev-live list backups --db
+DATABASE BACKUPS
+ NAME             DATABASE   AGE  COMPLETE  BYTES 
+ mysite-jtsg8     mysite     14m  true      31556 
 ```
 
 ## Database Backups
 
-Database [backups](https://docs.ddev.com/backups/) can be created on demand or are run on a schedule. Once a backup has been generated it can be restored to a site.
+Database [backups](https://docs.ddev.com/backups/) can be created on demand or are run on a schedule. Once a backup has been generated it can be restored to a site or [downloaded](https://docs.ddev.com/databases/#pulling-databases).
 
 The following command initiates a backup of the databases assets for the `mysite` site.
 ```
@@ -72,4 +85,24 @@ This command downloads a database backup asset. One argument is required: a refe
 ```
 ➜  ddev-live pull database ddev-demo-h9fqh
 Downloaded: ddev-demo-h9fqh.gz
+```
+
+## Restoring Databases
+`ddev-live restore` can apply a [database backup](https://docs.ddev.com/databases/#database-backups) to a [site](https://docs.ddev.com/sites/).
+
+This command restores a database backup named `mysite-jtsg8` to the `mysite` site.
+```
+➜  ddev-live restore database mysite mysite-jtsg8
+Initiated database restore ddev-demo/mysite-wd4kq
+```
+`ddev-live describe` will give you information about the restore job.
+```
+➜  ddev-live describe restore database mysite-wd4kq
+Name:     mysite-wd4kq
+Org:      ddev-demo
+Created:  23s ago (2020-04-29 09:51:27 -0400 EDT)
+Database: mysite
+Export:   mysite-jtsg8
+Status:   ImportOpFinished
+
 ```
