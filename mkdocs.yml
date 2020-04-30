@@ -24,7 +24,7 @@ nav:
     - Working with Sites:
         - backups: backups.md
         - databases: databases.md
-        - execs: placeholder.md
+        - execs: exec.md
         - files: files.md
         - guides:
             - Drupal: drupal-guide.md
