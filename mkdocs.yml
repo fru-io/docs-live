@@ -30,7 +30,7 @@ nav:
             - Drupal: drupal-guide.md
             - TYPO3: typo3-guide.md
             - WordPress: placeholder.md
-        - restores: placeholder.md
+        - restores: restores.md
         - sites: sites.md 
         - jobs: placeholder.md
         - hostnames: hostnames.md
