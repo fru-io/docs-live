@@ -31,7 +31,7 @@ nav:
             - TYPO3: typo3-guide.md
             - WordPress: placeholder.md
         - restores: placeholder.md
-        - sites: placeholder.md 
+        - sites: sites.md 
         - jobs: placeholder.md
         - hostnames: hostnames.md
         - tls: tls.md
