@@ -29,7 +29,7 @@ nav:
         - guides:
             - Drupal: drupal-guide.md
             - TYPO3: typo3-guide.md
-            - WordPress: placeholder.md
+            - WordPress: wordpress-guide.md
         - restores: restores.md
         - sites: sites.md 
         - jobs: jobs.md

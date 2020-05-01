@@ -1,45 +1,32 @@
-## Add a site from your connected GitHub account
-This tutorial uses TYPO3 and follows on the general [Getting Started Guide](getting-started.md). DDEV-Live supports other PHP applications and CMSs such as Drupal, WordPress, etc.
+# TYPO3 Getting Started Guide
+This tutorial gives an example of the DDEV-Live commands specific to TYPO3 CMS and follows on the general [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [Drupal](https://docs.ddev.com/drupal-guide/), [WordPress](https://docs.ddev.com/typo3-guide/), etc.
 
-#### DDEV-Live default settings.
+## DDEV-Live default settings for TYPO3
 We give additional flags below to use if your project differs from these defaults.
 
-* Default TYPO3 version is 9
-* Default docroot is empty, the repository's root directory (this is the directory from which your [site](sites.md) is served).
-* Default branch is master.
-* `composer install` will not run.
+- Default TYPO3 version is 9
+- Default docroot is empty, the repository's root directory (this is the directory from which your [site](sites.md) is served).
+- Default branch is master.
+- `composer install` will not run.
 
-#### User-provided values in commands:
-* `<org>` is your [account slug](account-types.md).
-* `<site>` is the [key for this project](site.md).
-* `<github-org>` is your connected [GitHub](github.md) user or organization.
-* `<repo-name>` is the connected repo you want to import.
+## Add a TYPO3 site from your connected GitHub account
+To create a [site](https://docs.ddev.com/sites/) named `mysite` on DDEV-Live and import code from a [connected GitHub account](https://docs.ddev.com/github/) named `ddev-demo` with a repo named `mysite` using the default settings, run: 
 
-- To create your project on DDEV-Live and import code from [GitHub](github.md) with the default settings, run:
 ```
-ddev-live create site typo3 <org>/<site> --github-repo <github-org>/<repo-name> [flags]
+➜  ~ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite
 ```
 
-Here is a common example for a TYPO3 v10 [site](sites.md) that requires `composer install`, with the docroot in /public:
-```
-ddev-live create site typo3 my-org/my-site --github-repo my-github/my-repo --docroot public --run-composer-install --typo3-version 10
-```
+Use `ddev-live describe site mysite` to view info about your [site](https://docs.ddev.com/sites/).
 
-You can add flags for specific configuration options. Use `ddev-live create site typo3 --help` to see all possible flags and their descriptions. A few common flags:
+## TYPO3-specific flags
+You can add flags for specific configuration options. Use `ddev-live create site typo3 --help` to see all possible flags and their descriptions. 
 
 | Flag | Description |
 | :---- | :----------- |
 | `--typo3-version <version>` |Specify the TYPO3 version, <8>, <9> or <10>. The default is TYPO3 v9. |
 | `--docroot <path>` |The docroot is the directory from which your site is served. The default is the repository's root. <br> This value is a relative path from your project root. For TYPO3, the most common is `--docroot public`. |
-| `--run-composer-install` |Runs `composer install` on site creation. <br> The default is that Composer does _not_ run. <br> Further arguments are available with `--composer-args <args>`.|
-| `--branch <branch-name>` |Specify the branch of a [GitHub](github.md) repo. The default branch is `master`. |
 
-The CLI will display `Creating TYPO3 site: <org>/<site>`. It may take a few minutes for your [site](sites.md) image to be built.  When your [site](sites.md) has been successfully created, running `ddev-live describe site <org>/<site>` will display:
+Here is an example to create a TYPO3 v10 [site](https://docs.ddev.com/sites/) that requires `composer install`, with the docroot in /public:
 ```
-Created TYPO3 site: <org>/<site>
+➜  ~ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite --docroot public --run-composer-install --typo3-version 10
 ```
-
-- Type `ddev-live describe site <org>/<site>`
-The output will display several sections including general [site](sites.md) info, and the health of various components. The status messages change as the system provisions the [site](sites.md). It takes several minutes for all health checks to return "true."
-
-The `Preview URL:` line of the output will display the preview url for your [site](sites.md) when it has been created. Visit this link to confirm that your code has been imported. For example, `https://preview-my-site-my-org.sites.ddev.live`.

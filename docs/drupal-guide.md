@@ -1,45 +1,31 @@
-## Add a site from your connected GitHub account
-This tutorial uses Drupal and follows on the general [Getting Started Guide](getting-started.md). DDEV-Live supports other PHP applications and CMSs such as TYPO3, WordPress, etc.
+# Drupal Getting Started Guide
+This tutorial gives an example of the DDEV-Live commands specific to Drupal and follows on the general [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [TYPO3](https://docs.ddev.com/typo3-guide/), [WordPress](https://docs.ddev.com/typo3-guide/), etc.
 
-#### DDEV-Live default settings.
+## DDEV-Live default settings for Drupal
 We give additional flags below to use if your project differs from these defaults.
 
-* Default Drupal version is Drupal 8.
-* Default docroot is the project root (ie the directory from which your [site](sites.md) is served).
-* Default branch is master.
-* `composer install` will not run.
+- Default Drupal version is Drupal 8.
+- Default docroot is the project root (ie the directory from which your [site](sites.md) is served).
+- Default branch is master.
+- `composer install` will not run.
 
-#### User-provided values in commands:
-* `<org>` is your [account slug](account-types.md).
-* `<site>` is the [key for this project](site.md).
-* `<github-org>` is your connected [GitHub](github.md) user or organization.
-* `<repo-name>` is the connected repo you want to import.
-
-To create your project on DDEV-Live and import code from [GitHub](github.md) with the default settings, run:
+## Add a Drupal site from your connected GitHub account
+To create a [site](https://docs.ddev.com/sites/) named `mysite` on DDEV-Live and import code from a [connected GitHub account](https://docs.ddev.com/github/) named `ddev-demo` with a repo named `mysite` using the default settings, run: 
 ```
-ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> [flags]
+➜  ~ ddev-live create site drupal mysite --github-repo ddev-demo/mysite
 ```
 
-Here is a common example for a Drupal 8 [site](sites.md) that requires `composer install`, with the docroot in /web:
-```
-ddev-live create site drupal my-org/my-site --github-repo my-github/my-repo --docroot web --run-composer-install
-```
+Use `ddev-live describe site mysite` to view info about your [site](https://docs.ddev.com/sites/).
 
-You can add flags for specific configuration options. Use `ddev-live create site drupal --help` to see all possible flags and their descriptions. A few common flags:
+## Drupal-specific flags
+You can add flags for specific configuration options. Use `ddev-live create site drupal --help` to see all possible flags and their descriptions. 
 
 | Flag | Description |
 | :---- | :----------- |
 | `--drupal-version <version>` |Specify the Drupal version, `<7>` or `<8>`. The default is Drupal 8. |
 | `--docroot <path>` |The docroot is the directory from which your site is served. The default is the project root, `--docroot ""`. <br> This value is a relative path from your project root. For Drupal 8, the most common is `--docroot web`. |
-| `--run-composer-install` |Runs `composer install` on site creation. <br> The default is that Composer does _not_ run. <br> Further arguments are available with `--composer-args <args>`.|
-| `--branch <branch-name>` |Specify the branch of a [GitHub](github.md) repo. The default branch is `master`. |
 
-The CLI will display feedback while your [site](sites.md) is being initialized. It may take a few minutes for your [site](sites.md) image to be built.  When your [site](sites.md) has been successfully created, the CLI displays:
+Here is an example for a Drupal 8 site that requires `composer install`, with the docroot in /web:
 ```
-Created Drupal site: <org>/<site>
+➜  ~ ddev-live create site drupal ddev-demo/mysite --github-repo ddev-demo/mysite --docroot web --run-composer-install
 ```
-
-- Type `ddev-live describe site <org>/<site>`
-The output will display several sections including status and health. These sections are not populated until the system reports on them, and the status messages change as the system provisions the site. It takes several minutes for all health checks to return "true."
-
-The `Preview URL:` line of the output will display the preview url for your [site](sites.md) when it has been created. Visit this link to confirm that your code has been imported. For example, `https://my-site-my-org.sites.ddev.live/`.
