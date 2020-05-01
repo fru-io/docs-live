@@ -1,10 +1,10 @@
 # Known issues
-* `ddev-live auth` has a 60 minute timeout. If you start noticing CLI output similar to "failed to get site" when you know the site exists you should run `ddev-live auth` again.
-* You may see a 503 or a 502 error at a newly generated site's URL for a period of time.
+* `ddev-live auth` has a 60 minute timeout. If you start noticing CLI output similar to "failed to get site" when you know the [site](sites.md) exists you should run `ddev-live auth` again.
+* You may see a 503 or a 502 error at a newly generated [site's](sites.md) URL for a period of time.
 * `ddev-live exec` commands queue and cannot currently be run simultaneously, leading to long waiting times and CLI timeouts.
-* When you make a change in the GitHub repo for a previously deployed site you do not have the ability to check on the status of the deployment from the CLI.
+* When you make a change in the [GitHub](github.md) repo for a previously deployed [site](sites.md) you do not have the ability to check on the status of the deployment from the CLI.
 * DRUPAL_HASH_SALT is visible in CLI output.
-* Databases from deleted sites are not being cleaned up properly.
+* [Databases](databases.md) from deleted [sites](sites.md) are not being cleaned up properly.
 * `ddev-live push files` does not yet work with an archive of the entire files directory.
 
 ### Running into something that's not listed here? [Support is here for you](https://docs.ddev.com/support/)

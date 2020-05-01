@@ -20,7 +20,7 @@ This tutorial uses Drupal as an example. DDEV-Live supports many PHP application
   * [Run the build to deploy on DDEV-Live](#6-run-the-build-to-see-your-branch-launched-into-ddev-live)
 
 ### Prerequisites
-* A fully configured account on [DDEV-Live](https://dash.ddev.com/)
+* A fully configured [account](account-types.md) on [DDEV-Live](https://dash.ddev.com/)
 * A Jenkins server and user with access and permissions to install new executables
 
 ### Files you will need to create or configure. Please see the [tutorial repository](https://github.com/drud/devrel/tree/master/jenkins-ddev-live) for example files.

@@ -16,14 +16,14 @@ You should only be paying for exactly the things you’re using, we need manage 
 
 Expanding the list of CMSs and frameworks
 
-TYPO3, static sites (Gatsby, Hugo, Jekyll, etc), WordPress, NodeJS, Ruby on Rails --  just to name a few. We also want to [hear from you](https://dash.ddev.com/feedback/) about your portfolio of sites and their requirements.
+TYPO3, static [sites](sites.md) (Gatsby, Hugo, Jekyll, etc), WordPress, NodeJS, Ruby on Rails --  just to name a few. We also want to [hear from you](https://dash.ddev.com/feedback/) about your portfolio of [sites](sites.md) and their requirements.
 
 
 ### Later
 
-More Git hosting providers
+More Git hosting [providers](providers.md)
 
-We are guessing that many of you have repos hosted in places like GitLab, BitBucket, and Gogs and we don’t want to lock you into just using GitHub.
+We are guessing that many of you have repos hosted in places like GitLab, BitBucket, and Gogs and we don’t want to lock you into just using [GitHub](github.md).
 
 Tooling unification
 

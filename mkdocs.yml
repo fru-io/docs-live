@@ -35,7 +35,7 @@ nav:
         - jobs: placeholder.md
         - hostnames: hostnames.md
         - tls: tls.md
-        - variables: placeholder.md
+        - variables: variables.md
     - CI/CD:
         - Jenkins: jenkins.md
         - CircleCI: placeholder.md

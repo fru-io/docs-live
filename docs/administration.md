@@ -1,8 +1,8 @@
 # Administration
-The DDEV-Live platform is designed to work with organizations. As an administrator, you can administer the users that have the ability to manage deployments for an organization. Administration is managed through the `ddev-live admin` set of commands.
+The DDEV-Live platform is designed to work with [organizations](organizations.md). As an administrator, you can administer the users that have the ability to manage deployments for an [organization](organizations.md). Administration is managed through the `ddev-live admin` set of commands.
 
 ## Listing users
-Listing users for the organization you are authenticated against is accomplised with `ddev-live admin list`.
+Listing users for the [organization](organizations.md) you are authenticated against is accomplised with `ddev-live admin list`.
 
 ```
 ➜  ddev-live admin list
@@ -17,7 +17,7 @@ DEVELOPERS
 ```
 
 ## Adding users
-You can add an administrator or a devloper to an organization. An administrator has the ability to add and remove other administrators in addition to managing deployments. A developer can use all functionality provided by the ddev-live client other than adding and removing administrators. The users email address should be the same as their GitHub email address.
+You can add an administrator or a devloper to an [organization](organizations.md). An administrator has the ability to add and remove other administrators in addition to managing deployments. A developer can use all functionality provided by the ddev-live client other than adding and removing administrators. The users email address should be the same as their [GitHub](github.md) email address.
 
 Add a developer with `ddev-live admin add developer`.
 

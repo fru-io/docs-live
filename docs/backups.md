@@ -1,5 +1,5 @@
 # Backups
-Backups of databases and files are not enabled by default. Database backups can be set to a regular schedule or initiated manually while file backups must be initiated manually.
+Backups of [databases](databases.md) and [files](files.md) are not enabled by default. [databases](databases.md) backups can be set to a regular schedule or initiated manually while [files](files.md) backups must be initiated manually.
 
 ## Databases
 - [Creating backups](https://docs.ddev.com/databases/#database-backups)
