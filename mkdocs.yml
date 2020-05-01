@@ -32,7 +32,7 @@ nav:
             - WordPress: placeholder.md
         - restores: restores.md
         - sites: sites.md 
-        - jobs: placeholder.md
+        - jobs: jobs.md
         - hostnames: hostnames.md
         - tls: tls.md
         - variables: variables.md
