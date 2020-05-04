@@ -1,2 +1,2 @@
 # Coming Soon
-This page is being constructed and will receive a content update soon.
+This page is in the process of being written. If you need immediate help [Support is here for you](https://docs.ddev.com/support/)

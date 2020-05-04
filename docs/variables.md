@@ -3,42 +3,42 @@
 ## Set Variable
 The following command sets an environment variable named `FOO` with the value of `bar` for the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md).
 ```
-➜  ddev-live config variable set mysite FOO "bar"
+$ ddev-live config variable set mysite FOO "bar"
 Set FOO="bar" for site ddev-demo/mysite
 ```
 ## Unset Variable
 The following command deletes an environment variable named `FOO` from the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md).
 ```
-➜  ddev-live config variable unset mysite FOO
+$ ddev-live config variable unset mysite FOO
 Unset variable FOO for site ddev-demo/mysite
 ```
 ## View Variables
 The following command views the details of the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md). Inside the output is a section named `ENVIRONMENT` that lists the environment variables available for the site. In this example, you can see that there are two variables that are set: `DRUPAL_TRUSTED_HOST_PATTERN` and `FOO`.
 ```
-➜  ddev-live describe site mysite
+$ ddev-live describe site mysite
 SITE INFO
  Name:          mysite
  Org:           ddev-demo
  Created:       17d ago (2020-04-14 17:05:18 -0400 EDT)
  Type:          8
- Version:       
+ Version:
  PHP Version:   7.2
  Healthy:       true
  Updated:       16s ago (2020-05-01 08:48:02 -0400 EDT)
  Info:          PHPApp mysite is provisioned
- Preview URL:   http://preview-mysite-ddev-demo.sites.ddev.live
+ Preview URL:   https://preview-mysite-ddev-demo.sites.ddev.live
  Cron Disabled: true
- Cron Schedule: 
+ Cron Schedule:
 
 SITE IMAGE
  Created:       17d ago (2020-04-14 17:05:18 -0400 EDT)
  Run Composer:  true
- Composer Args: 
- GITHUB SOURCE 
+ Composer Args:
+ GITHUB SOURCE
   Org:    ddev-demo
   Repo:   my-drupal-8-site
   Branch: 8.7.8
-  Status: 
+  Status:
 
 SITE
  Healthy: true
@@ -69,7 +69,7 @@ HOSTS
 HOSTNAMES
  No custom hosts configured
 
-TLS Provider:       
+TLS Provider:
  TLSDisable:         true
  TLSDisableRedirect: false
 

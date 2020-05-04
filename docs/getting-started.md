@@ -8,7 +8,7 @@ This tutorial will step you through setting up DDEV-Live as a new user - from in
 ## Install the DDEV-Live [GitHub](github.md) app
 Grant DDEV-Live access to your selected repositories.
 1. In your browser, navigate to [https://dash.ddev.com](https://dash.ddev.com).
-2. If prompted, click the **Login With Github** button and log in to GitHub if needed. The DDEV-Live UI displays. 
+2. If prompted, click the **Login With Github** button and log in to GitHub if needed. The DDEV-Live UI displays.
 3. In the **Important Links** section on the dash homepage, click the **Install Github App** link. A [GitHub](github.md) configuration page displays.
 4. Choose the personal or organization account where you want to install the app, then select the repositories you want DDEV-Live to access and click Install. *You or the organization must own the repositories*.
 
@@ -26,7 +26,7 @@ $ brew install drud/ddev-live/ddev-live
 From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate via CLI** link for your operating system to download the DDEV-Live CLI. This will download a file named ddev-live.zip.
 
 1. Extract ddev-live.zip. For example: `unzip ddev-live.zip`.
-2. Move the resulting ddev-live binary to a directory that is in your $PATH variable. For example:`mv ~/Downloads/ddev-live /usr/local/bin`. You may need to add to your $PATH in your .bash_profile or equivalent.
+2. Move the resulting ddev-live binary to a directory that is in your $PATH variable. For example: `mv ~/Downloads/ddev-live /usr/local/bin`. You may need to add to your `$PATH` in your .bash_profile or equivalent.
 
 #### Windows
 From the [DDEV-Live dashboard](https://dash.ddev.com), click the **Authenticate via CLI** link for Windows to download the DDEV-Live CLI. This will download a file named ddev-live.zip.

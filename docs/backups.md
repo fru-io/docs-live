@@ -13,4 +13,3 @@ Backups of [databases](databases.md) and [files](files.md) are not enabled by de
 - [Creating backups](https://docs.ddev.com/files/#file-backups)
 - [Listing backups](https://docs.ddev.com/files/#listing-files)
 - [Restoring backups](https://docs.ddev.com/files/#file-restores)
-

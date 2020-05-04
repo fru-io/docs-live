@@ -6,4 +6,3 @@ You can create [backups](https://docs.ddev.com/backups/) of both [files](files.m
 
 ## Files
 - [Restoring backups](https://docs.ddev.com/files/#file-restores)
-

@@ -10,16 +10,16 @@ We give additional flags below to use if your project differs from these default
 - `composer install` will not run.
 
 ## Add a TYPO3 site from your connected GitHub account
-To create a [site](https://docs.ddev.com/sites/) named `mysite` on DDEV-Live and import code from a [connected GitHub account](https://docs.ddev.com/github/) named `ddev-demo` with a repo named `mysite` using the default settings, run: 
+To create a [site](https://docs.ddev.com/sites/) named `mysite` on DDEV-Live and import code from a [connected GitHub account](https://docs.ddev.com/github/) named `ddev-demo` with a repo named `mysite` using the default settings, run:
 
 ```
-➜  ~ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite
+$ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite
 ```
 
 Use `ddev-live describe site mysite` to view info about your [site](https://docs.ddev.com/sites/).
 
 ## TYPO3-specific flags
-You can add flags for specific configuration options. Use `ddev-live create site typo3 --help` to see all possible flags and their descriptions. 
+You can add flags for specific configuration options. Use `ddev-live create site typo3 --help` to see all possible flags and their descriptions.
 
 | Flag | Description |
 | :---- | :----------- |

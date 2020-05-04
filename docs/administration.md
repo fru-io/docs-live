@@ -17,27 +17,27 @@ DEVELOPERS
 ```
 
 ## Adding users
-You can add an administrator or a devloper to an [organization](organizations.md). An administrator has the ability to add and remove other administrators in addition to managing deployments. A developer can use all functionality provided by the ddev-live client other than adding and removing administrators. The users email address should be the same as their [GitHub](github.md) email address.
+You can add an administrator or a developer to an [organization](organizations.md). An administrator has the ability to add and remove other administrators in addition to managing deployments. A developer can use all functionality provided by the ddev-live client other than adding and removing administrators. The users email address should be the same as their [GitHub](github.md) email address.
 
 Add a developer with `ddev-live admin add developer`.
 
 ```
-➜  ddev-live admin add developer foo@example.com
+$ ddev-live admin add developer foo@example.com
 Added developer foo@example.com to organization ddev-demo
 ```
 
 Add a developer with `ddev-live admin add administrator`.
 
 ```
-➜  ddev-live admin add admin bar@example.com
+$ ddev-live admin add admin bar@example.com
 Added user bar@example.com to organization ddev-demo
 ```
-## Deleting users
 
+## Deleting users
 Delete a developer with `ddev-live admin delete developer`.
 
 ```
-➜  ddev-live admin delete developer foo@example.com
+$ ddev-live admin delete developer foo@example.com
 Are you sure you want to delete developer ddev-demo/foo@example.com? (Y/n) y
 Deleted developer foo@example.com from organization ddev-demo
 ```
@@ -45,7 +45,7 @@ Deleted developer foo@example.com from organization ddev-demo
 Delete a developer with `ddev-live admin delete administrator`.
 
 ```
-➜  ddev-live admin delete admin bar@example.com
+$ ddev-live admin delete admin bar@example.com
 Are you sure you want to delete admin ddev-demo/bar@example.com? (Y/n) y
 Deleted admin bar@example.com from organization ddev-demo
 ```

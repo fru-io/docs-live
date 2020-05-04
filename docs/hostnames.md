@@ -9,7 +9,7 @@ You can assign additional hostnames to a [site](sites.md) with the `ddev-live co
 The following command adds a hostname of `example.com` to a site named `mysite` in the `ddev-demo` [organization](organizations.md).
 
 ```
-➜  ddev-live config hostname add mysite example.com
+$ ddev-live config hostname add mysite example.com
 Added hostname example.com to site ddev-demo/mysite
 ```
 
@@ -17,27 +17,27 @@ Added hostname example.com to site ddev-demo/mysite
 You can use `ddev-live describe site` to view the hostname details for a given [site](sites.md). The following examples use a [site](sites.md) named `mysite` which has been configured to recognize the `example.com` domain.
 
 ```
-➜  ddev-live describe site mysite
+$ ddev-live describe site mysite
 ```
 Look for the HOSTNAMES section in the output.
 ```
 HOSTNAMES
  - Hostname:                  example.com
-   Redirect:                  
+   Redirect:
    TLSDisable:                false
    TLSDisableRedirect:        false
-   RecommendedDNSRecordType:  
-   RecommendedDNSRecordValue: 
+   RecommendedDNSRecordType:
+   RecommendedDNSRecordValue:
 ```
-Read the [TLS]documentation](https://docs.ddev.com/site/) for further details on configuring TLSDisable and TLSDisableRedirect.
+Read the [TLS documentation](https://docs.ddev.com/site/) for further details on configuring TLSDisable and TLSDisableRedirect.
+
 ## Updating DNS
 In order for your hostname to resolve you will need to update an A record for apex domains and a CNAME for sub domains like www. Your A records should use the ip address `34.67.213.20` if a CNAME is not available. All other records should use a CNAME of `ingress1.ddev.live`. Please consult your DNS providers documentation for additional instructions.
 
 ## Delete a Hostname
-
 The following command deletes a hostname of `example.com` from a site named `mysite` in the `ddev-demo` [organization](organizations.md).
 
 ```
-➜  ddev-live config hostname delete mysite example.com
+$ ddev-live config hostname delete mysite example.com
 Deleted hostname example.com from site ddev-demo/mysite
 ```

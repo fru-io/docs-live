@@ -2,7 +2,6 @@
 Database [backups](backups.md) are not enabled by default. You will need to [configure a database backup](https://docs.ddev.com/databases/#configuring-database-backups).
 
 ## Listing Databases
-
 `ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
 
 The following command returns the databases assets. In this example, there is one database named `mysite` for the `mysite` [site](sites.md).
@@ -14,24 +13,22 @@ DATABASES
 ```
 
 ## Listing Database Backups
-
 `ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
 
 The following command returns the database [backups](backups.md). In this example, there is one database named `mysite` for the `mysite` [site](sites.md). The output is restricted to database [backups](backups.md) with the `--db` flag. Omitting the `--db` flag will list both database and file [backups](backups.md).
 ```
 ➜  ddev-live list backups --db
 DATABASE BACKUPS
- NAME             DATABASE   AGE  COMPLETE  BYTES 
- mysite-jtsg8     mysite     14m  true      31556 
+ NAME             DATABASE   AGE  COMPLETE  BYTES
+ mysite-jtsg8     mysite     14m  true      31556
 ```
 
 ## Database Backups
-
-Database [backups](backups.md) can be created on demand or are run on a schedule. Once a [backup](backups.md) has been generated it can be restored to a [site](sites.md) or [downloaded](https://docs.ddev.com/databases/#pulling-databases).
+Database [backups](backups.md) can be created on demand or run on a schedule. Once a [backup](backups.md) has been generated it can be restored to a [site](sites.md) or [downloaded](https://docs.ddev.com/databases/#pulling-databases).
 
 The following command initiates a [backup](backups.md) of the databases assets for the `mysite` [site](sites.md).
 ```
-➜  ddev-live backup database mysite 
+➜  ddev-live backup database mysite
 Initiated database backup: ddev-demo/mysite-h9fqh
 ```
 
@@ -47,7 +44,7 @@ To configure a [backup](backups.md) schedule, use `ddev-live config backups`. On
 Enabled database backups for site: ddev-demo/mysite
 ```
 
-The `ddev-live config backups retention` command sets the number of automated [backups](backups.md) to be retained. 
+The `ddev-live config backups retention` command sets the number of automated [backups](backups.md) to be retained.
 
 This command accepts two arguments: a reference to a [site](sites.md) and the number of [backups](backups.md) to be retained. By default, 7 [backups](backups.md) will be retained, equating to one week's worth of daily [backups](backups.md). The count can be configured to values between 1 and 365.
 ```
@@ -60,7 +57,7 @@ Set database backup retention count to 5 for site: ddev-demo/mysite
 
 Use `ddev-live push database` to import a database to your [site](sites.md). Two arguments are required: a reference to a [site](sites.md) and the path to a database [backup](backups.md) asset. Database [backups](backups.md) must be gzip-ed SQL files. When the database [backup](backups.md) has been uploaded, a [backup](backups.md) restore operation is initiated using the uploaded asset.
 
-The following command pushes a database named `foo.sql.gz` from local to live and initiates a [backup restore](https://docs.ddev.com/backups/). 
+The following command pushes a database named `foo.sql.gz` from local to live and initiates a [backup restore](https://docs.ddev.com/backups/).
 ```
 ➜  ddev-live push database mysite ./foo.sql.gz
 Uploaded: ./foo.sql.gz
@@ -104,5 +101,4 @@ Created:  23s ago (2020-04-29 09:51:27 -0400 EDT)
 Database: mysite
 Export:   mysite-jtsg8
 Status:   ImportOpFinished
-
 ```
