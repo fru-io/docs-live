@@ -14,34 +14,34 @@ nav:
     - Introduction and Philosophy: introduction.md
     - Getting Started: getting-started.md
     - Auth and Orgs:
-        - accounts: account-types.md
-        - authentication: authentication.md
-        - administration: administration.md
-        - organizations: organizations.md
+        - Accounts: account-types.md
+        - Authentication: authentication.md
+        - Administration: administration.md
+        - Organizations: organizations.md
     - Providers:
-        - provider: providers.md
-        - gitHub: github.md
+        - Provider: providers.md
+        - GitHub: github.md
     - Working with Sites:
-        - backups: backups.md
-        - databases: databases.md
-        - execs: exec.md
-        - files: files.md
-        - guides:
+        - Backups: backups.md
+        - Databases: databases.md
+        - Execs: exec.md
+        - Files: files.md
+        - Guides:
             - Drupal: drupal-guide.md
             - TYPO3: typo3-guide.md
             - WordPress: wordpress-guide.md
-        - restores: restores.md
-        - sites: sites.md 
-        - jobs: jobs.md
-        - hostnames: hostnames.md
-        - tls: tls.md
-        - variables: variables.md
+        - Restores: restores.md
+        - Sites: sites.md
+        - Jobs: jobs.md
+        - Hostnames: hostnames.md
+        - TLS: tls.md
+        - Variables: variables.md
     - CI/CD:
         - Jenkins: jenkins.md
         - CircleCI: placeholder.md
     - Finding Help:
-        - community: placeholder.md
-        - support: support.md
+        - Community: placeholder.md
+        - Support: support.md
         - FAQs: faq.md
     - About:
         - Roadmap: roadmap.md
