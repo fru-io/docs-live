@@ -31,6 +31,7 @@ nav:
             - TYPO3: typo3-guide.md
             - WordPress: wordpress-guide.md
         - Restores: restores.md
+        - Services: services.md
         - Sites: sites.md
         - Jobs: jobs.md
         - Hostnames: hostnames.md
