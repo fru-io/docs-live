@@ -1,5 +1,5 @@
 # WordPress Getting Started Guide
-This tutorial gives an example of the DDEV-Live commands specific to WordPress and follows on the general [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [TYPO3](https://docs.ddev.com/typo3-guide/), [Drupal](https://docs.ddev.com/drupal-guide/), etc.
+This tutorial gives an example of the DDEV-Live commands specific to WordPress. First you will need to set up your DDEV-Live account and connect to your [GitHub](https://docs.ddev.com/github/) acccount using the [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [TYPO3](https://docs.ddev.com/typo3-guide/), [Drupal](https://docs.ddev.com/drupal-guide/), etc.
 
 ## DDEV-Live default settings for WordPress
 We give additional flags below to use if your project differs from these defaults.
