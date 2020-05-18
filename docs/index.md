@@ -1,7 +1,12 @@
 # Welcome to DDEV-Live documentation
 
+## What would you like to do? 
+- Sign up for your account on [dash.ddev.com](dash.ddev.com)
+- [Get started](https://docs.ddev.com/getting-started/) connecting to DDEV-Live
+- Visit the [DDEV website](https://ddev.com/).
+
 ## Getting help
-- We want your [feedback on your experience](https://dash.ddev.com/feedback/)
+- We want your [feedback on your experience](https://dash.ddev.com/feedback/).
 - If you get stuck, [Support is here for you](https://dash.ddev.com/docs/support/).
 
 ## Integrations
