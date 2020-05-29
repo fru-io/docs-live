@@ -1,4 +1,5 @@
 # exec
+
 `ddev-live exec` runs a command or script in the [site's](sites.md) environment.
 
 Commands and scripts can be defined directly in the invocation or stored in a
@@ -74,7 +75,7 @@ To avoid this, create a file containing the commands:
   echo $HOME
 ```
 ...and reference the file in the exec command:
-```➜  ddev-live exec mysite --file home.sh
+```$  ddev-live exec mysite --file home.sh
 Targeting site: ddev-demo/mysite
 Running command:
   #! /bin/sh
@@ -90,6 +91,6 @@ OUTPUT
 After an exec has been created and scheduled (but before it has been executed),
 it can be cancelled:
 ```
-➜  ddev-live exec cancel ddev-demo/mysite-gdk6x
+$  ddev-live exec cancel ddev-demo/mysite-gdk6x
 Cancelled exec ddev-demo/mysite-gdk6x
 ```

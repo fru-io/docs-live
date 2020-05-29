@@ -1,4 +1,5 @@
 # TLS Configuration
+
 You have several options to control TLS settings for [site](sites.md) deployed on DDEV-Live. TLS settings include the delivery of a Let's Encrypt SSL certificate and redirecting between http and https.
 
 You can view the TLS and CERTIFICATE ISSUER sections of `ddev-live config site` output to view a [site's](sites.md) configurations.
@@ -37,7 +38,7 @@ The [site](sites.md) described above would not work on https and would work on h
 The following example enables TLS for the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md).
 
 ```
-➜  ddev-live config tls mysite --tls-enable
+$  ddev-live config tls mysite --tls-enable
 Updated hostname settings for ddev-demo/mysite
 ```
 The output of `ddev-live describe site mysite` will have an updated TLS section.

@@ -1,4 +1,5 @@
 # WordPress Getting Started Guide
+
 This tutorial gives an example of the DDEV-Live commands specific to WordPress. First you will need to set up your DDEV-Live account and connect to your [GitHub](https://docs.ddev.com/github/) acccount using the [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [TYPO3](https://docs.ddev.com/typo3-guide/), [Drupal](https://docs.ddev.com/drupal-guide/), etc.
 
 ## DDEV-Live default settings for WordPress
@@ -29,5 +30,5 @@ You can add flags for specific configuration options. Use `ddev-live create site
 
 Here is an example for a WordPress site that requires `composer install`, with the docroot in /docroot:
 ```
-➜  ddev-live create site wordpress ddev-demo/mysite --github-repo ddev-demo/mysite --docroot docroot --run-composer-install
+$  ddev-live create site wordpress ddev-demo/mysite --github-repo ddev-demo/mysite --docroot docroot --run-composer-install
 ```

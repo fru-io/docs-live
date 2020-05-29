@@ -1,4 +1,5 @@
 # Welcome
+
 We want to spend a few minutes to help you understand what the DDEV-Live platform represents and some of the considerations we've used while crafting what you are about to experience.
 
 In a not so distant past, Open Source Content Management Systems changed the face of the internet. People that collaborated on the problems a user of a website would face revolutionized the web by working together in open and inclusive communities. As sites increased in popularity and robustness the challenges associated with hosting for a global audience became increasingly complex. As the problems of creating content became a focal point, the underlying hosting necessary to drive user experiences was left behind. To me, this represented the first phase of watching Open Source change the world.

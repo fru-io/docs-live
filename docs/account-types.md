@@ -1,3 +1,5 @@
+# Account Types
+
 ## Local Developers
 Users of the DDEV-Local development environment are free to use the DDEV-Local tool without creating an account. [DDEV-Local](https://ddev.readthedocs.io/en/stable/) is open source and hosting provider agnostic, so you can extend it to support additional hosting providers.
 

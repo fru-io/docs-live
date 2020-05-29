@@ -1,4 +1,5 @@
 # Variables
+
 `ddev live config variable` allows you to set and unset environment variables for a [site](sites.md).
 ## Set Variable
 The following command sets an environment variable named `FOO` with the value of `bar` for the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md).
@@ -6,12 +7,14 @@ The following command sets an environment variable named `FOO` with the value of
 $ ddev-live config variable set mysite FOO "bar"
 Set FOO="bar" for site ddev-demo/mysite
 ```
+
 ## Unset Variable
 The following command deletes an environment variable named `FOO` from the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md).
 ```
 $ ddev-live config variable unset mysite FOO
 Unset variable FOO for site ddev-demo/mysite
 ```
+
 ## View Variables
 The following command views the details of the `mysite` [site](sites.md) in the `ddev-demo` [organization](organizations.md). Inside the output is a section named `ENVIRONMENT` that lists the environment variables available for the site. In this example, you can see that there are two variables that are set: `DRUPAL_TRUSTED_HOST_PATTERN` and `FOO`.
 ```

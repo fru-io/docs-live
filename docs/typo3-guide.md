@@ -1,4 +1,5 @@
 # TYPO3 Getting Started Guide
+
 This tutorial gives an example of the DDEV-Live commands specific to TYPO3 CMS. First you will need to set up your DDEV-Live account and connect to your [GitHub](https://docs.ddev.com/github/) acccount using the [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [Drupal](https://docs.ddev.com/drupal-guide/), [WordPress](https://docs.ddev.com/typo3-guide/), etc.
 
 ## DDEV-Live default settings for TYPO3
@@ -28,5 +29,5 @@ You can add flags for specific configuration options. Use `ddev-live create site
 
 Here is an example to create a TYPO3 v10 [site](https://docs.ddev.com/sites/) that requires `composer install`, with the docroot in /public:
 ```
-➜  ~ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite --docroot public --run-composer-install --typo3-version 10
+$  ~ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite --docroot public --run-composer-install --typo3-version 10
 ```

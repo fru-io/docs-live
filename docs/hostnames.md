@@ -5,7 +5,6 @@ Each new [site](sites.md) you launch on DDEV-Live is given a default url. The ur
 You can assign additional hostnames to a [site](sites.md) with the `ddev-live config hostname` command. Once the DNS resolves for new hostnames we will make a request to Let's Encrypt for a [ssl](tls.md) certificate on your behalf. Host information is stored in HOSTS from `ddev-describe site`.
 
 ## Add a Hostname
-
 The following command adds a hostname of `example.com` to a site named `mysite` in the `ddev-demo` [organization](organizations.md).
 
 ```

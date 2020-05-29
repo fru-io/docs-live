@@ -1,11 +1,12 @@
 # Administration
+
 The DDEV-Live platform is designed to work with [organizations](organizations.md). As an administrator, you can administer the users that have the ability to manage deployments for an [organization](organizations.md). Administration is managed through the `ddev-live admin` set of commands.
 
 ## Listing users
 Listing users for the [organization](organizations.md) you are authenticated against is accomplised with `ddev-live admin list`.
 
 ```
-➜  ddev-live admin list
+$  ddev-live admin list
 ADMINS
  NAME                TYPE
  ddev-demo@ddev.com  Admin

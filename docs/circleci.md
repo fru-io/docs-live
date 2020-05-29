@@ -5,6 +5,7 @@ This tutorial will illustrate how to perform a one-time setup to configure [Circ
 This tutorial uses [Drupal](https://docs.ddev.com/drupal-guide/) as an example. DDEV-Live has explicit support for multiple CMSs and PHP applications.
 
 **Why you might need this:**
+
 - You want to demo work to clients or your team so they can approve work in a user acceptance testing (UAT) environment.
 - You want to run functional tests.
 
@@ -50,6 +51,7 @@ orbs:
 
 ### 5. Configure with orb commands
 Use the following DDEV-Live orb commands as appropriate for your project and use case, or add additional commands from the DDEV-Live CLI. Use these to configure your circleci/config.yml to run your required build steps:
+
 - **ddev-live/install** This orb command will install the DDEV-Live CLI. You may not need to do this step if your image already includes the DDEV-Live CLI.
 - **ddev-live/auth** Logs in with your API token environmental variable (see example below). You can also provide a `default-org` if your account has access to multiple [organizations](https://docs.ddev.com/organizations/).
 - **ddev-live/ci-branch-multi** This will create new sites for every push that happens to the repository.
