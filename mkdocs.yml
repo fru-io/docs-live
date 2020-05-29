@@ -38,8 +38,9 @@ nav:
         - TLS: tls.md
         - Variables: variables.md
     - CI/CD:
+        - Overview: cicd.md
         - Jenkins: jenkins.md
-        - CircleCI: placeholder.md
+        - CircleCI: circleci.md
     - Finding Help:
         - Community: placeholder.md
         - Support: support.md
