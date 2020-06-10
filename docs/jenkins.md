@@ -80,6 +80,9 @@ Save the build.
 ## Deleting the site when you are done
 Run `ddev-live delete site --help` for details on removing the build from DDEV-Live when you are finished.
 
+## Watch a demo of this integration on YouTube:
+[![Demo of DDEV-Live and Jenkins](http://img.youtube.com/vi/PO01MX2ZE8k/0.jpg)](http://www.youtube.com/watch?v=PO01MX2ZE8k "Demo of DDEV-Live and Jenkins")
+
 ### What next?
 We’d love to help you be successful with DDEV-Live. Please visit our [Help & Support page](https://docs.ddev.com/support/).
 
