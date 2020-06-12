@@ -1,28 +1,16 @@
-FROM node:8.0-alpine AS builder
+FROM python:3-alpine
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY package.json /app
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
+ && apk add --no-cache git
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh
+COPY . .
 
-# Creating tar of productions dependencies
-RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
+RUN pip install --no-cache-dir -r requirements.txt
+RUN apk del .build-deps
 
-# Copying application code
-COPY . /app
+EXPOSE 8000
 
-FROM node AS runner
-
-EXPOSE 3000
-WORKDIR /app
-
-# Adding production dependencies to image
-COPY --from=builder /tmp/node_modules /app/node_modules
-
-# Copying application code
-COPY . /app
-
-# start the node web server
-CMD npm start
+ENTRYPOINT ["mkdocs"]
+CMD ["serve", "--dev-addr=0.0.0.0:8000", "--no-livereload"]
