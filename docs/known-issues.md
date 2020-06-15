@@ -6,5 +6,6 @@
 - It can take up to 3 seconds after site creation for the `ddev-live describe` command to succeed.
 - [Databases](databases.md) from deleted [sites](sites.md) are not being cleaned up properly.
 - `ddev-live push files` does not yet work with an archive of the entire files directory.
+- `ddev-live push files` will fail with the message "The access key ID you provided does not exist in our records." Please try your file push a few times and it should complete successfully. 
 
 ### Running into something that's not listed here? [Support is here for you](https://docs.ddev.com/support/)
