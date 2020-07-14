@@ -21,6 +21,7 @@ nav:
     - Providers:
         - Provider: providers.md
         - GitHub: github.md
+        - GitLab: gitlab.md
     - Working with Sites:
         - Backups: backups.md
         - Databases: databases.md

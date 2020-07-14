@@ -4,6 +4,8 @@ A "site" on DDEV-Live is a project which has information attached to it and whic
 
 `<site>` is what you want to call your project on DDEV-Live. It must consist of lower case alphanumeric characters or ''-'', start with an _alphabetic_ character, and end with an _alphanumeric_ character.
 
+### GitHub
+
 To create your project on DDEV-Live and import code from [GitHub](github.md) with the default settings, run:
 ```
 $ ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> [flags]
@@ -13,6 +15,14 @@ You can add flags for specific configuration options. Use a command as follows t
 ```
 $ ddev-live create site wordpress -h
 ```
+
+### GitLab
+
+The previous command is tightly coupled with the GitHub API and [GitHub Apps](https://developer.github.com/apps/), that it doesn't support any other git hostings. But as we are gradually introducing integrations with more third-party tools and platforms, for GitLab we have added more universal set of flags that are agnostic of the git hosting and newly support not only branches but also tags and any other valid git revisions:
+```
+$ ddev-live create site drupal <org>/<site> --git-repo <git_repository_url> --git-rev <git_revision> [flags]
+```
+
 
 ## Working with your site on DDEV-Live
 The DDEV-Live GitHub app watches the specified branch of your repo. When you push updates to the repo, DDEV-Live will redeploy the site. This will take a few minutes to complete.
