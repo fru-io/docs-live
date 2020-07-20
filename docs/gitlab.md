@@ -63,9 +63,9 @@ will trigger a build if the git revision differs from previously configured revi
 
 ### Revoke Access
 
-**Webhook Configuration**
+**Delete Webhook Configuration**
 
-If you use automatic build triggers delete all your sites in DDEV-Live to remove all repository configuration associated with DDEV-Live.
+If you want to disable a webhook trigger, delete all sites that reference particular GitLab server.
 List sites:
 ```
 $ ddev-live list sites
