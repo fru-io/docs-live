@@ -16,8 +16,8 @@ Grant DDEV-Live access to your selected repositories.
 You can change these settings and add or remove repositories later in [settings/integration](https://dash.ddev.com/settings/integration).
 
 ## Install the DDEV-Live CLI
-#### MacOS
-For MacOS, install the DDEV-Live CLI with [Homebrew](https://brew.sh):
+#### MacOS & Linux
+Install the DDEV-Live CLI with [Homebrew](https://brew.sh):
 
 ```
 $ brew tap drud/ddev-live
