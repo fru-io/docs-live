@@ -20,7 +20,7 @@ $ ddev-live create site wordpress -h
 
 The previous command is tightly coupled with the GitHub API and [GitHub Apps](https://developer.github.com/apps/), and therefore it does not support any other Git hosts. As we are gradually introducing integrations with more third-party tools and platforms, for GitLab we have added more universal set of flags that are agnostic of the Git hosting [provider](https://docs.ddev.com/providers/) and newly support not only branches but also tags and any other valid Git revisions:
 ```
-$ ddev-live create site drupal <org>/<site> --git-repo <git-repository-url> --git-rev <git-revision> [flags]
+$ ddev-live create site drupal <org>/<site> --git-repo <git-repository-url> --git-rev <branch/tag/commit> [flags]
 ```
 
 
