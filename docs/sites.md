@@ -31,3 +31,16 @@ The DDEV-Live GitHub app watches the specified branch of your repo. When you pus
 - View the state of a specific site with `ddev-live describe site <org>/<site>`.
 - Use `ddev-live config` to modify the GitHub repo or branch to pull from.
 - Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
+
+#### Setting expiration on your site
+Optionally you can set a site to expire anywhere from 30 minutes to 5 days from the site creation both at site creation time as well as configure later using flag `--expires-in`. When the site expires, it will be automatically deleted from DDEV-Live.
+```
+$ ddev-live configure drupal <site> --expires-in 4d
+```
+
+Here is a handy command to filter through your sites for all that have expiry set and sort by which one expires earliest:
+```
+$ ddev-live list sites -o json --format-time-as-seconds | jq -c '[.sites[] | select(.expires != "")] | sort_by(.expires) | .[]'
+```
+
+The flag `-o json` sets the output from plaintext to JSON formatted, the second flag `--format-time-as-seconds` converts the human readable duration and time to seconds and timestamp so it can be conveniently passed to other tools, such as `jq`, for additional processing.
