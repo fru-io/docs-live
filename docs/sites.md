@@ -33,20 +33,20 @@ The DDEV-Live GitHub app watches the specified branch of your repo. When you pus
 - Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
 
 #### Setting expiration on your site
-Optionally you can set a site to expire anywhere from 30 minutes to 5 days from the creation timestamp with `--expires-in` flag. It can be used both at site creation time as well as configured later. When the site expires, it will be automatically deleted from DDEV-Live.
+Optionally, you can set a site to expire anywhere from 30 minutes to 5 days from the creation timestamp with the `--expires-in` flag. It can be set during initial site creation or configured later. When the site reaches the expiration time, it will be automatically deleted from DDEV-Live. This is useful when creating disposable testing or preview sites.
 
-Example creating a site that will expire in 90 minutes.
+Example for creating a site that will expire in 90 minutes.
 ```
 $ ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> --expires-in 90m
 ```
 
-Extending or shortening the expiration sets the time to live from the site creation and can never extend beyond 5 days total.
-This example will set the expiry to 4 days from when the site was created.
+Extending or shortening the expiration sets the expiration time relative to the site creation time and can never extend beyond 5 days total from site creation.
+This example will set the expiration to 4 days from when the site was created.
 ```
 $ ddev-live config drupal <site> --expires-in 4d
 ```
 
-Here is a handy command to filter through your sites for all that have expiry set and sort by which one expires earliest:
+Here is a handy command to filter through your sites for all that have expiration set and sort by which one expires earliest:
 ```
 $ ddev-live list sites -o json --format-time-as-seconds | jq -c '[.sites[] | select(.expires != "")] | sort_by(.expires) | .[]'
 ```
