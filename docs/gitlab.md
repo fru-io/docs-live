@@ -1,10 +1,10 @@
 # GitLab
 
 ???+ note
-    This guide uses GitLab 13.0 for it's examples. Your experience may vary depending on GitLab version.
+    This guide uses GitLab 13.0 for its examples. Your experience may vary depending on GitLab version. Current functionality was designed with self-managed [GitLab Omnibus](https://about.gitlab.com/install/) in mind. [GitLab.com](https://gitlab.com/) may be used in the same way, however you will need to [manually configure webhooks](https://docs.ddev.com/gitlab/#project-webhook-configuration).
 
 
-The integration with GitLab has been designed differently from [GitHub](https://docs.ddev.com/github/).  For publicly available GitLab repositories, the CLI flags are all you need. This page describes how to configure credentials and enable webhooks for automatic build triggers.
+The integration with GitLab has been designed differently from [GitHub](https://docs.ddev.com/github/).  For publicly available GitLab repositories, [the CLI flags](https://docs.ddev.com/sites/#gitlab) are all you need. This page describes how to configure credentials and enable webhooks for automatic build triggers.
 
 ### Configure personal access token
 
@@ -37,7 +37,7 @@ ddev-live create credentials gitlab <credentials-name> \
 
 ### Site creation
 
-Site creation now uses the [ddev-live CLI more general purpose flags](https://docs.ddev.com/sites/#gitlab).
+[Site](https://docs.ddev.com/sites/) creation now uses the [ddev-live CLI more general purpose flags](https://docs.ddev.com/sites/#gitlab).
 
 ```
 ddev-live create site typo3 typo3-example-site \

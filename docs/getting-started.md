@@ -3,7 +3,7 @@
 This tutorial will step you through setting up DDEV-Live as a new user - from initial [account](account-types.md) [authentication](authentication.md) to installing the DDEV-Live CLI.
 
 ### You will need
-- A [GitHub](github.md) account
+- A [Git provider](https://docs.ddev.com/providers/)
 - A [DDEV-Live](https://dash.ddev.com) account
 
 ## Install the DDEV-Live [GitHub](github.md) app
