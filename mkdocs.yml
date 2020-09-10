@@ -34,6 +34,7 @@ nav:
         - Restores: restores.md
         - Services: services.md
         - Sites: sites.md
+        - Tags: site-tags.md
         - Jobs: jobs.md
         - Hostnames: hostnames.md
         - TLS: tls.md
