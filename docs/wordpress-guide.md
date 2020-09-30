@@ -32,3 +32,30 @@ Here is an example for a WordPress site that requires `composer install`, with t
 ```
 $  ddev-live create site wordpress ddev-demo/mysite --github-repo ddev-demo/mysite --docroot docroot --run-composer-install
 ```
+
+## WordPress DDEV Custom Config
+We also support a custom WP config file in your repo that will allow you to set custom WP config settings for your install. The file name is `wp-drud-config.php` and located in the docroot. You can set env variables using the CLI like so `ddev-live config variable set {org}/{site} NGINX_DOCROOT '/var/www/html/docroot'`/ Then you can use `getenv` in the `wp-drud-config.php` file like so `getenv('NGINX_DOCROOT')` to pull environment specific configs.
+
+### Common Use Cases: 
+
+WP in sub directory
+
+```
+<?php
+// site URL
+define('WP_HOME', ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']);
+
+/** WP in Sub-directory */
+// WP URL
+define('WP_SITEURL', WP_HOME . '/wp');
+// set WP ABSPATH
+define('ABSPATH', getenv('DDEV_DOCROOT') . '/wp/');
+
+/** Custom wp-content Directory */
+// full local path of current directory (no trailing slash)
+define('WP_CONTENT_DIR', getenv('DDEV_DOCROOT') . '/content');
+// full URI of current directory (no trailing slash)
+define('WP_CONTENT_URL', WP_HOME . '/content');
+```
+
+
