@@ -3,7 +3,7 @@
 Database [backups](backups.md) are not enabled by default. You will need to [configure a database backup](https://docs.ddev.com/databases/#configuring-database-backups).
 
 ## Listing Databases
-`ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
+`ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/exec/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
 
 The following command returns the databases assets. In this example, there is one database named `mysite` for the `mysite` [site](sites.md).
 ```
