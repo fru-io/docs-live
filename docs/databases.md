@@ -103,3 +103,7 @@ Database: mysite
 Export:   mysite-jtsg8
 Status:   ImportOpFinished
 ```
+## Example
+Creating a database backup:<script id="asciicast-358910" src="https://asciinema.org/a/358910.js" async></script>
+Pushing a local database to ddev-live: <script id="asciicast-358916" src="https://asciinema.org/a/358916.js" async></script>
+Pulling a database from ddev-live to your local: <script id="asciicast-358914" src="https://asciinema.org/a/358914.js" async></script>

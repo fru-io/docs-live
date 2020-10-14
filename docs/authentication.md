@@ -12,3 +12,6 @@ $ ddev-live auth --token $DDEV_LIVE_TOKEN
 ```
 
 Storing the DDEV-Live API token as an environment variable and then referencing that environment variable is the recommend way of working with this type of token.
+
+## Example
+Authtentication with a default organization and a token:<script id="asciicast-358902" src="https://asciinema.org/a/358902.js" async></script>
