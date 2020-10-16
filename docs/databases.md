@@ -14,7 +14,7 @@ DATABASES
 ```
 
 ## Listing Database Backups
-`ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/execs/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
+`ddev-live list` can list different types of objects including [backups](https://docs.ddev.com/backups/), [databases](https://docs.ddev.com/databases/), [execs](https://docs.ddev.com/exec/), [files](https://docs.ddev.com/files/), [restores](https://docs.ddev.com/restores/), and [sites](https://docs.ddev.com/sites/).
 
 The following command returns the database [backups](backups.md). In this example, there is one database named `mysite` for the `mysite` [site](sites.md). The output is restricted to database [backups](backups.md) with the `--db` flag. Omitting the `--db` flag will list both database and file [backups](backups.md).
 ```
