@@ -1,3 +1,8 @@
+---
+title: Welcome to DDEV-Live
+description: Deploy your PHP project to DDEV-Live hosting. We tamed the complexity of Kubernetes for you.
+---
+
 # Welcome to DDEV-Live documentation
 
 ## What would you like to do? 
