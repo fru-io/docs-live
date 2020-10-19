@@ -1,3 +1,7 @@
+---
+title: Get started with DDEV-Live
+description: Set up your account and connect to the DDEV hosting platform
+---
 # Get started with DDEV-Live
 
 This tutorial will step you through setting up DDEV-Live as a new user - from initial [account](account-types.md) [authentication](authentication.md) to installing the DDEV-Live CLI.

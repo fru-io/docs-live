@@ -1,3 +1,7 @@
+---
+title: Organizations
+description: An organization on DDEV-Live is an account which one or multiple developers may have access to.
+---
 # Organizations
 
 An Organization is a shared [account](account-types.md) where developers can collaborate on projects. When you authenticate with DDEV-Live you are associated with an organization for subsequent commands. Your primary organization is listed as the [account](account-types.md) slug on [your settings](https://dash.ddev.com/settings) page. Your results will vary depending on the organization you have queried.

@@ -1,3 +1,7 @@
+---
+title: TLS
+description: Configuring TLS and SSL certificates for DDEV-Live hosting 
+---
 # TLS Configuration
 
 You have several options to control TLS settings for [site](sites.md) deployed on DDEV-Live. TLS settings include the delivery of a Let's Encrypt SSL certificate and redirecting between http and https.

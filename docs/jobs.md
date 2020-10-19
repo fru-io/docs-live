@@ -1,3 +1,7 @@
+---
+title: Jobs
+description: How DDEV-Live hosting works withh the concept of jobs 
+---
 # Jobs
 
 Many of the commands that are issued against the DDEV-Live platform are processed as a job. In each instance of a command that generates a job you will be given a job ID that allows you to track the status of the job. When a job is complete it is not deleted so that you can continue to check it's status as necessary.

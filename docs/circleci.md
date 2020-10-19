@@ -1,3 +1,7 @@
+---
+title: CircleCI
+description: How to configure and integrate DDEV-Live with CircleCI using an API token 
+---
 # Tutorial: How to integrate CircleCI with DDEV-Live
 
 This tutorial will illustrate how to perform a one-time setup to configure [CircleCI](https://circleci.com/) in order to run regular automatic deployments into [DDEV-Live](https://ddev.com/ddev-live/). With this setup, you can connect an existing CI/CD process to DDEV-Live.

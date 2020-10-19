@@ -1,3 +1,7 @@
+---
+title: Hostnames
+description: Add, describe, and delete hostnames and configure DNS for DDEV
+---
 # Hostnames
 
 Each new [site](sites.md) you launch on DDEV-Live is given a default url. The url follows the format of `https://preview-myorg-mysite.sites.ddev.live` where myorg and mysite are replaced with your [organization](organizations.md) name and the site name you used when creating the [site](sites.md). The preview url is always visible in [SITE INFO](https://docs.ddev.com/sites/) from `ddev-live describe site` and as the [PREVIEWURL](https://docs.ddev.com/sites/) from `ddev-live list sites`.

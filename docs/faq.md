@@ -1,3 +1,7 @@
+---
+title: Frequently asked questions
+description: FAQ for using the DDEV hosting environment 
+---
 # Frequently asked questions
 
 ## General questions

@@ -1,3 +1,7 @@
+---
+title: Authentication
+description: Connecting to the DDEV-Live platform using the CLI or the API token 
+---
 # Authentication
 
 ## Authenticating from the command line

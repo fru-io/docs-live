@@ -1,3 +1,7 @@
+---
+title: Known issues
+description: Iterate, release small pieces of work, and use Git!  
+---
 # Known issues
 
 - You may see a 503 or a 502 error at a newly generated [site's](sites.md) URL for a period of time.

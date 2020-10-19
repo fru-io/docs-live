@@ -1,3 +1,7 @@
+---
+title: Variables
+description: Set, unset, and view DDEV-Live hosting environment variables 
+---
 # Variables
 
 `ddev live config variable` allows you to set and unset environment variables for a [site](sites.md).

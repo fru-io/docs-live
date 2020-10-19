@@ -1,3 +1,7 @@
+---
+title: Drupal Guide
+description: Deploy Drupal to DDEV-Live hosting 
+---
 # Drupal Getting Started Guide
 
 This tutorial gives an example of the DDEV-Live commands specific to Drupal. First you will need to set up your DDEV-Live account and connect to your [GitHub](https://docs.ddev.com/github/) acccount using the [Getting Started Guide](https://docs.ddev.com/getting-started/). DDEV-Live supports other PHP applications and CMSs such as [TYPO3](https://docs.ddev.com/typo3-guide/), [WordPress](https://docs.ddev.com/typo3-guide/).

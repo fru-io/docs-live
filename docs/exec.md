@@ -1,3 +1,7 @@
+---
+title: The exec command
+description: How to run commands in the DDEV hosting environment 
+---
 # exec
 
 `ddev-live exec` runs a command or script in the [site's](sites.md) environment.

@@ -1,3 +1,7 @@
+---
+title: Help and Support
+description: Looking for more answers? The DDEV team and community are here to help.
+---
 # Help and Support
 
 We want to help you be successful with DDEV-Live.

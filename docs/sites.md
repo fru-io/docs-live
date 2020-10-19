@@ -1,3 +1,7 @@
+---
+title: Sites
+description: Working with sites on DDEV-Live hosting
+---
 # Sites
 
 A "site" on DDEV-Live is a project which has information attached to it and which can be referenced in commands.

@@ -1,3 +1,7 @@
+---
+title: Jenkins
+description: How to configure and integrate DDEV-Live with Jenkins using your API token 
+---
 # Tutorial: How to integrate Jenkins with DDEV-Live
 
 This tutorial will illustrate how to perform a one-time setup to configure [Jenkins](https://jenkins.io/) in order to run regular automatic deployments into DDEV-Live. With this setup, you can connect an existing CI/CD process into DDEV-Live.

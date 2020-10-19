@@ -1,3 +1,7 @@
+---
+title: An introduction and open source philosophy
+description: The DDEV local development and hosting platform was built out of a passion for open source. 
+---
 # Welcome
 
 We want to spend a few minutes to help you understand what the DDEV-Live platform represents and some of the considerations we've used while crafting what you are about to experience.

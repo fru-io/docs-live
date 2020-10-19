@@ -1,3 +1,7 @@
+---
+title: Restores
+description: How to restore a database or files on DDEV hosting 
+---
 # Restores
 
 You can create [backups](https://docs.ddev.com/backups/) of both [files](files.md) and [databases](databases.md) that can be restored to a running [site](sites.md).

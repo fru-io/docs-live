@@ -1,3 +1,7 @@
+---
+title: Backups
+description: How to backup databases and files in the DDEV-Live hosting environment
+---
 # Backups
 
 Backups of [databases](databases.md) and [files](files.md) are not enabled by default. [databases](databases.md) backups can be set to a regular schedule or initiated manually while [files](files.md) backups must be initiated manually.

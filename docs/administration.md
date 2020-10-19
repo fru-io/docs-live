@@ -1,3 +1,7 @@
+---
+title: Adminstration
+description: User management and administrative tasks on DDEV-Live hosting
+---
 # Administration
 
 The DDEV-Live platform is designed to work with [organizations](organizations.md). As an administrator, you can administer the users that have the ability to manage deployments for an [organization](organizations.md). Administration is managed through the `ddev-live admin` set of commands.

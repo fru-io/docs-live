@@ -1,3 +1,7 @@
+---
+title: Site Tags
+description: Add a tag to your deployed project on the DDEV platform
+---
 # Site Tags
 A "tag" is a type of metadata that can be set on [site](https://docs.ddev.com/sites/) resources. They can be used to group or filter multiple sites with in a `ddev-live list sites` command using the `--tag` flag. They are also useful and visible when describing a site using the `ddev-live describe site` command, visible under the `Tags:` heading.
 

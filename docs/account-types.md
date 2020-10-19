@@ -1,3 +1,7 @@
+---
+title: Account types
+description: DDEV-Local is free and open source. For DDEV-Live hosting, please create an account.
+---
 # Account Types
 
 ## Local Developers
