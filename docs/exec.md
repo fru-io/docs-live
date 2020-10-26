@@ -6,17 +6,14 @@ description: How to run commands in the DDEV hosting environment
 
 `ddev-live exec` runs a command or script in the [site's](sites.md) environment.
 
-Commands and scripts can be defined directly in the invocation or stored in a
-file for repeatability and consistency. By default, this command will wait
-until all constituent commands are complete, then return the combined stdout
-and stderr output, along with other execution information.
+Commands and scripts can be defined directly in the invocation or stored in a file for repeatability and consistency. By default, this command will wait until all constituent commands are complete, then return the combined stdout and stderr output, along with other execution information.
 
 You can use the `--async` flag with `ddev-live exec` if you prefer not waiting for the output to be returned.
 
 ## exec inline command
 The following command illustrates calling `drush version` in the `mysite` site for the `ddev-demo` [organization](organizations.md).
 ```
-$ ddev-live exec mysite -- 'drush version'
+$ ddev-live exec mysite -- "drush version"
 Targeting site: ddev-demo/mysite
 Running command:
 drush version
@@ -56,12 +53,7 @@ OUTPUT
 WP-CLI 2.4.0
 ```
 ## exec shell
-Any command or script passed to exec will be interpreted by 'sh', meaning a
-user can utilize environment [variables](variables.md), wildcards, and the like when running
-commands. If the commands used in an exec rely on these features of 'sh', the
-commands should be defined in a file to prevent shell parsing and substitution
-locally. For example, the following command will echo the value of the [variables](variables.md)
-as defined on the local system, not the [site's](sites.md) remote environment:
+Any command or script passed to exec will be interpreted by "sh", meaning a user can utilize environment [variables](variables.md), wildcards, and the like when running commands. If the commands used in an exec rely on these features of "sh", the commands should be defined in a file to prevent shell parsing and substitution locally. For example, the following command will echo the value of the [variables](variables.md) as defined on the local system, not the [site's](sites.md) remote environment:
 ```
 $ ddev-live exec mysite -- echo $HOME
 Targeting site: ddev-demo/mysite
@@ -79,12 +71,12 @@ To avoid this, create a file containing the commands:
   echo $HOME
 ```
 ...and reference the file in the exec command:
-```$  ddev-live exec mysite --file home.sh
+```
+$  ddev-live exec mysite --file home.sh
 Targeting site: ddev-demo/mysite
 Running command:
   #! /bin/sh
   echo $HOME
-
 
 Created exec: ddev-demo/mysite-gxxcf
 
