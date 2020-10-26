@@ -36,6 +36,10 @@ DDEV-Live "watches" the specified branch of your repo. When you push updates to 
 - Use `ddev-live config` to modify the GitHub repo or branch to pull from.
 - Use `ddev-live delete` to delete a resource. For example, `ddev-live delete site <org>/<site>`.
 
+???+ note "Garbage Collection when Deleting a Site"
+    When a site is deleted, `file` and `database` backups that belong to the site will also be automatically garbage collected.
+    Be sure to use `ddev-live pull` on any live `file` or `database` assets <b>before</b> deleting a site.
+
 Example of a site creation command with describe site command:
 ```
 $ ddev-live create site drupal my-drupal-site \
