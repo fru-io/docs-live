@@ -14,7 +14,7 @@ You can create [backups](https://docs.ddev.com/backups/) of both [files](files.m
 
 ## Syncing Data
 
-Backups of both databases and files are scoped to an [organization](organizations.md).  Because backups are not scoped to the site from which they were taken restore operations of backups can be restored to any target in that [organization](organizations.md).  
+Backups are [organization](organizations.md) scoped and can be reused between multiple sites in the same [organization](organizations.md). But they are bound to a site and will get garbage collected when site is deleted.
 
 One use case where this can be useful when syncing files and database content from a production site to a site which is under development.
 
