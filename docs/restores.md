@@ -16,7 +16,7 @@ You can create [backups](https://docs.ddev.com/backups/) of both [files](files.m
 
 Backups are [organization](organizations.md) scoped and can be reused between multiple sites in the same [organization](organizations.md). But they are bound to a [site](sites.md) and will get garbage collected when the [site](sites.md) is deleted.
 
-One use case where this can be useful when syncing [file](files.md) and [database](databases.md) content from a production [site](sites.md) to a [site](sites.md) which is under development.
+One use case where this can be useful is attempting to sync [file](files.md) and [database](databases.md) content from a production [site](sites.md) to a [site](sites.md) which is under development.
 
 For example:
 ```
