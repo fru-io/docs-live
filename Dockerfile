@@ -5,10 +5,12 @@ WORKDIR /usr/src/app
 RUN apk add --no-cache --virtual .build-deps gcc musl-dev \
  && apk add --no-cache git
 
-COPY . .
+COPY requirements.txt requirements.txt
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN apk del .build-deps
+
+COPY . .
 
 EXPOSE 8000
 

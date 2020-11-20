@@ -39,6 +39,10 @@ nav:
         - Hostnames: hostnames.md
         - TLS: tls.md
         - Variables: variables.md
+        - Preview Bot:
+            - Commands: preview-bot.md 
+            - GitHub: github-bot.md
+            - GitLab: gitlab-bot.md
     - CI/CD:
         - Overview: cicd.md
         - Jenkins: jenkins.md
