@@ -4,7 +4,7 @@ description: Launch DDEV-Live preview sites interacting from GitHub pull request
 ---
 # Usage of GitHub preview bot
 
-The [GitHub integration guide](https://docs.ddev.com/github/) explains how to install the DDEV-Live GitHub app.
+The [GitHub integration guide](https://docs.ddev.com/github/) explains how to install the DDEV-Live GitHub app. The DDEV Preview bot requires a publicly visible email configured for your account in order to be able to perform authorization on each command.
 
 ???+ note 
     If you have installed the DDEV-Live app before November 23rd, 2020, you will need to approve new set of permissions for reading and writing pull request comments to enable Preview bot functionality.
