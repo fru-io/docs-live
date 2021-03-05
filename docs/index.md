@@ -11,11 +11,11 @@ description: Deploy your PHP project to DDEV-Live hosting. We tamed the complexi
 - Visit the [DDEV website](https://ddev.com/).
 
 ## Getting help
-- We want your [feedback on your experience](https://dash.ddev.com/feedback/).
-- If you get stuck, [Support is here for you](https://docs.ddev.com/support/).
+- The DDEV support team is available for all customer enquiries. Additionally, there are several community support channels you may wish to explore.
+- [Support is here for you](https://docs.ddev.com/support/).
 
 ## Integrations
-- The DDEV Team is planning first-class integrations between [DDEV-Local and DDEV-Live](https://ddev.readthedocs.io/en/stable/users/providers/DDEV-Live/). If you have ideas or want to help us shape our roadmap, please [get in touch](https://dash.ddev.com/feedback/).
+- The DDEV Team is planning first-class integrations between [DDEV-Local and DDEV-Live](https://ddev.readthedocs.io/en/stable/users/providers/DDEV-Live/). If you have ideas or want to help us shape our roadmap, please [get in touch](https://dash.ddev.com/support/).
 
 All the best,
 The DDEV Team
