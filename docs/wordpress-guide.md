@@ -1,6 +1,6 @@
 ---
 title: WordPress Guide
-description: Deploy WordPress to DDEV-Live hosting 
+description: Deploy WordPress to DDEV-Live hosting
 ---
 # WordPress Getting Started Guide
 
@@ -17,7 +17,7 @@ We give additional flags below to use if your project differs from these default
 ## Add a WordPress site from your connected GitHub account
 To create a [site](https://docs.ddev.com/sites/) named `mysite` on DDEV-Live and import code from a [connected GitHub account](https://docs.ddev.com/github/) named `ddev-demo` with a repo named `mysite` using the default settings, run:
 ```
-$ ddev-live create site wordpress mysite --github-repo ddev-demo/mysite
+$ ddev-live create site wordpress mysite --git-repo https://github.com/ddev-demo/mysite
 ```
 
 Use `ddev-live describe site mysite` to view info about your [site](https://docs.ddev.com/sites/).
@@ -34,5 +34,5 @@ You can add flags for specific configuration options. Use `ddev-live create site
 
 Here is an example for a WordPress site that requires `composer install`, with the docroot in /docroot:
 ```
-$  ddev-live create site wordpress ddev-demo/mysite --github-repo ddev-demo/mysite --docroot docroot --run-composer-install
+$  ddev-live create site wordpress ddev-demo/mysite --git-repo https://github.com/ddev-demo/mysite --docroot docroot --run-composer-install
 ```

@@ -1,6 +1,6 @@
 ---
 title: TYPO3 Guide
-description: Deploy TYPO3 CMS to DDEV-Live hosting 
+description: Deploy TYPO3 CMS to DDEV-Live hosting
 ---
 # TYPO3 Getting Started Guide
 
@@ -18,7 +18,7 @@ We give additional flags below to use if your project differs from these default
 To create a [site](https://docs.ddev.com/sites/) named `mysite` on DDEV-Live and import code from a [connected GitHub account](https://docs.ddev.com/github/) named `ddev-demo` with a repo named `mysite` using the default settings, run:
 
 ```
-$ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite
+$ ddev-live create site typo3 mysite --git-repo https://github.com/ddev-demo/mysite
 ```
 
 Use `ddev-live describe site mysite` to view info about your [site](https://docs.ddev.com/sites/).
@@ -33,5 +33,5 @@ You can add flags for specific configuration options. Use `ddev-live create site
 
 Here is an example to create a TYPO3 v10 [site](https://docs.ddev.com/sites/) that requires `composer install`, with the docroot in /public:
 ```
-$  ~ ddev-live create site typo3 mysite --github-repo ddev-demo/mysite --docroot public --run-composer-install --typo3-version 10
+$  ~ ddev-live create site typo3 mysite --git-repo https://github.com/ddev-demo/mysite --docroot public --run-composer-install --typo3-version 10
 ```

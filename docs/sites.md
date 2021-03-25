@@ -12,7 +12,7 @@ A "site" on DDEV-Live is a project which has information attached to it and whic
 
 To create your project on DDEV-Live and import code from [GitHub](github.md) with the default settings, run:
 ```
-$ ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> [flags]
+$ ddev-live create site drupal <org>/<site> --git-repo https://github.com/<github-org>/<repo-name> [flags]
 ```
 
 You can add flags for specific configuration options. Use a command as follows to see all possible flags and their descriptions:
@@ -43,7 +43,7 @@ DDEV-Live "watches" the specified branch of your repo. When you push updates to 
 Example of a site creation command with describe site command:
 ```
 $ ddev-live create site drupal my-drupal-site \
-    --github-repo ddev-demo/multilingual --branch master \
+    --git-repo https://github.com/ddev-demo/multilingual --git-rev master \
     --drupal-version 8 \
     --run-composer-install \
     --tag=drupal,testing,expires \
@@ -59,12 +59,12 @@ $ ddev-live describe site ddev-demo/my-drupal-site
 SITE INFO
  Name:          my-drupal-site
  Org:           ddev-demo
- Tags:           
+ Tags:
   - expires
   - testing
   - drupal
  Created:       5m ago (2020-08-20 14:48:28 +0200 CEST)
- Expires:       in 2d (2020-08-22 14:48:28 +0200 CEST) 
+ Expires:       in 2d (2020-08-22 14:48:28 +0200 CEST)
  Type:          Drupal
  Version:       8
  PHP Version:   7.2
@@ -73,18 +73,18 @@ SITE INFO
  Info:          PHPApp my-drupal-site is provisioned
  Preview URL:   http://preview-my-drupal-site-ddev-demo.sites.ddev.live
  Cron Status:   enabled
- Cron Schedule: 
+ Cron Schedule:
 
 SITE IMAGE
  Created:       4m ago (2020-08-20 14:48:52 +0200 CEST)
  Run Composer:  true
- Composer Args: 
+ Composer Args:
  Status:
- GIT SOURCE 
+ GIT SOURCE
   URL:           https://github.com/ddev-demo/multilingual
   Revision:      master
   CurrentCommit: e477ae98bda87cf081e8652a9a35aa5de276b88f
-  Status:        
+  Status:
 
 SITE
  Healthy: true
@@ -117,7 +117,7 @@ Optionally, you can set a site to expire anywhere from 30 minutes to 5 days from
 
 Example for creating a site that will expire in 90 minutes.
 ```
-$ ddev-live create site drupal <org>/<site> --github-repo <github-org>/<repo-name> --expires-in 90m
+$ ddev-live create site drupal <org>/<site> --git-repo https://github.com/<github-org>/<repo-name> --expires-in 90m
 ```
 
 Extending or shortening the expiration sets the expiration time relative to the site creation time and can never extend beyond 5 days total from site creation.

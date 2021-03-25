@@ -1,6 +1,6 @@
 ---
 title: Jenkins
-description: How to configure and integrate DDEV-Live with Jenkins using your API token 
+description: How to configure and integrate DDEV-Live with Jenkins using your API token
 ---
 # Tutorial: How to integrate Jenkins with DDEV-Live
 
@@ -59,7 +59,7 @@ eval $(/usr/share/jenkins/ref/.linuxbrew/bin/brew shellenv)
 SITENAME=staging-${GIT_BRANCH#*/}-$BUILD_NUMBER
 ddev-live auth --token=$TOKEN --default-org=your-org
 
-ddev-live create site drupal $SITENAME --github-repo=you/your-repo --branch=${GIT_BRANCH#*/}
+ddev-live create site drupal $SITENAME --git-repo=https://github.com/you/your-repo --git-rev=${GIT_BRANCH#*/}
 /usr/share/jenkins/ref/devrel/jenkins-ddev-live/wait_site_healthy.sh $SITENAME
 
 url=$(ddev-live describe site ${SITENAME} -o json | jq -r .previewUrl)

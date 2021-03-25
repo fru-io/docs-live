@@ -1,4 +1,4 @@
-site_name: DDEV-Live
+site_name: DDEV-Live Documentation
 
 google_analytics:
   - 'UA-105593079-5'
@@ -40,7 +40,7 @@ nav:
         - TLS: tls.md
         - Variables: variables.md
         - Preview Bot:
-            - Commands: preview-bot.md 
+            - Commands: preview-bot.md
             - GitHub: github-bot.md
             - GitLab: gitlab-bot.md
     - CI/CD:
@@ -76,5 +76,5 @@ plugins:
         locale: en
 
 extra_javascript:
-  - 'js/extra.js'
-  - 'js/jquery-3.5.1.min.js'
+  - 'assets/extra.js'
+  - 'assets/jquery-3.5.1.min.js'
