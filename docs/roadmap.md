@@ -1,30 +1,27 @@
 ---
 title: Roadmap
-description: What's new and what's coming soon for Kubernetes-based hosting on DDEV 
+description: What's new and what's coming soon for DDEV hosting
 ---
+
 # Roadmap
 
+[Read about recent releases on our blog](https://www.ddev.com/tag/platform-updates/).
+
 ## Current
-More Git hosting [providers](providers.md)
+### Unifying the experience when connect to various Git [providers](providers.md)
+DDEV-Live as a platform currently supports connections to [GitHub](github.md) and [GitLab](gitlab.md). Both can be referenced in commands if you use the ddev-live CLI. If you use the UI on dash.ddev.com to create a new site then only GitHub is currently available. UI support for GitLab is in progress now. In the future, we'll have more provider agnostic commands.
 
-We know many of you have repos hosted in GitLab, BitBucket, and Gogs and we don’t want to lock you into just using [GitHub](github.md).
+### Tooling unification
+We want the transition from local to live to be as smooth as possible. To this end, you may currently use the [DDEV-Local integration](https://ddev.readthedocs.io/en/stable/users/providers/DDEV-Live/), as well as following the guided stepper in the [dash.ddev.com](https://dash.ddev.com/) UI. 
+Additional integrated support is coming soon, and in the meantime we'd love to [hear from you](support.md) about what you expect from that experience!
 
-Tooling unification
-
-We want the transition from local to live to be as smooth as possible, so we need to make some bolts and nuts changes to software versions, images, configuration files.
-
-Billing and entitlements
-
-You should only be paying for exactly the things you’re using, we need manage our inventory, and be able to do things like regularly bill a credit card. (Who knew!) But.. if you want to pay to use our platform now, we can facilitate that too, [just get in touch](https://docs.ddev.com/support/)!
+### Billing and sign up
+We're currently making it easier for you to start a trial account on DDEV-Live. At the moment the signup process requests your GitHub username and a credit card to get started. Changes to this process are rolling out in Spring 2021. If you're eager to get going, want to make a special request, or have a larger need than the listed plans allow for, please [email us](mailto:support@ddev.com).
 
 ## Next
-Better workflows
-
-More debug tools
-
-Protection for production workloads
+Fine tuning! We've reached a nice plateau and want to make everything run super smooth before adding new features. 
 
 ## Later
-Expanding the list of CMSs and frameworks
+Expanding the list of supported CMSs and frameworks. Offering fine-grained permissioning support for various user roles. 
 
-TYPO3, static [sites](sites.md) (Gatsby, Hugo, Jekyll, etc), NodeJS, Ruby on Rails --  just to name a few. We also want to [hear from you](https://dash.ddev.com/feedback/) about your portfolio of [sites](sites.md) and their requirements.
+We also want to [hear from you](https://dash.ddev.com/feedback/) about your portfolio of [sites](sites.md) and their requirements. The most important part of the platform is you, please do start a conversation with us anywhere, anytime :)
