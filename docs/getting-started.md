@@ -31,9 +31,13 @@ $ brew install drud/ddev-live/ddev-live
 #### Alternative macOS and Linux install
 The below links will download a file named ddev-live.zip
 
-[Download the DDEV-Live CLI for macOS (darwin)](https://downloads.ddev.com/ddev-live-cli/latest/darwin/ddev-live.zip).
+[Download the DDEV-Live CLI for macOS amd64 (most traditional Macs)](https://downloads.ddev.com/ddev-live-cli/latest/darwin_amd64/ddev-live.zip).
 
-[Download the DDEV-Live CLI for Linux](https://downloads.ddev.com/ddev-live-cli/latest/linux/ddev-live.zip).
+[Download the DDEV-Live CLI for macOS arm64 (Apple Silicon M1)](https://downloads.ddev.com/ddev-live-cli/latest/darwin_arm64/ddev-live.zip).
+
+[Download the DDEV-Live CLI for Linux amd64 (most Linux computers)](https://downloads.ddev.com/ddev-live-cli/latest/linux_amd64/ddev-live.zip).
+
+[Download the DDEV-Live CLI for Linux arm64](https://downloads.ddev.com/ddev-live-cli/latest/linux_arm64/ddev-live.zip).
 
 1. Extract ddev-live.zip. For example: `unzip ddev-live.zip`.
 2. Move the resulting ddev-live binary to a directory that is in your $PATH variable. For example: `mv ~/Downloads/ddev-live /usr/local/bin`. You may need to add to your `$PATH` in your .bash_profile or equivalent.
