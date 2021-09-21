@@ -6,7 +6,7 @@ GitPython==3.1.7
 htmlmin==0.1.12
 Jinja2==2.11.2
 joblib==0.16.0
-jsmin==2.2.2
+git+https://github.com/serenecloud/jsmin@6467320#egg=jsmin
 livereload==2.6.2
 lunr==0.5.8
 Markdown==3.2.2
