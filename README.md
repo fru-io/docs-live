@@ -1,6 +1,6 @@
-DDEV-Live Documentation
+FRU.io Documentation
 ======================
-https://docs.ddev.com
+https://fru.ddev.com
 
 ## Contributions
 Edits, additions, corrections, etc are most welcome. Our docs live in the `docs` folder and are written in [Markdown](https://daringfireball.net/projects/markdown/).
